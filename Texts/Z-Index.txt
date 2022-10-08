@@ -1,0 +1,13 @@
+
+.question mark: 8; //Top most after load
+.nav: 9;  //Top most layer
+.aboutOverlay: 9;
+.contactOverlay: 9; 
+.overlay: 
+.allBody1: 
+.allBody2 .introduction: 
+.projectsDisplay: 9;
+LoadingScreen: 10 //The main layer
+WelcomeScreen: 1; //least order layer
+.introduction: 1; // least Welcome page ko sabai 1
+.projects: 1; //least

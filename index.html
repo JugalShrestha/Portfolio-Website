@@ -1,0 +1,589 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="Scripts/java.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<!--font-family: 'Monoton', cursive; Equals to line in text-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+ 
+<!--font-family: 'Rubik Dirt', cursive; Dirt and bold text-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+
+<!--font-family: 'Cedarville Cursive', cursive; Pure cursive-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+
+<!--font-family: 'Bebas Neue', cursive; For Headers-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<!--font-family: 'Jost', sans-serif; For texts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    
+<title>Jugal Shrestha</title>
+</head>
+
+<body>
+   
+    <!--Inside the about and contact menu-->
+    <div class="MobileNav" id="navId">
+        <div onclick="navClose()" class="navCross">
+            &cross;
+        </div>
+        <div class="navOptionsForMobile">
+            <div onclick="openAboutOl()"  id="aboutId" class="about">
+                <p class="aboutIcon">
+                    ABOUT ME
+                </p>
+            </div>
+            <div onclick="openContactOl()" id="contactId" class="contact">
+                <p class="contactIcon">
+                    CONTACT
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--PC Nav Bar-->
+    <div class="nav">
+        <label onclick="scrollTo4()" class="logo">
+            <a>JS</a> 
+        </label>
+        <nav>
+        <ul class="navOptions">
+            <li><a id="allPLink" onclick="scrollTo1()">Projects</a></li>
+            <li><a id="allALink" onclick="scrollTo2()">About Me</a></li>
+            <li><a id="allCLink" onclick="scrollTo3()">Contact</a></li>
+        </ul>
+        </nav>
+        <div id="questionMarkId" onclick="navOpen()" class="questionMark">
+            ?
+        </div>
+    </div>
+
+        <!--Inside the about Section-->
+        <div id="aboutOl" class="aboutOverlay">
+            <div class="cross">
+                <p onclick="closeAboutOl()" class="crossIcon">
+                    ^
+                </p>
+            </div>
+            <div class="aboutAllBoxes">
+                <div class="aboutDes">
+                    <p class="aboutHeader">
+                        EDUCATION
+                    </p>
+                    <div class="aboutIntro">
+                        <p class="aboutIntroDes">
+                            <a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/MountGloryEBHS">SCHOOL</a> &check; 3.7<br>
+                            <a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/nccspaknajol">HIGH SCHOOL</a> &check; 3.3<br>
+                            <a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sxcmaitighar">COLLEGE</a> On going...<br>
+                        </p>
+                    </div>
+                </div>
+                <div class="aboutDes">
+                    <p class="aboutHeader">
+                        SKILLS 
+                    </p>
+                    <div class="aboutIntro">
+                        <p class="aboutIntroDes">
+                            HTML &check;<br>
+                            CSS &check;<br>
+                            Java &check;<br>
+                            C &check;<br>
+                            ETC &check;<br>
+                        </p>
+                    </div>
+                </div>
+                <div class="aboutDes">
+                    <p class="aboutHeader">
+                        EXPERIENCE
+                    </p>
+                    <div class="aboutIntro">
+                        <p class="aboutIntroDes">
+                            <a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://www.transperfect.com/about">TRANSPERFECT:</a>&check;
+                            <br><a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://appen.com">APPEN:</a> &check;<br>
+                            FREELANCING &check;
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--inside the Contact section of mobile-->
+        <div id="contactOl" class="contactOverlay">
+            <div class="cross">
+                <p onclick="closeContactOl()" class="crossIcon">
+                    ^
+                </p>
+            </div>
+             <div class="contactDes1">
+                <p class="contactHeader">
+                    FIND <br>ME<br> ON 
+                </p>
+                <div class="contactIntro">
+                    <p class="contactIntroDes">
+                        <a class="contactsA" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jugal-shrestha-8870b8226/">LinkedIn</a>
+                        <a class="contactsA" target="_blank" rel="noopener noreferrer" href="https://github.com/JugalBaucha">Github<a>
+                        <a class="contactsA" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/jugal_baucha/">Instagram</a>
+                        <a class="contactsA" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCuh9gYFLFtXmX-EzIIUYnOg">Youtube</a>
+                        <a class="contactsA" target="_blank" rel="noopener noreferrer" href="mailto: jugalnepali@gmail.com">Email</a>
+                        <br>🇳🇵 +977 9845257756
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    <!--Not used overlay-->
+    <div id="overlay1"class="overlay"></div>
+
+    <!--The loading screen-->
+    <div class="allBody1" id="allB1">
+        <div class="instruction">
+            <p class="start1"></p>
+        </div>
+        <div class="face">
+            <div class="faceUpper">
+                <div class="ears">
+                    <div class="earL"></div>
+                    <div class="earR"></div>
+                </div>
+                <div class="eye">
+                    <div class="eyeL"></div>
+                    <div class="eyeR"></div>
+                </div>
+            </div>
+             <div class="faceLower">
+                <div id="noseId" class="nose">
+                </div>
+             </div>
+        </div>
+    </div>
+
+    <!--Loaded after the loading screen-->
+    <div class="allBody2" id="allB2">
+        <!--Welcome msg-->
+        <div class="welcomePage" id="allWel1">
+            <div id="allWel2" class="introduction">
+                <p class="greetings">Namaste</p>
+                <p class="greetings2">
+                    Welcome to<br>
+                    the porfolio of<br>
+                    <span>Jugal<br>Shrestha<br></span></p>
+                <!--<p class="greetings3">J S</p>-->
+            </div>
+            <div class="upArrow">
+                ▼
+            </div>
+            <div class="notInMobile">
+                <div id="allWel3" class="introduction2">
+                    <p class="headerForIntro2">Hi!</p>
+                    <p class="desForIntro2">
+                        I am a student who has essential<br>
+                        skills of programming and I am<br> 
+                        familiar in languages like C, Java<br>
+                        , HTML, javascript, Css, and I like<br>
+                        to think myself as a creative and<br>
+                        a critical thinker.<br>  
+
+                    </p>
+                </div>
+                <div class="hillsBg">
+                    <img id="hill1" src="images/hills.png">
+                </div>
+                <div class="hillsBg2">
+                    <img id="hill2" src="images/hills.png">
+                </div>
+                <div  class="standingImageOfJugal">
+                    <img id="standingProud" src="images/Jugal Photo/StandingProud.png">
+                </div>
+            </div>
+        </div>
+        
+        <!--Menu Section-->
+        <div class="projects" id="allP1">
+                <div id="notInMobileId" class="projectsBackdrop">
+                    <div class="projectsBackdrop2"></div>
+                    <div class="projectsBackdrop3"></div>
+                </div>
+                <div id="notInMobileId" class="bgOverlay"></div>
+                <div class="notInMobile">
+                    <div id="projectsIntroId" class="projectsIntro">
+                        <div class="headerForProjectsIntro">
+                            So,
+                        </div>
+                        <div class="desForProjectsIntro">
+                            This is the menu section<br>
+                            when clicked will take you<br>
+                            to the selected profiles.<br>
+                        </div>
+                    </div>
+                    <div id="headerForProjectId" class="headerForProject">
+                        projects
+                        <br>menu
+                    </div>
+                </div>
+            <div class="boxes">
+                <div onclick="openArts()"  class="boxed"id="box1">
+                    <p class="imagesP">ARTS</p>
+                    <div id="pOl1" class="projectsOl">
+                        <p class="projectsOlDes">
+                            🖌
+                        </p>
+                    </div>
+                </div>
+                <div onclick="openPhotos()" class="boxed"id="box2">
+                    <p class="imagesP">PHOTOS</p>
+                    <div id="pOl2" class="projectsOl">
+                         <p class="projectsOlDes">
+                             📸
+                         </p>
+                    </div>
+                </div>
+                <div onclick="openProjects()" class="boxed"id="box3">
+                    <p class="imagesP">PROJECTS</p>
+                    <div id="pOl3" class="projectsOl">
+                        <p class="projectsOlDes">
+                            📙
+                        </p>
+                    </div>
+                </div>
+                <div onclick="openGames()" class="boxed"id="box4">
+                    <p class="imagesP">GAMES</p>
+                    <div id="pOl4" class="projectsOl">
+                        <p class="projectsOlDes">
+                            🎮
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Overlay for PROJECTS menu-->
+        <div class="projectsDisplay" id="projectOpen">
+            <div onclick="projectDisplayClose()" class="sideArrow">
+                ◁
+            </div>
+            <div class="displayContents">
+                <p class="displayHeaders">Projects</p>
+                <div class="resultsOfDisplay">
+                    <div class="boxesOfResult">
+                        <a target="_blank" href="https://github.com/JugalBaucha/LIBRARY_MANAGEMENT_SYSTEM" class="descriptionOfBoxes"> L.M.S </a>
+                        <div class="overlayForDisplay">
+                            <a target="_blank" href="https://github.com/JugalBaucha/LIBRARY_MANAGEMENT_SYSTEM" class="overlayForDisplay"> Library Management System <br> in C programming</a>
+                        </div>
+                    </div>
+                    <div class="boxesOfResult">
+                        b
+                    </div>
+                    <div class="boxesOfResult">
+                        c
+                    </div>
+                    <div class="boxesOfResult">
+                        d
+                    </div>
+                    <div class="boxesOfResult">
+                        e
+                    </div>
+                    <div class="boxesOfResult">
+                        f
+                    </div>
+                    <div class="boxesOfResult">
+                        g
+                    </div>
+                    <div class="boxesOfResult">
+                        h
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Overlay for ARTS menu-->
+        <div class="artsDisplay" id="artOpen">    
+            <div onclick="artDisplayClose()" class="sideArrow">
+                ◁
+            </div>
+            <div class="displayContents">
+                <p class="displayHeaders">Arts</p>
+                <div class="resultsOfDisplay">
+                    <div class="boxesOfResult">
+                        <img width="400px" height="400px" src="images/Jugal Photo/SittingProud.jpg">
+                    </div>
+                    <div  class="boxesOfResult">
+                        <img width="400px" height="400px" src="images/Arts/mountainsLake.jpg">
+                    </div>
+                    <div class="boxesOfResult">
+                        <img width="400px" height="400px" src="images/Arts/guitar.jpg">
+                    </div>
+                    <div class="boxesOfResult">
+                        <img width="400px" height="400px" src="images/Arts/ManuLogo.jpg">
+                    </div>
+                    <div class="boxesOfResult">
+                        <img width="800px" height="400px" src="images/mountain.jpg">
+                    </div>
+                    <div  class="boxesOfResult">
+                        <img width="400px" height="400px" src="images/Arts/ManuLogo.jpg">
+                    </div>
+                    <div class="boxesOfResult">
+                        <img width="400px" height="400px" src="images/woodTexture.jpg">
+                    </div>
+                    <div class="boxesOfResult">
+                        <img width="400px" height="400px" src="images/Arts/guitar.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Overlay for PHOTOS menu-->
+        <div class="photosDisplay" id="photoOpen">
+            <div onclick="photoDisplayClose()" class="sideArrow">
+                ◁
+            </div>
+            <div class="displayContents">
+                <p class="displayHeaders">Photos</p>
+                <div class="resultsOfDisplay">
+                    <div class="boxesOfResult">
+                        <a href="" class="descriptionOfBoxes"> </a>
+                    </div>
+                    <div class="boxesOfResult">
+                        b
+                    </div>
+                    <div class="boxesOfResult">
+                        c
+                    </div>
+                    <div class="boxesOfResult">
+                        d
+                    </div>
+                    <div class="boxesOfResult">
+                        e
+                    </div>
+                    <div class="boxesOfResult">
+                        f
+                    </div>
+                    <div class="boxesOfResult">
+                        g
+                    </div>
+                    <div class="boxesOfResult">
+                        h
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Overlay for GAMES menu-->
+        <div class="gamesDisplay" id="gameOpen">
+            <div onclick="gameDisplayClose()" class="sideArrow">
+                ◁
+            </div>
+            <div class="displayContents">
+                <p class="displayHeaders">Games</p>
+                <div class="resultsOfDisplay">
+                    <div class="boxesOfResult">
+                        <a href="" class="descriptionOfBoxes">  </a>
+                    </div>
+                    <div class="boxesOfResult">
+                        b
+                    </div>
+                    <div class="boxesOfResult">
+                        c
+                    </div>
+                    <div class="boxesOfResult">
+                        d
+                    </div>
+                    <div class="boxesOfResult">
+                        e
+                    </div>
+                    <div class="boxesOfResult">
+                        f
+                    </div>
+                    <div class="boxesOfResult">
+                        g
+                    </div>
+                    <div class="boxesOfResult">
+                        h
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="notInMobileId">
+        <!--About Section-->
+        <div id="allA1" class="aboutSection">
+            
+            <div id="headerForAboutSectionId" class="headerForAboutSection">
+                About Me
+            </div>
+            
+            <div class="overlayForAboutSec"></div>
+
+            <div class="notInMobile">
+                <div id="introForAboutSecId" class="introForAboutSection">
+                    <div class="headerForIntroOfAboutSec">
+                        Click The Link
+                    </div>
+                    <div class="desForIntroOfAboutSec">
+                        Please Click the Bold Words<br>
+                        to learn more about them,<br>
+                        Thank you!..
+                    </div>
+                </div>
+            </div>    
+            <div id="aboutAllBoxesId" class="aboutAllBoxes">
+                <div class="aboutDes">
+                    <p class="aboutHeader">
+                        EDUCATION
+                    </p>
+                    <div class="aboutIntro">
+                        <p class="aboutIntroDes">
+                            <a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/MountGloryEBHS">SCHOOL</a> &check; 3.7<br>
+                            <a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/nccspaknajol">HIGH SCHOOL</a> &check; 3.3<br>
+                            <a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sxcmaitighar">COLLEGE</a> On going...<br>BIM
+                        </p>
+                    </div>
+                </div>
+                <div class="aboutDes">
+                    <p class="aboutHeader">
+                        SKILLS 
+                    </p>
+                    <div class="aboutIntro">
+                        <p class="aboutIntroDes">
+                            HTML &check;<br>
+                            CSS &check;<br>
+                            Java &check;<br>
+                            C &check;<br>
+                            ETC &check;<br>
+                        </p>
+                    </div>
+                </div>
+                <div class="aboutDes">
+                    <p class="aboutHeader">
+                        EXPERIENCE
+                    </p>
+                    <div class="aboutIntro">
+                        <p class="aboutIntroDes">
+                            <a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://www.transperfect.com/about">TRANSPERFECT:</a>&check;
+                            <br><a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://appen.com">APPEN:</a> &check;<br>
+                            FREELANCING &check;
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Contact Section-->
+        <div id="allC1" class="contactSection">
+
+            <!--Header for contact Section-->
+            <div id="Contacts-Header" class="headerForContactSec">
+                CONTACTS
+            </div>
+
+            <!--Bottom part of contact section-->
+            <div class="contactSecOverlay1">
+
+                <!--social media links-->
+                <div class="socialLinks">
+                    <div class="contactSecHeader">
+                        Find Me On
+                    </div>
+                    <div class="contactIntro">
+                        <p class="contactIntroDes">
+                            <a class="contactsA" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jugal-shrestha-8870b8226/">
+                                <img width="40px" height="40px" src="images/Social-media-icons/linkedin.png" alt="linkedIn">
+                            </a>
+                            <a class="contactsA" target="_blank" rel="noopener noreferrer" href="https://github.com/JugalBaucha">
+                                <img width="40px" height="40px" src="images/Social-media-icons/github.png" alt="Github">
+                                <a>
+                            <a class="contactsA" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/jugal_baucha/">
+                                <img width="40px" height="40px" src="images/Social-media-icons/instagram.png" alt="Insta">
+                            </a>
+                            <a class="contactsA" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCuh9gYFLFtXmX-EzIIUYnOg">
+                                <img width="40px" height="40px" src="images/Social-media-icons/youtube.png" alt="Youtube">
+                            </a>
+                            <a id="emailLink" class="contactsA" target="_blank" rel="noopener noreferrer" href="mailto: jugalnepali@gmail.com">
+                                <img width="40px" height="40px" src="images/Social-media-icons/gmail.png" alt="mail">
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <!--Description about me-->
+                <div class="contactSecDesAboutMe">
+                    <div class="headerForContactSecDes">
+                        Jugal Shrestha.
+                    </div>
+                    <div class="introForContactSecDes">
+                        Hi! I am a freelance web developer.
+                         For your projects i will be there!
+                         <div class="introDesForContactSecDes">
+                            <br>Email: jugalnepali@gmail.com
+                            <br>Ph.no: NP +977 9845257756
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <!--Resume section-->
+                <div class="resumeLink">
+                    <div class="contactSecHeader">
+                        View my Cv?
+                    </div>
+                    <a target="_blank" href="Resume.pdf">Click here</a>
+                </div>
+
+                
+
+            </div>
+
+            <!--Email form of contact-->
+            <div  id="Email-Form-Id" class="contactSecOverlay2">
+                <div class="emailForm">
+
+                    <!--Part 1 of email-->
+                    <div class="part1OfEmail">
+                        <input id="nameOfEmail" placeholder="Name" class="emailInput" type="text">
+                        <input id="emailOfEmail" placeholder="Email" class="emailInput" type="text" title="Subject">
+                    </div>
+
+                    <!--Part 2 of email-->
+                    <div class="part2OfEmail">
+                        <input id="bodyOfEmail" class="emailInput" type="text">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--Extra part of contact-->
+            <div class="contactSecOverlay3">
+
+            </div>
+
+        </div>
+
+        </div>
+
+    </div>
+</body>
+<script src="Scripts/activeLinks.js"></script>
+<script src="Scripts/deviceWidth.js"></script>
+<script src="Scripts/loader.js"></script>
+<script src="Scripts/parallax.js"></script>
+<script src="Scripts/scroll-reveal.js"></script>
+</html>
+

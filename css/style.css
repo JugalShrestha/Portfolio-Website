@@ -1,0 +1,1643 @@
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(3deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(3deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
+}
+@-webkit-keyframes card {
+  0% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(45deg);
+  }
+  50% {
+    transform: rotateY(80eg);
+  }
+  75% {
+    transform: rotateY(-45deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+@keyframes card {
+  0% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(45deg);
+  }
+  50% {
+    transform: rotateY(80eg);
+  }
+  75% {
+    transform: rotateY(-45deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes redEye {
+  100% {
+    background: var(--sColor);
+  }
+}
+@keyframes redEye {
+  100% {
+    background: var(--sColor);
+  }
+}
+@-webkit-keyframes rotate360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes Hallo {
+  100% {
+    width: 0;
+  }
+}
+@keyframes Hallo {
+  100% {
+    width: 0;
+  }
+}
+@-webkit-keyframes appearMouth {
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes appearMouth {
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes dot {
+  100% {
+    width: 1.25em;
+  }
+}
+@keyframes dot {
+  100% {
+    width: 1.25em;
+  }
+}
+@-webkit-keyframes remove {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes remove {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes remove2 {
+  98% {
+    opacity: 100%;
+  }
+  99% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes remove2 {
+  98% {
+    opacity: 100%;
+  }
+  99% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*animations*/
+/*ScrollEdit*/
+::-webkit-scrollbar {
+  width: 0.5vh;
+}
+
+body::-webkit-scrollbar-track {
+  margin: 0;
+  padding: 0;
+  border-radius: 0%;
+  background: var(--nColor);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10%;
+  background: var(--sColor);
+  opacity: 90%;
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  opacity: 50%;
+}
+
+/*COLOR PALATE*/
+:root {
+  --shadow:black;
+  --pigColor: rgb(21, 20, 20);
+  --pColor: rgb(0, 0, 0);
+  --sColor: rgb(232, 236, 246);
+  --nColor: #1f7e7e;
+  --s2Color:#cedcfa;
+  --p2Color:#060d1e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+* .activeLinksColor {
+  background: var(--p2Color);
+}
+
+/*inside the Body tag*/
+body {
+  background: var(--sColor);
+  margin: 0;
+  padding: 0;
+  /*For Cross Icon in About and Contact and Nav section*/
+  /*Inside the Nav bar*/
+  /*Inside the about section for Mobile*/
+  /*inside the contact section*/
+  /*For activation of the contact and about overlays*/
+  /*The loading Screen*/
+  /*After the Loading Screen All lies within this*/
+  /*Overlay for the main 4 menu unused*/
+}
+body .cross {
+  z-index: 9;
+  position: fixed;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -1%);
+  padding: 1vh;
+  margin: 0;
+  background: var(--sColor);
+  border-radius: 100%;
+  box-shadow: 0vh 0vh 1vh var(--shadow);
+  overflow: hidden;
+  /*Icon of Cross*/
+}
+body .cross:hover {
+  opacity: 50%;
+  border: 0;
+}
+body .cross .crossIcon {
+  cursor: pointer;
+  color: var(--pColor);
+  padding: 1vh;
+  margin-bottom: -2.3vh;
+  border-radius: 0;
+  font-size: 4vh;
+  font-weight: bold;
+}
+body .questionMark {
+  overflow: hidden;
+  cursor: pointer;
+  width: 4vh;
+  height: 4vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vh;
+  box-shadow: 0 0 1vh var(--shadow);
+  background: var(--sColor);
+  border-radius: 100%;
+  color: var(--pColor);
+  font-family: "Monoton", cursive;
+}
+body .nav {
+  margin: 0vh;
+  padding: 1vh;
+  z-index: 8;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  opacity: 80%;
+}
+body .nav .logo {
+  box-sizing: border-box;
+  margin: 0;
+  width: 6vh;
+  height: 6vh;
+  padding: 0vh;
+  background: var(--pColor);
+  border-radius: 100%;
+  border: 0.7vh solid var(--pColor);
+  border-top: 0.7vh double var(--sColor);
+  border-bottom: 0.7vh double var(--sColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+body .nav .logo a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--sColor);
+  font-size: 2vh;
+  font-family: "Monoton", cursive;
+}
+body .nav .navOptions {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-right: 1vh;
+  background: var(--nColor);
+  box-shadow: 0 0 0.5vh var(--shadow);
+  border-radius: 10vh;
+  margin: 1vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+body .nav .navOptions li {
+  display: inline-block;
+  padding: 1vh;
+  margin: 0;
+}
+body .nav .navOptions li a {
+  transition: 0.2s linear;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2vh;
+  color: var(--pColor);
+  box-shadow: 0 0 1vh var(--shadow);
+  font-family: "Bebas Neue", cursive;
+  text-transform: uppercase;
+  padding: 0vh 1vh;
+  border-radius: 10vh;
+}
+body .nav .navOptions li a:hover {
+  border-bottom: 0.4vh solid var(--pColor);
+  color: var(--sColor);
+}
+body .MobileNav {
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  transform: translateX(-400vh);
+  width: 100%;
+  height: 100vh;
+  background: var(--sColor);
+  align-items: center;
+  justify-content: center;
+  /*About button*/
+  /*Contact Button*/
+}
+body .MobileNav .navCross {
+  position: fixed;
+  top: 1%;
+  right: 1%;
+  font-size: 3vh;
+  color: var(--pColor);
+  font-weight: bold;
+  cursor: pointer;
+}
+body .MobileNav .about {
+  cursor: pointer;
+  height: 20vh;
+  width: 30vh;
+  background: var(--pColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 90%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+}
+body .MobileNav .about:hover {
+  opacity: 50%;
+}
+body .MobileNav .about .aboutIcon {
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  color: var(--sColor);
+  font-size: 7vh;
+  padding: 1vh;
+  font-family: "Bebas Neue", cursive;
+}
+body .MobileNav .contact {
+  height: 20vh;
+  width: 30vh;
+  background: var(--p2Color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 90%;
+  margin: 1vh 0vh 1vh 0;
+  padding: 0 1vh;
+  text-align: center;
+}
+body .MobileNav .contact:hover {
+  opacity: 50%;
+}
+body .MobileNav .contact .contactIcon {
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  color: var(--pColor);
+  font-size: 7vh;
+  padding: 1vh;
+  font-family: "Bebas Neue", cursive;
+}
+body .aboutOverlay {
+  transition: linear 0.2s;
+  padding: 0;
+  margin: 0;
+  background: var(--sColor);
+  z-index: 9;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateY(-200vh);
+  overflow: hidden;
+}
+body .aboutOverlay .aboutAllBoxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  margin: 0;
+  padding: 1vh;
+  text-align: left;
+  position: absolute;
+  top: 1%;
+  bottom: 1%;
+  overflow: auto;
+}
+body .aboutOverlay .aboutDes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1vh 1vh 2vh var(--pColor);
+  background-image: repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--sColor) 4vh, transparent 20%), repeating-linear-gradient(45deg, var(--pColor) 2vh, var(--sColor) 4vh, transparent 20%), repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--sColor) 4vh, transparent 20%), repeating-linear-gradient(45deg, var(--pColor) -2vh, var(--sColor) 4vh);
+  border-radius: 5%;
+  margin: 2vh;
+  padding: 1vh;
+  text-align: left;
+  height: 65vh;
+  width: 40vh;
+  position: relative;
+  overflow: hidden;
+}
+body .aboutOverlay .aboutDes:hover .aboutIntro {
+  visibility: visible;
+}
+body .aboutOverlay .aboutDes:hover .aboutHeader {
+  background: var(--pColor);
+  color: var(--sColor);
+}
+body .aboutOverlay .aboutDes .aboutHeader {
+  font-size: 4vh;
+  font-weight: bold;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 1vh;
+  background: var(--sColor);
+  padding: 1vh;
+  margin-right: -1vh;
+  opacity: 90%;
+}
+body .aboutOverlay .aboutDes .aboutIntro {
+  transition: ease-in-out 0.2s;
+  background: var(--sColor);
+  padding: 1vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 90%;
+  visibility: hidden;
+}
+body .aboutOverlay .aboutDes .aboutIntro .aboutIntroDes {
+  font-size: 2vh;
+  font-family: "Jost", sans-serif;
+}
+body .aboutOverlay .aboutDes .educationLink {
+  text-decoration: none;
+  color: var(--pColor);
+  font-weight: bold;
+  font-size: 3vh;
+  letter-spacing: 0.1vh;
+  font-family: "Bebas Neue", cursive;
+}
+body .contactOverlay {
+  transition: linear 0.2s;
+  padding: 0;
+  margin: 0;
+  background: var(--sColor);
+  z-index: 9;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateY(-200vh);
+  overflow: hidden;
+}
+body .contactOverlay .contactDes1 .contactHeader {
+  background-image: repeating-linear-gradient(45deg, var(--sColor) 4vh, var(--pColor) 4vh, var(--sColor) 2vh, transparent 30%), repeating-linear-gradient(315deg, var(--sColor) 6vh, var(--pColor) 10vh);
+  padding: 1vh;
+  opacity: 90%;
+  border-radius: 0;
+  text-align: center;
+  font-size: 4vh;
+  color: var(--sColor);
+  font-weight: bold;
+  text-shadow: 0 0 1vh var(--shadow);
+  font-family: "Bebas Neue", cursive;
+  pointer-events: none;
+}
+body .contactOverlay .contactDes1 .contactIntro .contactIntroDes {
+  width: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--pColor);
+  font-size: medium;
+  font-family: "Jost", sans-serif;
+}
+body .contactOverlay .contactDes1 .contactIntro .contactIntroDes .contactsA {
+  margin-top: 1em;
+}
+body .contactOverlay .contactDes1 .contactIntro .contactIntroDes .contactsA:hover {
+  opacity: 50%;
+}
+body .contactOverlay .contactDes1 .contactIntro .contactIntroDes a {
+  letter-spacing: 0.5vh;
+  text-decoration: none;
+  margin-right: -0.5vh;
+  font-size: 4vh;
+  color: var(--pColor);
+  font-family: "Jost", sans-serif;
+}
+body .active {
+  transform: translateY(0);
+}
+body #allB1 {
+  z-index: 10;
+  background: var(--sColor);
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+}
+body .instruction {
+  margin: 20vh 0 0 0;
+}
+body .instruction .start1 {
+  color: var(--pColor);
+  text-align: center;
+  font-size: 3em;
+  font-family: Impact;
+  letter-spacing: 0.5vh;
+}
+body .instruction .start1::after {
+  font-size: 3vh;
+  text-align: left;
+  vertical-align: bottom;
+  content: "...";
+  display: inline-block;
+  overflow: hidden;
+  -webkit-animation: dot steps(4) infinite 1s forwards;
+          animation: dot steps(4) infinite 1s forwards;
+  width: 0;
+}
+body .face {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  margin-top: 10vh;
+}
+body .faceUpper {
+  position: relative;
+  width: 24vh;
+  height: 10vh;
+  background: var(--pigColor);
+  margin: 0;
+  padding: 0;
+  border-radius: 100% 100% 0 0;
+}
+body .faceUpper .eye {
+  position: absolute;
+  top: 50%;
+  color: var(--pColor);
+  padding: 0;
+  margin-bottom: 1em;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  place-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+body .faceUpper .eye .eyeL {
+  height: 3vh;
+  width: 3vh;
+  background: var(--pigColor);
+  border-radius: 0 100% 0 100%;
+  margin-left: 1.5em;
+  -webkit-animation: redEye 0.1s ease 0.1s forwards;
+          animation: redEye 0.1s ease 0.1s forwards;
+}
+body .faceUpper .eye .eyeR {
+  height: 3vh;
+  width: 3vh;
+  background: var(--pigColor);
+  border-radius: 100% 0 100% 0;
+  margin-right: 1.5em;
+  -webkit-animation: redEye 0.1s ease 0.1s forwards;
+          animation: redEye 0.1s ease 0.1s forwards;
+}
+body .faceUpper .ears {
+  width: 100%;
+  top: 20%;
+  position: relative;
+  display: flex;
+  place-content: space-between;
+}
+body .faceUpper .ears .earL {
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  background: var(--pigColor);
+  position: absolute;
+  height: 3vh;
+  width: 2vh;
+  border-radius: 0% 100% 0 0;
+}
+body .faceUpper .ears .earR {
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  background: var(--pigColor);
+  position: absolute;
+  border-radius: 100% 0% 0 0;
+  right: 0;
+  height: 3vh;
+  width: 2vh;
+}
+body .faceLower {
+  color: var(--sColor);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  width: 0;
+  border-top: 12vh solid var(--pigColor);
+  border-left: 12vh solid transparent;
+  border-right: 12vh solid transparent;
+  margin: 0;
+  padding: 0;
+}
+body .faceLower .nose {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-top: 1em solid var(--pColor);
+  opacity: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body .active {
+  transform: scale(1);
+}
+body .remove {
+  transition: ease-in-out 1s;
+  transition-delay: 0.5s;
+  transform: translateX(-100%);
+}
+body .allBody2 {
+  padding: 0;
+  margin: 0;
+  /*For welcome Screen*/
+  /*For the main Menu System*/
+  /*For overlays inside the Menu tabs*/
+  /*For CLosing the tab opened from 4 menus*/
+  /*overlay for ARTS MENU*/
+}
+body .allBody2 .welcomePage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /*background-image:repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--nColor) 4vh, transparent 20%),
+                      repeating-linear-gradient(45deg ,var(--pColor) 2vh, var(--nColor) 4vh, transparent 20%),
+                      repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--nColor) 4vh, transparent 20%),
+                      repeating-linear-gradient(45deg ,var(--pColor) -2vh, var(--nColor) 4vh);
+  */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body .allBody2 .welcomePage .introduction {
+  z-index: 1;
+  color: var(--pColor);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .allBody2 .welcomePage .introduction .greetings {
+  pointer-events: none;
+  position: relative;
+  letter-spacing: 2vh;
+  margin-right: -2vh;
+  font-size: 4vh;
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: lighter;
+}
+body .allBody2 .welcomePage .introduction .greetings2 {
+  pointer-events: none;
+  margin-right: -0.5vh;
+  margin: 1vh;
+  font-size: 2vh;
+  font-family: "Cedarville Cursive", cursive;
+  letter-spacing: 0.5vh;
+  font-weight: bold;
+  padding: 1vh;
+}
+body .allBody2 .welcomePage .introduction .greetings2 span {
+  font-size: 3em;
+  font-family: "Monoton", cursive;
+}
+body .allBody2 .welcomePage .introduction .greetings3 {
+  pointer-events: none;
+  -webkit-animation: rotate360 10s infinite 1s forwards;
+          animation: rotate360 10s infinite 1s forwards;
+  border: 1vh double var(--pColor);
+  border-top: 1vh double var(--sColor);
+  border-bottom: 1vh double var(--sColor);
+  border-radius: 100%;
+  opacity: 90%;
+  margin: 1vh;
+  padding: 2vh;
+  text-transform: uppercase;
+  background: var(--pColor);
+  color: var(--sColor);
+  font-size: 4vh;
+  font-family: "Monoton", cursive;
+}
+body .allBody2 .welcomePage .introduction2 {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0%;
+  right: 10%;
+  width: 35vh;
+  height: 100%;
+  margin: 1vh;
+  overflow: hidden;
+}
+body .allBody2 .welcomePage .introduction2 .headerForIntro2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 4vh;
+  font-weight: bold;
+  letter-spacing: 0.5vh;
+  margin-right: -0.5vh;
+}
+body .allBody2 .welcomePage .introduction2 .desForIntro2 {
+  font-family: "Jost", sans-serif;
+  font-size: 2vh;
+}
+body .allBody2 .welcomePage .standingImageOfJugal img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  pointer-events: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .allBody2 .welcomePage .hillsBg img {
+  position: absolute;
+  filter: hue-rotate(70deg) blur(0px);
+  bottom: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .allBody2 .welcomePage .hillsBg2 img {
+  transform: rotate(180deg);
+  filter: hue-rotate(70deg) blur();
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+  width: 60%;
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .allBody2 .welcomePage .birds img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
+  filter: grayscale(100%);
+}
+body .allBody2 .welcomePage .upArrow {
+  z-index: 1;
+  -webkit-animation: blink 2s infinite 2s forwards;
+          animation: blink 2s infinite 2s forwards;
+  opacity: 0;
+  font-size: 3vh;
+  color: var(--pColor);
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  cursor: default;
+}
+body .allBody2 #box1 {
+  background-image: repeating-linear-gradient(45deg, var(--sColor) 2vh, var(--pColor) 4vh, transparent 20%), repeating-linear-gradient(315deg, var(--sColor) 2vh, var(--pColor) 4vh, transparent 20%), repeating-linear-gradient(0deg, var(--sColor) 5vh, var(--pColor) 10vh);
+}
+body .allBody2 #box2 {
+  background-image: repeating-linear-gradient(180deg, var(--pColor) 2vh, var(--sColor) 2vh, transparent 20%), repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--sColor) 2vh, transparent 20%), repeating-linear-gradient(0deg, var(--pColor) 5vh, var(--sColor) 10vh);
+}
+body .allBody2 #box2 .imagesP {
+  background: transparent;
+  color: var(--pColor);
+}
+body .allBody2 #box4 {
+  background-image: repeating-linear-gradient(45deg, var(--sColor) 2vh, var(--pColor) 4vh, transparent 20%), repeating-linear-gradient(315deg, var(--sColor) 2vh, var(--pColor) 4vh, transparent 20%), repeating-linear-gradient(0deg, var(--sColor) 5vh, var(--pColor) 10vh);
+}
+body .allBody2 #box3 {
+  background-image: repeating-linear-gradient(180deg, var(--pColor) 2vh, var(--sColor) 2vh, transparent 20%), repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--sColor) 2vh, transparent 20%), repeating-linear-gradient(0deg, var(--pColor) 5vh, var(--sColor) 10vh);
+}
+body .allBody2 #box3 .imagesP {
+  background: transparent;
+  color: var(--pColor);
+}
+body .allBody2 .projects {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--pColor);
+  overflow: hidden;
+}
+body .allBody2 .projects .notInMobile {
+  box-sizing: border-box;
+}
+body .allBody2 .projects .headerForProject {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  font-size: 9vh;
+  letter-spacing: 0.1vh;
+  margin-right: -1vh;
+  font-family: "Monoton", cursive;
+  color: var(--sColor);
+  text-transform: uppercase;
+  transform: rotate(45deg);
+  text-align: center;
+}
+body .allBody2 .projects .projectsIntro {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translate(-10%, -10%);
+  color: var(--sColor);
+}
+body .allBody2 .projects .projectsIntro .headerForProjectsIntro {
+  letter-spacing: 0.5vh;
+  margin-right: -0.5vh;
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  font-size: 4vh;
+}
+body .allBody2 .projects .projectsIntro .desForProjectsIntro {
+  font-family: "Jost", sans-serif;
+  text-align: center;
+  font-size: 2vh;
+}
+body .allBody2 .projects .projectsBackdrop {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  height: 30%;
+  background-image: repeating-linear-gradient(45deg, var(--pColor) 2vh, var(--sColor) 2vh, var(--pColor) 2vh, transparent 10%), repeating-linear-gradient(315deg, var(--sColor) 3vh, var(--pColor) 1vh, transparent 10%), repeating-linear-gradient(90deg, var(--pColor) 3vh, var(--sColor) 4vh, transparent 10%), repeating-linear-gradient(180deg, var(--pColor)-2vh, var(--sColor) 4vh);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+body .allBody2 .projects .projectsBackdrop2 {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  height: 15%;
+  background: var(--pColor);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+body .allBody2 .projects .projectsBackdrop3 {
+  position: absolute;
+  bottom: 20%;
+  width: 100%;
+  height: 15%;
+  background: var(--pColor);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+body .allBody2 .projects .bgOverlay {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  height: 30%;
+  background: var(--shadow);
+  opacity: 90%;
+  background-position: center;
+}
+body .allBody2 .projects .boxes {
+  padding: 0;
+  margin: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 72vh;
+  flex-wrap: wrap;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body .allBody2 .projects .boxes .boxed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: var(--sColor);
+  cursor: pointer;
+  width: 35vh;
+  height: 35vh;
+  position: relative;
+  overflow: hidden;
+}
+body .allBody2 .projects .boxes .boxed:hover .imagesP {
+  transform: scale(1.5);
+  opacity: 90%;
+}
+body .allBody2 .projects .boxes .boxed .imagesP {
+  transition: linear 0.1s;
+  background: var(--pColor);
+  padding: 1vh;
+  margin-right: -0.2em;
+  letter-spacing: 1vh;
+  color: var(--sColor);
+  font-size: 3vh;
+  font-weight: bold;
+  font-family: "Bebas Neue", cursive;
+}
+body .allBody2 .projects .boxes .boxed .projectsOl {
+  transition: linear 0.2s;
+  background: var(--pColor);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 80%;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1vh solid var(--sColor);
+}
+body .allBody2 .projects .boxes .boxed .projectsOl .projectsOlDes {
+  font-weight: bold;
+  letter-spacing: 0.5vh;
+  color: var(--sColor);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 10vh;
+}
+body .allBody2 .displayContents {
+  position: fixed;
+  top: 10%;
+  bottom: 10%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  max-width: 70%;
+}
+body .allBody2 .descriptionOfBoxes {
+  text-decoration: none;
+  margin-right: -0.2em;
+  letter-spacing: 1vh;
+  color: var(--pColor);
+  font-size: 5vh;
+  font-weight: bold;
+  font-family: monospace;
+}
+body .allBody2 .resultsOfDisplay {
+  padding: 0;
+  margin: 1vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-image: repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--sColor) 4vh, transparent 10%), repeating-linear-gradient(45deg, var(--pColor) 2vh, var(--sColor) 4vh, transparent 10%), repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--sColor) 4vh, transparent 10%), repeating-linear-gradient(45deg, var(--pColor) -2vh, var(--sColor) 4vh);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+body .allBody2 .resultsOfDisplay .boxesOfResult {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh;
+  cursor: pointer;
+  width: 35vh;
+  height: 35vh;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  box-shadow: 1vh 0.1vh 1vh var(--shadow);
+}
+body .allBody2 .resultsOfDisplay .boxesOfResult:hover {
+  -webkit-animation: rotate infinite ease 3s forwards;
+          animation: rotate infinite ease 3s forwards;
+}
+body .allBody2 .resultsOfDisplay .boxesOfResult:hover .overlayForDisplay {
+  visibility: visible;
+}
+body .allBody2 .resultsOfDisplay .boxesOfResult .overlayForDisplay {
+  transition: ease-in-out 0.2s;
+  background: var(--sColor);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 90%;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vh;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+body .allBody2 .sideArrow {
+  z-index: 9;
+  position: fixed;
+  bottom: 50%;
+  right: 0%;
+  transform: translate(-50%, 0%);
+  padding: 1vh 2vh;
+  margin: 0;
+  background: var(--sColor);
+  border-radius: 100%;
+  box-shadow: 0vh 0vh 1vh var(--shadow);
+  cursor: pointer;
+  font-family: "Jost", sans-serif;
+  color: var(--pColor);
+  font-size: 3vh;
+  font-weight: bold;
+}
+body .allBody2 .sideArrow:hover {
+  opacity: 50%;
+}
+body .allBody2 .displayHeaders {
+  color: var(--pColor);
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 1vh;
+  font-size: 5vh;
+  text-transform: uppercase;
+  position: fixed;
+  top: 1%;
+}
+body .allBody2 .projectsDisplay {
+  transition: linear 0.2s;
+  border-left: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: var(--sColor);
+  z-index: 9;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateX(-300%);
+}
+body .allBody2 .displayContentsForArtMobile {
+  visibility: hidden;
+}
+body .allBody2 .artsDisplay {
+  transition: ease-in-out 0.2s;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: var(--sColor);
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateX(-300%);
+}
+body .allBody2 .photosDisplay {
+  transition: ease-in-out 0.3s;
+  border-left: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: var(--sColor);
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateX(-300%);
+}
+body .allBody2 .gamesDisplay {
+  transition: ease-in-out 0.3s;
+  border-left: 0;
+  box-sizing: border-box;
+  padding: 0;
+  background: var(--sColor);
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateX(-300%);
+}
+body .allBody2 .active {
+  transform: translateX(0);
+}
+body .aboutSection {
+  width: 100%;
+  height: 100vh;
+  background: var(--nColor);
+  transition: linear 0.2s;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+body .aboutSection .headerForAboutSection {
+  font-size: 5vh;
+  color: var(--sColor);
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  transform: translate(-50%, -5%);
+  font-family: "Monoton", cursive;
+  text-transform: uppercase;
+  letter-spacing: 1vh;
+  margin-right: -1vh;
+}
+body .aboutSection .overlayForAboutSec {
+  position: absolute;
+  width: 30vh;
+  height: 100vh;
+  top: 0;
+  left: 1%;
+  background-image: repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--nColor) 4vh, transparent 10%), repeating-linear-gradient(45deg, var(--pColor) 2vh, var(--nColor) 4vh, transparent 10%), repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--nColor) 4vh, transparent 10%), repeating-linear-gradient(45deg, var(--pColor) -2vh, var(--nColor) 4vh);
+  background-position: center;
+  background-attachment: fixed;
+}
+body .aboutSection .introForAboutSection {
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+  transform: translate(-2%, -5%);
+  display: flex;
+  flex-direction: column;
+  color: var(--sColor);
+  text-align: center;
+}
+body .aboutSection .introForAboutSection .headerForIntroOfAboutSec {
+  font-size: 4vh;
+  font-weight: bold;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 0.3vh;
+  margin-right: -0.3vh;
+}
+body .aboutSection .introForAboutSection .desForIntroOfAboutSec {
+  font-size: 2vh;
+  font-family: "Jost", sans-serif;
+}
+body .aboutSection .aboutAllBoxes {
+  display: flex;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  margin: 0;
+  padding: 1vh;
+}
+body .aboutSection .aboutDes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1vh 1vh 2vh var(--pColor);
+  background-image: repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--sColor) 4vh, transparent 20%), repeating-linear-gradient(45deg, var(--pColor) 2vh, var(--sColor) 4vh, transparent 20%), repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--sColor) 4vh, transparent 20%), repeating-linear-gradient(45deg, var(--pColor) -2vh, var(--sColor) 4vh);
+  border-radius: 5%;
+  margin: 2vh;
+  padding: 1vh;
+  text-align: left;
+  height: 65vh;
+  width: 40vh;
+  position: relative;
+  overflow: hidden;
+}
+body .aboutSection .aboutDes:hover .aboutIntro {
+  visibility: visible;
+  transform: translateX(0);
+}
+body .aboutSection .aboutDes:hover .aboutHeader {
+  background: var(--pColor);
+  color: var(--sColor);
+}
+body .aboutSection .aboutDes .aboutHeader {
+  font-size: 4vh;
+  font-weight: bold;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 1vh;
+  background: var(--sColor);
+  padding: 1vh;
+  margin-right: -1vh;
+  opacity: 90%;
+}
+body .aboutSection .aboutDes .aboutIntro {
+  transition: ease-in-out 0.2s;
+  background: var(--sColor);
+  padding: 1vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 99%;
+  transform: translateX(-200vh);
+  visibility: hidden;
+}
+body .aboutSection .aboutDes .aboutIntro .aboutIntroDes {
+  font-size: 2vh;
+  font-family: "Jost", sans-serif;
+}
+body .aboutSection .aboutDes .educationLink {
+  text-decoration: none;
+  color: var(--pColor);
+  font-weight: bold;
+  font-size: 3vh;
+  letter-spacing: 0.1vh;
+  font-family: "Bebas Neue", cursive;
+}
+body .contactSection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: var(--p2Color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+body .contactSection .headerForContactSec {
+  height: 70%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sColor);
+  font-size: 10vh;
+  position: absolute;
+  letter-spacing: 1vh;
+  left: 10%;
+  top: 0;
+  font-family: "Monoton", cursive;
+}
+body .contactSection .contactSecOverlay1 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background: var(--sColor);
+  color: var(--sColor);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+body .contactSection .contactSecOverlay1 .socialLinks {
+  overflow: hidden;
+  width: 35vh;
+  border: 1vh solid var(--p2Color);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .contactSection .contactSecOverlay1 .socialLinks .contactSecHeader {
+  opacity: 90%;
+  border-radius: 0;
+  text-align: center;
+  font-size: 5vh;
+  letter-spacing: 0.3vh;
+  margin-bottom: 2vh;
+  color: var(--pColor);
+  font-weight: bold;
+  font-family: "Bebas Neue", cursive;
+}
+body .contactSection .contactSecOverlay1 .socialLinks .contactIntro .contactIntroDes {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: var(--pColor);
+  font-size: 2vh;
+  margin: 2vh 0;
+  font-family: "Jost", sans-serif;
+  filter: saturate(0%);
+}
+body .contactSection .contactSecOverlay1 .socialLinks .contactIntro .contactIntroDes .contactsA {
+  margin: 1vh;
+  padding: 0;
+}
+body .contactSection .contactSecOverlay1 .socialLinks .contactIntro .contactIntroDes .contactsA:hover {
+  opacity: 50%;
+}
+body .contactSection .contactSecOverlay1 .contactSecDesAboutMe {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--pColor);
+}
+body .contactSection .contactSecOverlay1 .contactSecDesAboutMe .headerForContactSecDes {
+  opacity: 90%;
+  border-radius: 0;
+  text-align: left;
+  font-size: 5vh;
+  letter-spacing: 0.3vh;
+  color: var(--pColor);
+  font-family: "Bebas Neue", cursive;
+}
+body .contactSection .contactSecOverlay1 .contactSecDesAboutMe .introForContactSecDes {
+  text-align: left;
+  text-decoration: none;
+  font-size: 2.5vh;
+  color: var(--pColor);
+  font-family: "Jost", sans-serif;
+  font-weight: bold;
+}
+body .contactSection .contactSecOverlay1 .contactSecDesAboutMe .introForContactSecDes .introDesForContactSecDes {
+  font-size: 2vh;
+  margin: 1vh;
+  opacity: 50%;
+}
+body .contactSection .contactSecOverlay1 .resumeLink {
+  overflow: hidden;
+  width: 35vh;
+  border: 1vh solid var(--p2Color);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .contactSection .contactSecOverlay1 .resumeLink .contactSecHeader {
+  opacity: 90%;
+  border-radius: 0;
+  text-align: center;
+  font-size: 5vh;
+  letter-spacing: 0.3vh;
+  color: var(--pColor);
+  font-weight: bold;
+  font-family: "Bebas Neue", cursive;
+}
+body .contactSection .contactSecOverlay1 .resumeLink a {
+  padding: 5vh;
+  text-decoration: none;
+  font-size: 3vh;
+  color: var(--pColor);
+  font-family: "Jost", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+body .contactSection .contactSecOverlay1 .resumeLink a:hover {
+  transform: scale(1.2);
+}
+body .contactSection .contactSecOverlay2 {
+  position: absolute;
+  top: 8vh;
+  right: 10vh;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 2vh var(--shadow);
+  padding: 4vh;
+  border-radius: 4vh;
+}
+body .contactSection .contactSecOverlay2 .emailForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .contactSection .contactSecOverlay2 .emailForm .part1OfEmail {
+  margin: 1vh;
+  display: flex;
+  flex-direction: row;
+}
+body .contactSection .contactSecOverlay2 .emailForm .part1OfEmail input {
+  width: 30vh;
+  height: 1vh;
+  border-radius: 1vh;
+  background: var(--p2Color);
+  border: none;
+  margin: 1vh;
+  color: var(--sColor);
+}
+body .contactSection .contactSecOverlay2 .emailForm .part2OfEmail input {
+  margin: 1vh;
+  width: 62vh;
+  height: 30vh;
+  border: none;
+  background-color: var(--p2Color);
+  opacity: 50%;
+  color: var(--sColor);
+}
+body .contactSection .contactSecOverlay2 .emailForm .emailInput {
+  padding: 2vh;
+  font-size: 2vh;
+  font-family: "Jost", sans-serif;
+  text-transform: uppercase;
+}
+body .contactSection .contactSecOverlay3 {
+  position: absolute;
+  transform: rotate(270deg);
+  right: 0%;
+  width: 40vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+body .contactSection .contactSecOverlay3 .contactSecHeader {
+  font-family: "Jost", sans-serif;
+  font-size: 4vh;
+  font-weight: bold;
+  color: var(--s2Color);
+  margin: 1vh;
+}
+body .contactSection .contactSecOverlay3 .contactSecDes a {
+  text-decoration: none;
+  font-family: "Jost", sans-serif;
+  font-size: 3vh;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--s2Color);
+}
+body .overlay {
+  transform: scale(0);
+  pointer-events: all;
+  z-index: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 90%;
+  background: var(--pColor);
+}
+body .activeOverlay {
+  transform: scale(1);
+}
+
+/*Optimized for mobile screen*/
+@media only screen and (max-width: 1620px) {
+  .projects {
+    margin: 0;
+    padding: 10vh 0;
+  }
+  .welcomePage::after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 30vh;
+    background: linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.3) 80%, var(--pColor) 100%);
+  }
+  .displayContents {
+    border: 2px solid black;
+  }
+  .notInMobile {
+    display: none;
+  }
+  #notInMobileId {
+    display: none;
+  }
+  .nav nav {
+    display: none;
+  }
+  .aboutSection {
+    display: none;
+  }
+  .contactSection {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
