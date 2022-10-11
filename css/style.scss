@@ -174,26 +174,29 @@ body{
 
     /*Inside the Nav bar*/
     .questionMark{
+        z-index: 8;
         overflow: hidden;
         cursor: pointer;
-        width:4vh;
-        height: 4vh;
+        position: fixed;
+        bottom:1%;
+        left:50%;
+        transform: translate(-50%, -1%);
         margin:0;
-        padding: 0;
+        padding: 1vh;
         display: flex;
         text-align: center;
         align-items: center;
         justify-content: center;
-        font-size: 3vh;
+        font-size: 2vh;
+        border-radius: 10vh;
         box-shadow: 0 0 1vh var(--shadow);
         background: var(--sColor);
-        border-radius: 100%;
         color:var(--pColor);
         font-family: 'Monoton',cursive;
     }
     .nav{
         margin: 0vh;
-        padding: 1vh;
+        padding: 0vh;
         z-index: 8;
         position: fixed;
         top:0;
@@ -206,7 +209,7 @@ body{
         .logo{
             box-sizing: border-box;
             margin: 0;
-            padding: 0vh;
+            padding: 1vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -226,7 +229,9 @@ body{
                    
                 }
         }
-        
+        nav{
+            align-self: center;
+        }
         .navOptions{
             display: flex;
             flex-direction: row;
@@ -313,7 +318,7 @@ body{
         .contact{
             height: 20vh;
             width: 30vh;
-            background: var(--p2Color);
+            background: var(--s2Color);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -880,10 +885,10 @@ body{
                 top: 35%;
                 width: 100%;
                 height: 30%;
-                background-image: repeating-linear-gradient(45deg, var(--pColor)2vh ,var(--s2Color)2vh,var(--pColor)2vh,transparent 10%),
-                                  repeating-linear-gradient(315deg, var(--s2Color)3vh ,var(--pColor)1vh,transparent 10%),
-                                  repeating-linear-gradient(90deg, var(--pColor)3vh ,var(--s2Color)4vh,transparent 10%),                  
-                                  repeating-linear-gradient(180deg, var(--pColor)-2vh ,var(--s2Color)4vh);
+                background-image: repeating-linear-gradient(45deg, var(--pColor)2vh ,var(--sColor)2vh,var(--pColor)2vh,transparent 10%),
+                                  repeating-linear-gradient(315deg, var(--sColor)3vh ,var(--pColor)1vh,transparent 10%),
+                                  repeating-linear-gradient(90deg, var(--pColor)3vh ,var(--sColor)4vh,transparent 10%),                  
+                                  repeating-linear-gradient(180deg, var(--pColor)-2vh ,var(--sColor)4vh);
                 background-position:center;
                 background-size:cover;
                 background-attachment: fixed;
@@ -1259,12 +1264,20 @@ body{
                     }
                     .Resume{
                         overflow: hidden;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0;
+                        margin: 1vh;
                         a{
                             transition: ease-in-out .2s;
                             font-family: var(--Header);
                             text-decoration: none;
                             font-size: 3vh;
                             padding: 1vh;
+                            text-align: center;
+                            width: 95%;
                             background: var(--s2Color);
                             color:var(--pColor);
                             &:hover{
@@ -1337,7 +1350,6 @@ body{
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        background: linear-gradient(to left,var(--pColor),var(--p2Color));
 
         //Upper part of contact section
         .contact-sec-overlay2{
@@ -1350,11 +1362,12 @@ body{
             width: 100%;
             margin:0;
             padding:5vh 0;
+            background: var(--s2Color);
 
             //Header For Contact Section
             .headerForContactSec{
-                color:var(--sColor);
-                font-size: 5vh;
+                color:var(--pColor);
+                font-size: 9vh;
                 font-family: 'Monoton', cursive;
                 margin: 1vh;
             }
@@ -1362,7 +1375,7 @@ body{
             //Email Form
                 .emailForm{
                     box-shadow: 0 0 2vh var(--shadow);
-                    backdrop-filter: blur(5px);
+                    backdrop-filter: blur(5vh);
                     margin: 0;
                     padding: 4vh;
                     border-radius: 4vh;
@@ -1383,11 +1396,11 @@ body{
                         input{
                             width:30vh;
                             height: 1vh;
-                            border:.1vh solid var(--sColor);
+                            border:.1vh solid var(--pColor);
                             border-radius: 1vh;
                             background: transparent;
                             margin: 1vh;
-                            color: var(--sColor);
+                            color: var(--pColor);
                         }
                     }
 
@@ -1402,10 +1415,10 @@ body{
                             padding: 1vh;
                             width: 95%;
                             height: 30vh;
-                            border:.1vh solid var(--sColor);
+                            border:.1vh solid var(--pColor);
                             border-radius: 1vh;
                             background-color: transparent;
-                            color: var(--sColor);
+                            color: var(--pColor);
                             font-size: 2vh;
                             font-family: var(--Text);
                             
@@ -1413,8 +1426,8 @@ body{
                         button{
                             width:10vh;
                             height: 5vh;
-                            background: var(--s2Color);
-                            color:var(--pColor);
+                            background: var(--pColor);
+                            color:var(--sColor);
                             border-radius: 1vh;
                             font-size: 2vh;
                             font-family: var(--Header);
@@ -1452,19 +1465,16 @@ body{
         .contactSecOverlay1{
             width:100%;
             min-height: 30vh;
-            border-top: 1vh solid var(--sColor);
             color: var(--sColor);
+            background: var(--Red-Color);
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content:space-evenly;
             flex-direction: row;
-            flex-wrap: wrap;
-
             //For social links
             .socialLinks{
                 overflow: hidden;
-                width: 35vh;
                 height: 100%;
                 display: flex;
                 justify-content: center;
@@ -1473,8 +1483,8 @@ body{
                 .contactSecHeader{
                     opacity: 90%;
                     border-radius: 0;
-                    text-align: center;
-                    font-size: 4vh;
+                    text-align:left;
+                    font-size: 3vh;
                     letter-spacing: .3vh;
                     margin-bottom: 2vh;
                     color: var(--sColor);
@@ -1514,12 +1524,13 @@ body{
                 flex-direction: column;
                 justify-content: center;
                 color:var(--sColor);
+                padding: 1vh;
                 .headerForContactSecDes
                 {
                     opacity: 90%;
                     border-radius: 0;
                     text-align: left;
-                    font-size: 5vh;
+                    font-size: 3vh;
                     letter-spacing: .3vh;
                     color: var(--sColor);
                     font-family: 'Bebas Neue', cursive; 
@@ -1528,7 +1539,7 @@ body{
                 {
                     text-align: left;
                     text-decoration: none;
-                    font-size: 2.5vh;
+                    font-size: 2vh;
                     color: var(--sColor);
                     font-family: 'Jost', sans-serif;
                     .introDesForContactSecDes{
@@ -1539,38 +1550,31 @@ body{
                 }
             }
 
-            //For resume link
-            .resumeLink{
+            //For Thanks section
+            .thanks-section{
                 overflow: hidden;
-                width: 35vh;
+                width: auto;
                 height: 100%;
                 display: flex;
                 justify-content: center;
-                align-items: center;
+                align-items: left;
                 flex-direction: column;
                
                 .contactSecHeader{
                     opacity: 90%;
                     border-radius: 0;
-                    text-align: center;
-                    font-size: 5vh;
+                    font-size: 3vh;
                     letter-spacing: .3vh;
                     color: var(--sColor);
                     font-weight: bold;
                     font-family: 'Bebas Neue', cursive; 
     
                 }
-                a{
-                    padding:5vh;
+                li{
                     text-decoration: none;
-                    font-size: 3vh;
-                    color: var(--sColor);
-                    font-family: 'Jost', sans-serif;
-                    text-transform:uppercase;
-                    font-weight: bold;
-                    &:hover{
-                        transform: scale(1.2);
-                    }
+                    font-size: 2vh;
+                    color: var(--Text-Color);
+                    font-family: var(--Text);
                 }
                 
             }
@@ -1661,6 +1665,17 @@ body{
     }
     .contactSection{
         display:none;
+    }
+
+    .skill-section{
+        .icons{
+            img{
+                margin:0;
+            }
+        }
+    }
+    .nav{
+        visibility: collapse;
     }
 }
 
