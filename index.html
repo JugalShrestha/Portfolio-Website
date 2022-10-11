@@ -417,7 +417,7 @@
             </div>
         </div>
         
-        <div id="notInMobileId">
+        
         <!--About Section-->
         <div id="allA1" class="aboutSection">
             
@@ -425,75 +425,89 @@
                 About Me
             </div>
             
-            <div class="overlayForAboutSec"></div>
+            <div id="notInMobileId" class="overlayForAboutSec"></div>
 
-            <div class="notInMobile">
-                <div id="introForAboutSecId" class="introForAboutSection">
-                    <div class="headerForIntroOfAboutSec">
-                        And
-                    </div>
-                    <div class="desForIntroOfAboutSec">
-                        Please Click the Bold Words<br>
-                        to learn more about them<br>
-                        via External links,<br>
-                        Thank you!..
-                    </div>
-                </div>
-            </div>    
             <div id="aboutAllBoxesId" class="aboutAllBoxes">
-                <!--<div class="aboutDes">
-                    <p class="aboutHeader">
-                        EDUCATION
-                    </p>
-                    <div class="aboutIntro">
-                        <p class="aboutIntroDes">
-                            <a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/MountGloryEBHS">SCHOOL</a> &check; 3.7<br>
-                            <a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/nccspaknajol">HIGH SCHOOL</a> &check; 3.3<br>
-                            <a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sxcmaitighar">COLLEGE</a> On going...<br>BIM
-                        </p>
+
+                <div class="Part1-With-Photo-Resume">
+                    <div class="Photo">
+                        <img src="images/Jugal Photo/About-Section-Photo.jpg" alt="">
                     </div>
-                </div>
-                <div class="aboutDes">
-                    <p class="aboutHeader">
-                        SKILLS 
-                    </p>
-                    <div class="aboutIntro">
-                        <p class="aboutIntroDes">
-                            HTML &check;<br>
-                            CSS &check;<br>
-                            Java &check;<br>
-                            C &check;<br>
-                            ETC &check;<br>
-                        </p>
+                    <div class="Resume">
+                        <a target="_blank" href="Resume.pdf">résumé ?</a>
                     </div>
-                </div>
-                <div class="aboutDes">
-                    <p class="aboutHeader">
-                        EXPERIENCE
-                    </p>
-                    <div class="aboutIntro">
-                        <p class="aboutIntroDes">
-                            <a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://www.transperfect.com/about">TRANSPERFECT:</a>&check;
-                            <br><a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://appen.com">APPEN:</a> &check;<br>
-                            FREELANCING &check;
-                        </p>
-                    </div>
-                </div>-->
-                <div class="aboutDes">
-                    Hellow
                 </div>
 
+                <div class="Part2-With-Des">
+                    <div class="Sub-Header">
+                        Hi I am Jugal,
+                    </div>
+                    <div class="Body-Part">
+                        Currentlty, I am a student pursuing
+                        bachelor's degree in BIM (IT) who is
+                        working as a Freelancer for any projects
+                        that suits my fit, I am an Artist
+                        on side, a web developer on need and overall
+                        a creative problem solver.<br><br>
+                        I have worked with company such as,
+                        transperfect and appen doing Freelancing
+                        for them. I have a little experience of
+                        leading and working in a team through my
+                        own little clubs that I run. Also, I am someone
+                        who has worked with many other creative minds
+                        So, working in a team won't be a problem for me.<br><br>
+                        That's it for me! What about you?
+                    </div>
+                </div>
             </div>
+
+            <div class="skill-section">
+                <div class="header">
+                    Skills that I have,
+                </div>
+                <div class="icons">
+                    <img src="images/skills-icon/html-5.png" alt="html">
+                    <img src="images/skills-icon/java.png" alt="java">
+                    <img src="images/skills-icon/java-script.png" alt="JS">
+                    <img src="images/skills-icon/css.png" alt="CSs">
+                    <img src="images/skills-icon/c-document.png" alt="C">
+                </div>
+            </div>
+
         </div>
 
+
+        
         <!--Contact Section-->
         <div id="allC1" class="contactSection">
 
-            <!--Header for contact Section-->
-            <div id="Contacts-Header" class="headerForContactSec">
-                CONTACTS
-            </div>
+            <!--Upper Part of contacts-->
+            <div class="contact-sec-overlay2">
+                <!--Header for contact Section-->
+                <div id="Contacts-Header" class="headerForContactSec">
+                    CONTACTS
+                </div> 
+                
+                  <!--Email form of contact-->
+                    <div class="emailForm">
+                        <form id="my-form" action="https://formspree.io/f/xaykbdoj" method="post">
+                            <!--Part 1 of email-->
+                            <div class="part1OfEmail">
+                                <input id="nameOfEmail" placeholder="Name Here" class="emailInput" type="text">
+                                <input id="emailOfEmail" placeholder="Email Here" class="emailInput" type="text" title="Subject">
+                            </div>
+                            <!--Part 2 of email-->
+                            <div class="part2OfEmail">
+                                <textarea placeholder="Message Here" name="message" id="email-msg" cols="30" rows="10"></textarea>
+                                <button type="submit">Send</button>
+                                <p id=my-form-status></p>
+                            </div>
+                        </form>
+                    </div>
 
+            </div>
+            
+            
             <!--Bottom part of contact section-->
             <div class="contactSecOverlay1">
 
@@ -524,7 +538,7 @@
                 </div>
 
                 <!--Description about me-->
-                <div class="contactSecDesAboutMe">
+                <div id="notInMobileId" class="contactSecDesAboutMe">
                     <div class="headerForContactSecDes">
                         Jugal Shrestha.
                     </div>
@@ -551,31 +565,14 @@
 
             </div>
 
-            <!--Email form of contact-->
-            <div  id="Email-Form-Id" class="contactSecOverlay2">
-                <div class="emailForm">
-
-                    <!--Part 1 of email-->
-                    <div class="part1OfEmail">
-                        <input id="nameOfEmail" placeholder="Name" class="emailInput" type="text">
-                        <input id="emailOfEmail" placeholder="Email" class="emailInput" type="text" title="Subject">
-                    </div>
-
-                    <!--Part 2 of email-->
-                    <div class="part2OfEmail">
-                        <input id="bodyOfEmail" class="emailInput" type="text">
-                        
-                    </div>
-                </div>
-            </div>
-
+          
             <!--Extra part of contact-->
             <div class="contactSecOverlay3">
 
             </div>
 
         </div>
-
+        <div id="notInMobileId">
         </div>
 
     </div>
@@ -585,5 +582,6 @@
 <script src="Scripts/loader.js"></script>
 <script src="Scripts/parallax.js"></script>
 <script src="Scripts/scroll-reveal.js"></script>
+<script src="Scripts/form-send.js"></script>
 </html>
 

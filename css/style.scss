@@ -122,6 +122,8 @@ body::-webkit-scrollbar-track{
     --s2Color:#F2E205;
     --p2Color:#060d1e;
     --Red-Color:#F20505;
+    --Header:'Bebas Neue', cursive;
+    --Text:'Jost', sans-serif;
 }
 *{
     margin:0;
@@ -1171,36 +1173,32 @@ body{
     //About Section
     .aboutSection{
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         background:var(--nColor);
         transition: linear .2s;
         position: relative;
-        padding: 0;
+        padding: 1vh;
         margin: 0;
         display: flex;
         flex-direction: column;
         flex-wrap:nowrap;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
 
         .headerForAboutSection{
             font-size: 5vh;
             color:var(--sColor);
-            position: absolute;
-            top: 5%;
-            right:10%;
-            transform: translate(-50%,-5%);
             font-family: 'Monoton', cursive;
             text-transform: uppercase;
             letter-spacing: 1vh;
             margin-right: -1vh;
+            padding-bottom: 2vh;
         }
         .overlayForAboutSec
         {
             position: absolute;
             width:30vh;
-            height: 100vh;
+            height: 100%;
             top:0;
             left:1%;
             background-image:repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--nColor) 4vh, transparent 10%),
@@ -1234,65 +1232,99 @@ body{
         }
         .aboutAllBoxes{
                 display: flex;
-                position: absolute;
-                bottom:10%;
-                left:0;
                 flex-direction: row;
+                flex-wrap: wrap;
                 align-items: center;
-                justify-content: center;
-                background: transparent;
-                margin:0;
+                justify-content:center;
                 padding: 1vh;
-            }
-            .aboutDes{
-                display: flex;
-                flex-direction:column;
-                flex-wrap: nowrap;
-                align-items: center;
-                justify-content: center;
-                box-shadow: 1vh 1vh 2vh  var(--pColor);
-                margin:2vh;
-                padding: 1vh;
-                text-align: left;
-                overflow: hidden;
-                .aboutHeader{
-                    font-size: 4vh;
-                    font-weight: bold;
-                    font-family: 'Bebas Neue', cursive;
-                    letter-spacing: 1vh;
-                    background: var(--sColor);
-                    padding: 1vh;
-                    margin-right: -1vh;
-                    opacity: 90%;
-                }
-                .aboutIntro{
-                    transition: ease-in-out .2s;
-                    background: var(--sColor);
-                    padding: 1vh;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    border-radius: 5%;
+                color:var(--Text-Color);
+                .Part1-With-Photo-Resume{
                     display: flex;
-                    justify-content: center;
+                    flex-direction: column;
                     align-items: center;
-                    opacity: 99%;
-                    transform: translateX(-200vh);
-                    visibility: hidden;
-                    .aboutIntroDes{
-                        font-size: 2vh;
-                        font-family: 'Jost', sans-serif;
+                    justify-content: center;
+                    margin: 1vh;
+                    .Photo{
+                        box-sizing: border-box;
+                        margin: 1vh;
+                        padding: 0;
+                        overflow: hidden;
+                        border:1vh solid var(--sColor);
+                        img{
+                            width:40vh;
+                            height:40vh;
+                            object-fit: contain;
+                            transform: scale(2);
+                        }
+                    }
+                    .Resume{
+                        overflow: hidden;
+                        a{
+                            transition: ease-in-out .2s;
+                            font-family: var(--Header);
+                            text-decoration: none;
+                            font-size: 3vh;
+                            padding: 1vh;
+                            background: var(--s2Color);
+                            color:var(--pColor);
+                            &:hover{
+                                background: var(--sColor);
+                            }
+                        }
                     }
                 }
-                .educationLink{
-                    text-decoration: none;
-                    color:var(--pColor);
-                    font-weight: bold;
-                    font-size: 3vh;
-                    letter-spacing: .1vh;
-                    font-family: 'Bebas Neue', cursive;
+                .Part2-With-Des{
+                    max-width: 40vh;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: left;
+                    justify-content: center;
+                    .Sub-Header{
+                        font-family: var(--Header);
+                        font-size: 4vh;
+                        text-align: left;
+                        font-weight: bold;
+                        letter-spacing: .5vh;
+                    }
+                    .Body-Part{
+                        font-family: var(--Text);
+                        text-align: justify;
+                        font-size:2vh;
+                    }
+                }
+
+            }
+            .skill-section{
+                z-index: 1;
+                min-height: 20vh;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color:var(--Text-Color);
+                margin-top: 5vh;
+
+                .header{
+                    font-family: var(--Header);
+                    font-size: 4vh;
+                    letter-spacing: .5vh;
+                }
+
+                .icons{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        margin:1vh 3vh;
+                        width:10vh;
+                        height: 10vh;
+                        opacity: 50%;
+                        &:hover{
+                            opacity: 100%;
+                        }
+                    }
                 }
             }
             
@@ -1300,43 +1332,134 @@ body{
 
     //Contact Section
     .contactSection{
-        position: relative;
-        width:100%;
-        height: 100vh;
-        background: var(--p2Color);
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        background: linear-gradient(to left,var(--pColor),var(--p2Color));
 
-        //Header For Contact Section
-        .headerForContactSec{
-            height: 70%;
-            width: 50%;
+        //Upper part of contact section
+        .contact-sec-overlay2{
             display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
-            color:var(--sColor);
-            font-size: 10vh;
-            position: absolute;
-            letter-spacing: 1vh;
-            left:10%;
-            top:0;
-            font-family: 'Monoton', cursive;
+            min-height: 70vh;
+            width: 100%;
+            margin:0;
+            padding:5vh 0;
+
+            //Header For Contact Section
+            .headerForContactSec{
+                color:var(--sColor);
+                font-size: 5vh;
+                font-family: 'Monoton', cursive;
+                margin: 1vh;
+            }
+
+            //Email Form
+                .emailForm{
+                    box-shadow: 0 0 2vh var(--shadow);
+                    backdrop-filter: blur(5px);
+                    margin: 0;
+                    padding: 4vh;
+                    border-radius: 4vh;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    align-items:center;
+                    justify-content: center;
+
+                    .part1OfEmail{
+                        margin: 1vh;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        
+                        input{
+                            width:30vh;
+                            height: 1vh;
+                            border:.1vh solid var(--sColor);
+                            border-radius: 1vh;
+                            background: transparent;
+                            margin: 1vh;
+                            color: var(--sColor);
+                        }
+                    }
+
+                    .part2OfEmail{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        textarea{
+                            margin: 1vh;
+                            padding: 1vh;
+                            width: 95%;
+                            height: 30vh;
+                            border:.1vh solid var(--sColor);
+                            border-radius: 1vh;
+                            background-color: transparent;
+                            color: var(--sColor);
+                            font-size: 2vh;
+                            font-family: var(--Text);
+                            
+                        }
+                        button{
+                            width:10vh;
+                            height: 5vh;
+                            background: var(--s2Color);
+                            color:var(--pColor);
+                            border-radius: 1vh;
+                            font-size: 2vh;
+                            font-family: var(--Header);
+                            letter-spacing: .5vh;
+                            font-weight: bold;
+                            border: none;
+                            cursor: pointer;
+                            align-self: flex-end;
+                            margin: 1vh;
+                            opacity: 50%;
+                            &:hover{
+                                opacity: 100%;
+                            }
+                        }
+
+                        p{
+                            font-size: 2vh;
+                            font-family: var(--Text);
+                            color:var(--Text-Color);
+                            padding: 1vh;
+                        }
+                    }
+
+                    .emailInput{
+                        padding: 2vh;
+                        font-size: 2vh;
+                        font-family: 'Jost', sans-serif;
+                        text-transform: uppercase;
+                    }
+                }
+
         }
 
         //Bottom part of contact section
         .contactSecOverlay1{
-            position: absolute;
-            bottom:0;
             width:100%;
-            height: 30%;
+            min-height: 30vh;
             border-top: 1vh solid var(--sColor);
             color: var(--sColor);
             overflow: hidden;
             display: flex;
-            justify-content: space-between;
+            align-items: center;
+            justify-content:space-evenly;
             flex-direction: row;
+            flex-wrap: wrap;
 
             //For social links
             .socialLinks{
@@ -1351,7 +1474,7 @@ body{
                     opacity: 90%;
                     border-radius: 0;
                     text-align: center;
-                    font-size: 5vh;
+                    font-size: 4vh;
                     letter-spacing: .3vh;
                     margin-bottom: 2vh;
                     color: var(--sColor);
@@ -1453,60 +1576,6 @@ body{
             }
         }
 
-        //Email Form
-        .contactSecOverlay2{
-            position: absolute;
-            top:8vh;
-            right:10vh;
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 2vh var(--shadow);
-            padding: 4vh;
-            border-radius: 4vh;
-            
-            .emailForm{
-                display: flex;
-                flex-direction: column;
-                align-items:center;
-                justify-content: center;
-
-                .part1OfEmail{
-                    margin: 1vh;
-                    display: flex;
-                    flex-direction: row;
-                    
-                    input{
-                        width:30vh;
-                        height: 1vh;
-                        border-radius: 1vh;
-                        background: var(--p2Color);
-                        border:none;
-                        margin: 1vh;
-                        color: var(--sColor);
-                    }
-                }
-
-                .part2OfEmail{
-                    input{
-                        margin: 1vh;
-                        width: 62vh;
-                        height: 30vh;
-                        border:none;
-                        background-color: var(--p2Color);
-                        opacity: 50%;
-                        color: var(--sColor);
-                        
-                    }
-                }
-
-                .emailInput{
-                    padding: 2vh;
-                    font-size: 2vh;
-                    font-family: 'Jost', sans-serif;
-                    text-transform: uppercase;
-                }
-            }
-            
-        }
 
         .contactSecOverlay3{
             position:absolute;
@@ -1594,3 +1663,4 @@ body{
         display:none;
     }
 }
+
