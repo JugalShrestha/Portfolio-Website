@@ -204,11 +204,13 @@ body::-webkit-scrollbar-track {
 :root {
   --shadow:black;
   --pigColor: rgb(21, 20, 20);
-  --pColor: rgb(0, 0, 0);
+  --pColor: #0D0D0D;
   --sColor: rgb(232, 236, 246);
-  --nColor: #1f7e7e;
-  --s2Color:#cedcfa;
+  --Text-Color: white;
+  --nColor: #01403A;
+  --s2Color:#F2E205;
   --p2Color:#060d1e;
+  --Red-Color:#F20505;
 }
 
 * {
@@ -288,44 +290,34 @@ body .nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: transparent;
+  opacity: 98%;
+  background: var(--pColor);
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  opacity: 80%;
+  justify-content: space-evenly;
 }
 body .nav .logo {
   box-sizing: border-box;
   margin: 0;
-  width: 6vh;
-  height: 6vh;
   padding: 0vh;
-  background: var(--pColor);
-  border-radius: 100%;
-  border: 0.7vh solid var(--pColor);
-  border-top: 0.7vh double var(--sColor);
-  border-bottom: 0.7vh double var(--sColor);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: linear 0.2s;
+}
+body .nav .logo:hover {
+  background: var(--Red-Color);
 }
 body .nav .logo a {
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--sColor);
-  font-size: 2vh;
+  color: var(--Text-Color);
+  letter-spacing: 0.5vh;
+  font-size: 3vh;
   font-family: "Monoton", cursive;
 }
 body .nav .navOptions {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin-right: 1vh;
-  background: var(--nColor);
-  box-shadow: 0 0 0.5vh var(--shadow);
-  border-radius: 10vh;
-  margin: 1vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -333,24 +325,21 @@ body .nav .navOptions {
 }
 body .nav .navOptions li {
   display: inline-block;
-  padding: 1vh;
-  margin: 0;
+  margin: 0 1vh;
+  padding: 0 1vh;
 }
 body .nav .navOptions li a {
   transition: 0.2s linear;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2vh;
-  color: var(--pColor);
-  box-shadow: 0 0 1vh var(--shadow);
-  font-family: "Bebas Neue", cursive;
+  font-size: 1.5vh;
+  color: var(--Text-Color);
+  font-family: "Jost", sans-serif;
+  font-weight: bold;
   text-transform: uppercase;
-  padding: 0vh 1vh;
-  border-radius: 10vh;
 }
 body .nav .navOptions li a:hover {
-  border-bottom: 0.4vh solid var(--pColor);
-  color: var(--sColor);
+  opacity: 50%;
 }
 body .MobileNav {
   z-index: 9;
@@ -743,14 +732,10 @@ body .allBody2 .welcomePage {
   position: relative;
   width: 100%;
   height: 100vh;
-  /*background-image:repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--nColor) 4vh, transparent 20%),
-                      repeating-linear-gradient(45deg ,var(--pColor) 2vh, var(--nColor) 4vh, transparent 20%),
-                      repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--nColor) 4vh, transparent 20%),
-                      repeating-linear-gradient(45deg ,var(--pColor) -2vh, var(--nColor) 4vh);
-  */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  /* background-image:repeating-linear-gradient(180deg,var(--pColor)2vh,var(--sColor)20vh,transparent 20%),
+   repeating-linear-gradient(315deg,var(--pColor)20vh,var(--sColor)20vh,transparent 20%),
+   repeating-linear-gradient(0deg,var(--pColor)-5vh,var(--sColor)5vh);*/
+  background: conic-gradient(seashell, var(--s2Color));
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -789,12 +774,14 @@ body .allBody2 .welcomePage .introduction .greetings2 {
   font-size: 2vh;
   font-family: "Cedarville Cursive", cursive;
   letter-spacing: 0.5vh;
-  font-weight: bold;
   padding: 1vh;
+  font-weight: bold;
 }
 body .allBody2 .welcomePage .introduction .greetings2 span {
-  font-size: 3em;
+  font-weight: lighter;
+  font-size: 6vh;
   font-family: "Monoton", cursive;
+  text-transform: uppercase;
 }
 body .allBody2 .welcomePage .introduction .greetings3 {
   pointer-events: none;
@@ -851,39 +838,6 @@ body .allBody2 .welcomePage .standingImageOfJugal img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-body .allBody2 .welcomePage .hillsBg img {
-  position: absolute;
-  filter: hue-rotate(70deg) blur(0px);
-  bottom: 0%;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-body .allBody2 .welcomePage .hillsBg2 img {
-  transform: rotate(180deg);
-  filter: hue-rotate(70deg) blur();
-  position: absolute;
-  top: 0;
-  right: 0;
-  pointer-events: none;
-  width: 60%;
-  height: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-body .allBody2 .welcomePage .birds img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transform: translate(-50%, -50%);
-  width: 30%;
-  height: 30%;
-  filter: grayscale(100%);
-}
 body .allBody2 .welcomePage .upArrow {
   z-index: 1;
   -webkit-animation: blink 2s infinite 2s forwards;
@@ -928,7 +882,7 @@ body .allBody2 .projects {
   justify-content: center;
   width: 100%;
   min-height: 100vh;
-  background: var(--pColor);
+  background: var(--shadow);
   overflow: hidden;
 }
 body .allBody2 .projects .notInMobile {
@@ -971,7 +925,7 @@ body .allBody2 .projects .projectsBackdrop {
   top: 35%;
   width: 100%;
   height: 30%;
-  background-image: repeating-linear-gradient(45deg, var(--pColor) 2vh, var(--sColor) 2vh, var(--pColor) 2vh, transparent 10%), repeating-linear-gradient(315deg, var(--sColor) 3vh, var(--pColor) 1vh, transparent 10%), repeating-linear-gradient(90deg, var(--pColor) 3vh, var(--sColor) 4vh, transparent 10%), repeating-linear-gradient(180deg, var(--pColor)-2vh, var(--sColor) 4vh);
+  background-image: repeating-linear-gradient(45deg, var(--pColor) 2vh, var(--s2Color) 2vh, var(--pColor) 2vh, transparent 10%), repeating-linear-gradient(315deg, var(--s2Color) 3vh, var(--pColor) 1vh, transparent 10%), repeating-linear-gradient(90deg, var(--pColor) 3vh, var(--s2Color) 4vh, transparent 10%), repeating-linear-gradient(180deg, var(--pColor)-2vh, var(--s2Color) 4vh);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -981,7 +935,7 @@ body .allBody2 .projects .projectsBackdrop2 {
   top: 20%;
   width: 100%;
   height: 15%;
-  background: var(--pColor);
+  background: var(--shadow);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -991,7 +945,7 @@ body .allBody2 .projects .projectsBackdrop3 {
   bottom: 20%;
   width: 100%;
   height: 15%;
-  background: var(--pColor);
+  background: var(--shadow);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -1037,10 +991,10 @@ body .allBody2 .projects .boxes .boxed:hover {
 }
 body .allBody2 .projects .boxes .boxed .imagesP {
   transition: linear 0.1s;
-  background: var(--pColor);
+  background: var(--s2Color);
   padding: 1vh;
   letter-spacing: 1vh;
-  color: var(--sColor);
+  color: var(--pColor);
   font-size: 3vh;
   font-weight: bold;
   font-family: "Bebas Neue", cursive;
@@ -1310,23 +1264,10 @@ body .aboutSection .aboutDes {
   align-items: center;
   justify-content: center;
   box-shadow: 1vh 1vh 2vh var(--pColor);
-  background-image: repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--sColor) 4vh, transparent 20%), repeating-linear-gradient(45deg, var(--pColor) 2vh, var(--sColor) 4vh, transparent 20%), repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--sColor) 4vh, transparent 20%), repeating-linear-gradient(45deg, var(--pColor) -2vh, var(--sColor) 4vh);
-  border-radius: 5%;
   margin: 2vh;
   padding: 1vh;
   text-align: left;
-  height: 65vh;
-  width: 40vh;
-  position: relative;
   overflow: hidden;
-}
-body .aboutSection .aboutDes:hover .aboutIntro {
-  visibility: visible;
-  transform: translateX(0);
-}
-body .aboutSection .aboutDes:hover .aboutHeader {
-  background: var(--pColor);
-  color: var(--sColor);
 }
 body .aboutSection .aboutDes .aboutHeader {
   font-size: 4vh;

@@ -115,11 +115,13 @@ body::-webkit-scrollbar-track{
 :root{
     --shadow:black;
     --pigColor: rgb(21, 20, 20);
-    --pColor: rgb(0, 0, 0);
+    --pColor: #0D0D0D;
     --sColor: rgb(232, 236, 246);
-    --nColor: #1f7e7e;
-    --s2Color:#cedcfa;
+    --Text-Color: white;
+    --nColor: #01403A;
+    --s2Color:#F2E205;
     --p2Color:#060d1e;
+    --Red-Color:#F20505;
 }
 *{
     margin:0;
@@ -194,64 +196,55 @@ body{
         position: fixed;
         top:0;
         width: 100%;
-        background:transparent;
+        opacity: 98%;
+        background:var(--pColor);
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        opacity: 80%;
+        justify-content: space-evenly;
         .logo{
             box-sizing: border-box;
             margin: 0;
-            width: 6vh;
-            height: 6vh;
             padding: 0vh;
-            background: var(--pColor);
-            border-radius: 100%;
-            border:.7vh solid var(--pColor);
-            border-top: .7vh double var(--sColor);
-            border-bottom: .7vh double var(--sColor);
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
+            transition: linear .2s;
+            &:hover{
+                background: var(--Red-Color);
+            }
                 a{
                     text-transform: uppercase;
                     text-decoration: none;
-                    color:var(--sColor);
-                    font-size: 2vh;
+                    color:var(--Text-Color);
+                    letter-spacing: .5vh;
+                    font-size: 3vh;
                     font-family: 'Monoton',cursive;
+
+                   
                 }
         }
         
         .navOptions{
-            height: fit-content;
-            margin-right: 1vh;
-            background: var(--nColor);
-            box-shadow: 0 0 .5vh var(--shadow);
-            border-radius: 10vh;
-            margin:1vh;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
             li{
                 display: inline-block;
-                padding: 1vh;
-                margin: 0;
+                margin: 0 1vh;
+                padding: 0 1vh;
                 a{
                     transition: .2s linear;
                     cursor: pointer;
                     text-decoration: none;
-                    font-size:2vh;
-                    color:var(--pColor);
-                    box-shadow: 0 0 1vh var(--shadow);
-                    font-family: 'Bebas Neue', cursive;
+                    font-size:1.5vh;
+                    color:var(--Text-Color);
+                    font-family: 'Jost', sans-serif;
+                    font-weight: bold;
                     text-transform: uppercase;
-                    padding:0vh 1vh;
-                    border-radius: 10vh;
                     &:hover{
-                        border-bottom: .4vh solid var(--pColor);
-                        color:var(--sColor);
+                        opacity: 50%;
                     }
                 }
             }
@@ -667,14 +660,10 @@ body{
             position:relative;
             width:100%;
             height: 100vh;
-            /*background-image:repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--nColor) 4vh, transparent 20%),
-                                repeating-linear-gradient(45deg ,var(--pColor) 2vh, var(--nColor) 4vh, transparent 20%),
-                                repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--nColor) 4vh, transparent 20%),
-                                repeating-linear-gradient(45deg ,var(--pColor) -2vh, var(--nColor) 4vh);
-            */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+           /* background-image:repeating-linear-gradient(180deg,var(--pColor)2vh,var(--sColor)20vh,transparent 20%),
+            repeating-linear-gradient(315deg,var(--pColor)20vh,var(--sColor)20vh,transparent 20%),
+            repeating-linear-gradient(0deg,var(--pColor)-5vh,var(--sColor)5vh);*/
+            background: conic-gradient(seashell, var(--s2Color));
             margin:0;
             padding: 0;
             overflow: hidden;
@@ -712,11 +701,13 @@ body{
                     font-size: 2vh;
                     font-family: 'Cedarville Cursive', cursive;
                     letter-spacing: .5vh;
-                    font-weight: bold;
                     padding: 1vh;
+                    font-weight: bold;
                     span{
-                        font-size: 3em;
+                        font-weight: lighter;
+                        font-size: 6vh;
                         font-family: 'Monoton', cursive;
+                        text-transform: uppercase;
                     }
                 }
                 .greetings3{
@@ -778,47 +769,6 @@ body{
                 pointer-events:none;
                 object-fit: cover;
             }
-
-            //Hills Image
-            .hillsBg{
-                img{
-                    position:absolute;
-                    filter: hue-rotate(70deg) blur(0px);
-                    bottom: 0%;
-                    width: 100%;
-                    height: 100%;
-                    pointer-events:none;
-                    object-fit: cover;
-                }
-            }
-            .hillsBg2{
-                img{
-                    transform: rotate(180deg);
-                    filter: hue-rotate(70deg) blur();
-                    position: absolute;
-                    top:0;
-                    right:0;
-                    pointer-events: none;
-                    width:60%;
-                    height:50%;
-                    object-fit: cover;
-                }
-            }
-
-            //birds
-            .birds{
-                img{
-                    position: absolute;
-                    top:50%;
-                    left: 50%;
-                    object-fit: cover;
-                    transform: translate(-50%,-50%);
-                    width:30%;
-                    height: 30%;
-                    filter:grayscale(100%);
-                }
-            }
-
 
             //Instruction for scroll
             .upArrow{
@@ -884,7 +834,7 @@ body{
             justify-content: center;
             width: 100%;
             min-height: 100vh;
-            background: var(--pColor);
+            background: var(--shadow);
             overflow: hidden;
 
             .notInMobile{
@@ -928,10 +878,10 @@ body{
                 top: 35%;
                 width: 100%;
                 height: 30%;
-                background-image: repeating-linear-gradient(45deg, var(--pColor)2vh ,var(--sColor)2vh,var(--pColor)2vh,transparent 10%),
-                                  repeating-linear-gradient(315deg, var(--sColor)3vh ,var(--pColor)1vh,transparent 10%),
-                                  repeating-linear-gradient(90deg, var(--pColor)3vh ,var(--sColor)4vh,transparent 10%),                  
-                                  repeating-linear-gradient(180deg, var(--pColor)-2vh ,var(--sColor)4vh);
+                background-image: repeating-linear-gradient(45deg, var(--pColor)2vh ,var(--s2Color)2vh,var(--pColor)2vh,transparent 10%),
+                                  repeating-linear-gradient(315deg, var(--s2Color)3vh ,var(--pColor)1vh,transparent 10%),
+                                  repeating-linear-gradient(90deg, var(--pColor)3vh ,var(--s2Color)4vh,transparent 10%),                  
+                                  repeating-linear-gradient(180deg, var(--pColor)-2vh ,var(--s2Color)4vh);
                 background-position:center;
                 background-size:cover;
                 background-attachment: fixed;
@@ -942,7 +892,7 @@ body{
                 top: 20%;
                 width: 100%;
                 height: 15%;
-                background:var(--pColor);
+                background:var(--shadow);
                 background-position:center;
                 background-size:cover;
                 background-attachment: fixed;
@@ -953,7 +903,7 @@ body{
                 bottom: 20%;
                 width: 100%;
                 height: 15%;
-                background:var(--pColor);
+                background:var(--shadow);
                 background-position:center;
                 background-size:cover;
                 background-attachment: fixed;
@@ -1000,10 +950,10 @@ body{
                     }
                     .imagesP{
                         transition: linear .1s;
-                        background: var(--pColor);
+                        background: var(--s2Color);
                         padding:1vh;
                         letter-spacing: 1vh;
-                        color: var(--sColor);
+                        color: var(--pColor);
                         font-size: 3vh;
                         font-weight: bold;
                         font-family: 'Bebas Neue', cursive;
@@ -1301,28 +1251,10 @@ body{
                 align-items: center;
                 justify-content: center;
                 box-shadow: 1vh 1vh 2vh  var(--pColor);
-                background-image:repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--sColor) 4vh, transparent 20%),
-                                repeating-linear-gradient(45deg ,var(--pColor) 2vh, var(--sColor) 4vh, transparent 20%),
-                                repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--sColor) 4vh, transparent 20%),
-                                repeating-linear-gradient(45deg ,var(--pColor) -2vh, var(--sColor) 4vh);
-                border-radius: 5%;
                 margin:2vh;
                 padding: 1vh;
                 text-align: left;
-                height: 65vh;
-                width: 40vh;
-                position: relative;
                 overflow: hidden;
-                &:hover{
-                    .aboutIntro{
-                        visibility: visible;
-                        transform: translateX(0);
-                    }
-                    .aboutHeader{
-                        background: var(--pColor);
-                        color:var(--sColor);
-                    }
-                }
                 .aboutHeader{
                     font-size: 4vh;
                     font-weight: bold;

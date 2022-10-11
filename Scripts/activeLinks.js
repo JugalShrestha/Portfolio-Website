@@ -14,7 +14,7 @@ hoverer1.addEventListener("mouseover",active1,false);
 hoverer1.addEventListener("mouseout",remove1,false);
 
 function active1(){
-    activeL1.style.background= "white";
+    activeL1.style.background= "#F20505";
 }
 function remove1(){
     activeL1.style.background="transparent";
@@ -25,7 +25,7 @@ hoverer2.addEventListener("mouseover",active2,false);
 hoverer2.addEventListener("mouseout",remove2,false);
 
 function active2(){
-    activeL2.style.background="white";
+    activeL2.style.background="#F20505";
 }
 function remove2(){
     activeL2.style.background="transparent";
@@ -37,7 +37,7 @@ hoverer3.addEventListener("mouseover",active3,false);
 hoverer3.addEventListener("mouseout",remove3,false);
 
 function active3(){
-    activeL3.style.background="white";
+    activeL3.style.background="#F20505";
 }
 function remove3(){
     activeL3.style.background="transparent";
