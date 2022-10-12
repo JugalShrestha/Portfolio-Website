@@ -292,14 +292,16 @@ body .nav {
   margin: 0vh;
   padding: 0vh;
   z-index: 8;
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 1%;
   width: 100%;
+  height: 10%;
   opacity: 98%;
-  background: var(--pColor);
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
+  color: var(--pColor);
+  gap: 3vh;
 }
 body .nav .logo {
   box-sizing: border-box;
@@ -310,16 +312,14 @@ body .nav .logo {
   align-items: center;
   cursor: pointer;
   transition: linear 0.2s;
-}
-body .nav .logo:hover {
   background: var(--Red-Color);
 }
 body .nav .logo a {
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--Text-Color);
   letter-spacing: 0.5vh;
   font-size: 3vh;
+  color: var(--Text-Color);
   font-family: "Monoton", cursive;
 }
 body .nav nav {
@@ -341,7 +341,6 @@ body .nav .navOptions li a {
   cursor: pointer;
   text-decoration: none;
   font-size: 1.5vh;
-  color: var(--Text-Color);
   font-family: "Jost", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -739,127 +738,67 @@ body .allBody2 {
 body .allBody2 .welcomePage {
   position: relative;
   width: 100%;
-  height: 100vh;
-  /* background-image:repeating-linear-gradient(180deg,var(--pColor)2vh,var(--sColor)20vh,transparent 20%),
-   repeating-linear-gradient(315deg,var(--pColor)20vh,var(--sColor)20vh,transparent 20%),
-   repeating-linear-gradient(0deg,var(--pColor)-5vh,var(--sColor)5vh);*/
+  min-height: 100vh;
   background: conic-gradient(seashell, var(--s2Color));
   margin: 0;
-  padding: 0;
+  padding: 1vh 0;
   overflow: hidden;
-}
-body .allBody2 .welcomePage .introduction {
-  z-index: 1;
-  color: var(--pColor);
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  justify-content: center;
   align-items: center;
-  position: absolute;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-body .allBody2 .welcomePage .introduction .greetings {
-  pointer-events: none;
-  position: relative;
-  letter-spacing: 2vh;
-  margin-right: -2vh;
-  font-size: 4vh;
-  font-family: "Cedarville Cursive", cursive;
-  font-weight: lighter;
-}
-body .allBody2 .welcomePage .introduction .greetings2 {
-  pointer-events: none;
-  margin-right: -0.5vh;
-  margin: 1vh;
-  font-size: 2vh;
-  font-family: "Cedarville Cursive", cursive;
-  letter-spacing: 0.5vh;
-  padding: 1vh;
-  font-weight: bold;
-}
-body .allBody2 .welcomePage .introduction .greetings2 span {
-  font-weight: lighter;
-  font-size: 6vh;
-  font-family: "Monoton", cursive;
-  text-transform: uppercase;
-}
-body .allBody2 .welcomePage .introduction .greetings3 {
-  pointer-events: none;
-  -webkit-animation: rotate360 10s infinite 1s forwards;
-          animation: rotate360 10s infinite 1s forwards;
-  border: 1vh double var(--pColor);
-  border-top: 1vh double var(--sColor);
-  border-bottom: 1vh double var(--sColor);
-  border-radius: 100%;
-  opacity: 90%;
-  margin: 1vh;
-  padding: 2vh;
-  text-transform: uppercase;
-  background: var(--pColor);
-  color: var(--sColor);
-  font-size: 4vh;
-  font-family: "Monoton", cursive;
-}
-body .allBody2 .welcomePage .introduction2 {
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  justify-items: center;
-  text-align: center;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: absolute;
-  top: 0%;
-  right: 10%;
-  width: 35vh;
-  height: 100%;
-  margin: 1vh;
-  overflow: hidden;
 }
-body .allBody2 .welcomePage .introduction2 .headerForIntro2 {
-  font-family: "Bebas Neue", cursive;
-  font-size: 4vh;
-  font-weight: bold;
-  letter-spacing: 0.5vh;
-  margin-right: -0.5vh;
-}
-body .allBody2 .welcomePage .introduction2 .desForIntro2 {
-  font-family: "Jost", sans-serif;
-  font-size: 2vh;
-}
-body .allBody2 .welcomePage .standingImageOfJugal img {
+body .allBody2 .welcomePage ::after {
+  content: " ";
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  pointer-events: none;
-  -o-object-fit: cover;
-     object-fit: cover;
+  box-sizing: border-box;
+  width: 100%;
+  height: 30vh;
+  background: linear-gradient(to bottom, transparent 0%, transparent 50%, var(--s2Color) 80%, var(--s2Color) 100%);
 }
-body .allBody2 .welcomePage .upArrow {
-  z-index: 1;
-  -webkit-animation: blink 2s infinite 2s forwards;
-          animation: blink 2s infinite 2s forwards;
-  opacity: 0;
-  font-size: 3vh;
+body .allBody2 .welcomePage .introduction {
   color: var(--pColor);
+  padding: 0;
+  margin: 10vh 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+body .allBody2 .welcomePage .introduction .hi-part {
+  font-size: 10vh;
+  font-family: var(--Header);
   font-weight: bold;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translate(-50%, -10%);
-  cursor: default;
+  width: 100%;
+  letter-spacing: 1vh;
+  overflow: hidden;
+}
+body .allBody2 .welcomePage .introduction .short-des-part {
+  padding: 1vh 2vh;
+  background: var(--sColor);
+  width: auto;
+  font-size: 2vh;
+  letter-spacing: 1vh;
+  font-family: var(--Text);
+  text-transform: uppercase;
+  border-radius: 10vh;
+  overflow: hidden;
+}
+body .allBody2 .welcomePage .introduction .name-part {
+  font-size: 10vh;
+  font-family: var(--Header);
+  font-weight: bold;
+  color: var(--Red-Color);
+  width: 100%;
+  letter-spacing: 1vh;
+  overflow: hidden;
+}
+body .allBody2 .welcomePage .introduction .name-part span {
+  color: var(--pColor);
 }
 body .allBody2 #box1 {
   background-image: repeating-linear-gradient(45deg, var(--sColor) 2vh, var(--pColor) 4vh, transparent 20%), repeating-linear-gradient(315deg, var(--sColor) 2vh, var(--pColor) 4vh, transparent 20%), repeating-linear-gradient(0deg, var(--sColor) 5vh, var(--pColor) 10vh);
@@ -868,16 +807,6 @@ body .allBody2 #box2 {
   background-image: repeating-linear-gradient(180deg, var(--pColor) 2vh, var(--sColor) 2vh, transparent 20%), repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--sColor) 2vh, transparent 20%), repeating-linear-gradient(0deg, var(--pColor) 5vh, var(--sColor) 10vh);
 }
 body .allBody2 #box2 .imagesP {
-  background: transparent;
-  color: var(--pColor);
-}
-body .allBody2 #box4 {
-  background-image: repeating-linear-gradient(45deg, var(--sColor) 2vh, var(--pColor) 4vh, transparent 20%), repeating-linear-gradient(315deg, var(--sColor) 2vh, var(--pColor) 4vh, transparent 20%), repeating-linear-gradient(0deg, var(--sColor) 5vh, var(--pColor) 10vh);
-}
-body .allBody2 #box3 {
-  background-image: repeating-linear-gradient(180deg, var(--pColor) 2vh, var(--sColor) 2vh, transparent 20%), repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--sColor) 2vh, transparent 20%), repeating-linear-gradient(0deg, var(--pColor) 5vh, var(--sColor) 10vh);
-}
-body .allBody2 #box3 .imagesP {
   background: transparent;
   color: var(--pColor);
 }
@@ -890,8 +819,9 @@ body .allBody2 .projects {
   justify-content: center;
   width: 100%;
   min-height: 100vh;
-  background: var(--shadow);
+  background: linear-gradient(to bottom, var(--s2Color), var(--sColor));
   overflow: hidden;
+  color: var(--pColor);
 }
 body .allBody2 .projects .notInMobile {
   box-sizing: border-box;
@@ -904,7 +834,6 @@ body .allBody2 .projects .headerForProject {
   letter-spacing: 0.1vh;
   margin-right: -1vh;
   font-family: "Monoton", cursive;
-  color: var(--sColor);
   text-transform: uppercase;
   transform: rotate(45deg);
   text-align: center;
@@ -914,7 +843,6 @@ body .allBody2 .projects .projectsIntro {
   top: 10%;
   left: 10%;
   transform: translate(-10%, -10%);
-  color: var(--sColor);
 }
 body .allBody2 .projects .projectsIntro .headerForProjectsIntro {
   letter-spacing: 0.5vh;
@@ -939,21 +867,23 @@ body .allBody2 .projects .projectsBackdrop {
   background-attachment: fixed;
 }
 body .allBody2 .projects .projectsBackdrop2 {
+  z-index: 1;
   position: absolute;
   top: 20%;
   width: 100%;
   height: 15%;
-  background: var(--shadow);
+  background: var(--Red-Color);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 body .allBody2 .projects .projectsBackdrop3 {
+  z-index: 1;
   position: absolute;
   bottom: 20%;
   width: 100%;
   height: 15%;
-  background: var(--shadow);
+  background: var(--Red-Color);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -976,6 +906,7 @@ body .allBody2 .projects .boxes {
   max-width: 72vh;
   overflow: hidden;
   flex-wrap: wrap;
+  z-index: 1;
 }
 body .allBody2 .projects .boxes .container {
   overflow: hidden;
@@ -1198,7 +1129,8 @@ body .allBody2 .active {
 body .aboutSection {
   width: 100%;
   min-height: 100vh;
-  background: var(--nColor);
+  background: var(--s2Color);
+  color: var(--pColor);
   transition: linear 0.2s;
   position: relative;
   padding: 1vh;
@@ -1211,7 +1143,6 @@ body .aboutSection {
 }
 body .aboutSection .headerForAboutSection {
   font-size: 5vh;
-  color: var(--sColor);
   font-family: "Monoton", cursive;
   text-transform: uppercase;
   letter-spacing: 1vh;
@@ -1224,7 +1155,7 @@ body .aboutSection .overlayForAboutSec {
   height: 100%;
   top: 0;
   left: 1%;
-  background-image: repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--nColor) 4vh, transparent 10%), repeating-linear-gradient(45deg, var(--pColor) 2vh, var(--nColor) 4vh, transparent 10%), repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--nColor) 4vh, transparent 10%), repeating-linear-gradient(45deg, var(--pColor) -2vh, var(--nColor) 4vh);
+  background-image: repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--s2Color) 4vh, transparent 10%), repeating-linear-gradient(45deg, var(--pColor) 2vh, var(--s2Color) 4vh, transparent 10%), repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--s2Color) 4vh, transparent 10%), repeating-linear-gradient(45deg, var(--pColor) -2vh, var(--s2Color) 4vh);
   background-position: center;
   background-attachment: fixed;
 }
@@ -1235,7 +1166,6 @@ body .aboutSection .introForAboutSection {
   transform: translate(-2%, -5%);
   display: flex;
   flex-direction: column;
-  color: var(--sColor);
   text-align: center;
 }
 body .aboutSection .introForAboutSection .headerForIntroOfAboutSec {
@@ -1256,7 +1186,6 @@ body .aboutSection .aboutAllBoxes {
   align-items: center;
   justify-content: center;
   padding: 1vh;
-  color: var(--Text-Color);
 }
 body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume {
   display: flex;
@@ -1296,7 +1225,7 @@ body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Resume a {
   padding: 1vh;
   text-align: center;
   width: 95%;
-  background: var(--s2Color);
+  background: var(--Red-Color);
   color: var(--pColor);
 }
 body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Resume a:hover {
@@ -1329,7 +1258,6 @@ body .aboutSection .skill-section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--Text-Color);
   margin-top: 5vh;
 }
 body .aboutSection .skill-section .header {
@@ -1608,15 +1536,6 @@ body .activeOverlay {
   .projects {
     margin: 0;
     padding: 10vh 0;
-  }
-  .welcomePage::after {
-    content: " ";
-    position: absolute;
-    bottom: 0;
-    box-sizing: border-box;
-    width: 100%;
-    height: 30vh;
-    background: linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.3) 80%, var(--pColor) 100%);
   }
   .displayContents {
     border: 2px solid black;

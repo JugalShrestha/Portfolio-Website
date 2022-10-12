@@ -198,14 +198,16 @@ body{
         margin: 0vh;
         padding: 0vh;
         z-index: 8;
-        position: fixed;
-        top:0;
+        position: absolute;
+        top:1%;
         width: 100%;
+        height: 10%;
         opacity: 98%;
-        background:var(--pColor);
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
+        color:var(--pColor);
+        gap: 3vh;
         .logo{
             box-sizing: border-box;
             margin: 0;
@@ -215,18 +217,14 @@ body{
             align-items: center;
             cursor: pointer;
             transition: linear .2s;
-            &:hover{
-                background: var(--Red-Color);
-            }
+            background: var(--Red-Color);
                 a{
                     text-transform: uppercase;
                     text-decoration: none;
-                    color:var(--Text-Color);
                     letter-spacing: .5vh;
                     font-size: 3vh;
+                    color:var(--Text-Color);
                     font-family: 'Monoton',cursive;
-
-                   
                 }
         }
         nav{
@@ -246,7 +244,6 @@ body{
                     cursor: pointer;
                     text-decoration: none;
                     font-size:1.5vh;
-                    color:var(--Text-Color);
                     font-family: 'Jost', sans-serif;
                     font-weight: bold;
                     text-transform: uppercase;
@@ -666,133 +663,71 @@ body{
         .welcomePage{
             position:relative;
             width:100%;
-            height: 100vh;
-           /* background-image:repeating-linear-gradient(180deg,var(--pColor)2vh,var(--sColor)20vh,transparent 20%),
-            repeating-linear-gradient(315deg,var(--pColor)20vh,var(--sColor)20vh,transparent 20%),
-            repeating-linear-gradient(0deg,var(--pColor)-5vh,var(--sColor)5vh);*/
+            min-height: 100vh;
             background: conic-gradient(seashell, var(--s2Color));
             margin:0;
-            padding: 0;
+            padding: 1vh 0;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            ::after{
+                content:' ';
+                position: absolute;
+                bottom:0;
+                box-sizing: border-box;
+                width: 100%;
+                height:30vh;
+                background:linear-gradient(to bottom, transparent 0%,transparent 50%,var(--s2Color)80%,var(--s2Color) 100%);
+            }
 
             //Namaste part
             .introduction{
-                z-index:1;
                 color:var(--pColor);
                 padding: 0;
-                margin: 0;
+                margin: 10vh 0;
+                width: 50%;
                 display: flex;
                 flex-direction: column;
-                text-align: center;
                 justify-content: center;
                 align-items: center;
-                position: absolute;
-                height: 100%;
-                top:50%;
-                left:50%;
-                transform: translate(-50%,-50%); 
-                object-fit: cover;        
-                .greetings{
-                    pointer-events: none;
-                    position:relative;
-                    letter-spacing: 2vh;
-                    margin-right: -2vh;
-                    font-size: 4vh;
-                    font-family: 'Cedarville Cursive', cursive;
-                    font-weight: lighter;
-                }
-                .greetings2{
-                    pointer-events: none;
-                    margin-right: -.5vh;
-                    margin: 1vh;
-                    font-size: 2vh;
-                    font-family: 'Cedarville Cursive', cursive;
-                    letter-spacing: .5vh;
-                    padding: 1vh;
+                text-align: center;
+                overflow: hidden;
+
+                //hi part
+                .hi-part{
+                    font-size: 10vh;
+                    font-family: var(--Header);
                     font-weight: bold;
+                    width: 100%;
+                    letter-spacing: 1vh;
+                    overflow: hidden;
+                }
+                .short-des-part{
+                    padding: 1vh 2vh;
+                    background: var(--sColor);
+                    width: auto;
+                    font-size: 2vh;
+                    letter-spacing: 1vh;
+                    font-family: var(--Text);
+                    text-transform: uppercase;
+                    border-radius: 10vh;
+                    overflow: hidden;
+                }
+                .name-part{
+                    font-size: 10vh;
+                    font-family: var(--Header);
+                    font-weight: bold;
+                    color: var(--Red-Color);
+                    width: 100%;
+                    letter-spacing: 1vh;
+                    overflow: hidden;
                     span{
-                        font-weight: lighter;
-                        font-size: 6vh;
-                        font-family: 'Monoton', cursive;
-                        text-transform: uppercase;
+                        color:var(--pColor);
                     }
                 }
-                .greetings3{
-                    pointer-events: none;
-                    animation:rotate360 10s infinite 1s forwards;
-                    border:1vh double var(--pColor);
-                    border-top: 1vh double var(--sColor);
-                    border-bottom: 1vh double var(--sColor);
-                    border-radius: 100%;
-                    opacity: 90%;
-                    margin:1vh;
-                    padding:2vh;
-                    text-transform: uppercase;
-                    background: var(--pColor);
-                    color:var(--sColor);
-                    font-size: 4vh;
-                    font-family: 'Monoton',cursive;
-                }
             }
-
-            //About me details
-            .introduction2{
-                z-index: 1;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                justify-items: center;
-                text-align: center;
-                object-fit: cover;
-                position: absolute;
-                top:0%;
-                right:10%;
-                width: 35vh;
-                height: 100%;
-                margin:1vh;
-                overflow: hidden;
-                
-                .headerForIntro2{
-                    font-family: 'Bebas Neue', cursive;
-                    font-size: 4vh;
-                    font-weight: bold;
-                    letter-spacing: .5vh;
-                    margin-right: -.5vh;
-                }
-                .desForIntro2{
-                    font-family: 'Jost', sans-serif;
-                    font-size: 2vh;
-
-                }
-            }
-
-            //Self image
-            .standingImageOfJugal img{
-                position:absolute;
-                bottom:0;
-                left: 0;
-                width: 50%;
-                height: 100%;
-                pointer-events:none;
-                object-fit: cover;
-            }
-
-            //Instruction for scroll
-            .upArrow{
-                z-index: 1;
-                animation:blink 2s infinite 2s forwards;
-                opacity: 0;
-                font-size: 3vh;
-                color: var(--pColor);
-                font-weight: bold;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                position:absolute;
-                bottom:10%;
-                left:50%;
-                transform: translate(-50%,-10%);
-                cursor: default;
-            }
-            
         }
         
         /*For the main Menu System*/
@@ -803,23 +738,6 @@ body{
             
         }
         #box2{
-            background-image:repeating-linear-gradient(180deg,var(--pColor)2vh,var(--sColor)2vh,transparent 20%),
-            repeating-linear-gradient(315deg,var(--pColor)2vh,var(--sColor)2vh,transparent 20%),
-            repeating-linear-gradient(0deg,var(--pColor)5vh,var(--sColor)10vh);
-
-            .imagesP{
-                background:transparent;
-                color: var(--pColor);
-            }
-           
-        }
-        #box4{
-            background-image:repeating-linear-gradient(45deg,var(--sColor)2vh,var(--pColor)4vh,transparent 20%),
-                            repeating-linear-gradient(315deg,var(--sColor)2vh,var(--pColor)4vh,transparent 20%),
-                            repeating-linear-gradient(0deg,var(--sColor)5vh,var(--pColor)10vh);
-          
-        }
-        #box3{
             background-image:repeating-linear-gradient(180deg,var(--pColor)2vh,var(--sColor)2vh,transparent 20%),
             repeating-linear-gradient(315deg,var(--pColor)2vh,var(--sColor)2vh,transparent 20%),
             repeating-linear-gradient(0deg,var(--pColor)5vh,var(--sColor)10vh);
@@ -841,8 +759,9 @@ body{
             justify-content: center;
             width: 100%;
             min-height: 100vh;
-            background: var(--shadow);
+            background:linear-gradient(to bottom,var(--s2Color),var(--sColor));
             overflow: hidden;
+            color:var(--pColor);
 
             .notInMobile{
                 box-sizing: border-box;
@@ -855,7 +774,6 @@ body{
                 letter-spacing: .1vh;
                 margin-right: -1vh;
                 font-family: 'Monoton', cursive;
-                color:var(--sColor);
                 text-transform: uppercase;
                 transform: rotate(45deg);
                 text-align: center;
@@ -865,7 +783,6 @@ body{
                 top: 10%;
                 left:10%;
                 transform: translate(-10%,-10%);
-                color:var(--sColor);
                 .headerForProjectsIntro{
                     letter-spacing: .5vh;
                     margin-right: -.5vh;
@@ -895,22 +812,24 @@ body{
             }
 
             .projectsBackdrop2{
+                z-index: 1;
                 position:absolute;
                 top: 20%;
                 width: 100%;
                 height: 15%;
-                background:var(--shadow);
+                background:var(--Red-Color);
                 background-position:center;
                 background-size:cover;
                 background-attachment: fixed;
 
             }
             .projectsBackdrop3{
+                z-index: 1;
                 position:absolute;
                 bottom: 20%;
                 width: 100%;
                 height: 15%;
-                background:var(--shadow);
+                background:var(--Red-Color);
                 background-position:center;
                 background-size:cover;
                 background-attachment: fixed;
@@ -935,6 +854,7 @@ body{
                 max-width: 72vh;
                 overflow: hidden;
                 flex-wrap:wrap;
+                z-index: 1;
                 .container{
                     overflow:hidden;
                     width:35vh;
@@ -1179,7 +1099,8 @@ body{
     .aboutSection{
         width: 100%;
         min-height: 100vh;
-        background:var(--nColor);
+        background:var(--s2Color);
+        color:var(--pColor);
         transition: linear .2s;
         position: relative;
         padding: 1vh;
@@ -1192,7 +1113,6 @@ body{
 
         .headerForAboutSection{
             font-size: 5vh;
-            color:var(--sColor);
             font-family: 'Monoton', cursive;
             text-transform: uppercase;
             letter-spacing: 1vh;
@@ -1206,10 +1126,10 @@ body{
             height: 100%;
             top:0;
             left:1%;
-            background-image:repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--nColor) 4vh, transparent 10%),
-            repeating-linear-gradient(45deg ,var(--pColor) 2vh, var(--nColor) 4vh, transparent 10%),
-            repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--nColor) 4vh, transparent 10%),
-            repeating-linear-gradient(45deg ,var(--pColor) -2vh, var(--nColor) 4vh);
+            background-image:repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--s2Color) 4vh, transparent 10%),
+            repeating-linear-gradient(45deg ,var(--pColor) 2vh, var(--s2Color) 4vh, transparent 10%),
+            repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--s2Color) 4vh, transparent 10%),
+            repeating-linear-gradient(45deg ,var(--pColor) -2vh, var(--s2Color) 4vh);
             background-position: center;
             background-attachment: fixed;
         }
@@ -1221,7 +1141,6 @@ body{
             transform: translate(-2%,-5%);
             display:flex;
             flex-direction: column;
-            color:var(--sColor);
             text-align: center;
             .headerForIntroOfAboutSec{
                 font-size: 4vh;
@@ -1242,7 +1161,6 @@ body{
                 align-items: center;
                 justify-content:center;
                 padding: 1vh;
-                color:var(--Text-Color);
                 .Part1-With-Photo-Resume{
                     display: flex;
                     flex-direction: column;
@@ -1278,7 +1196,7 @@ body{
                             padding: 1vh;
                             text-align: center;
                             width: 95%;
-                            background: var(--s2Color);
+                            background: var(--Red-Color);
                             color:var(--pColor);
                             &:hover{
                                 background: var(--sColor);
@@ -1315,7 +1233,6 @@ body{
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                color:var(--Text-Color);
                 margin-top: 5vh;
 
                 .header{
@@ -1635,15 +1552,6 @@ body{
     .projects{
         margin:0;
         padding:10vh 0;
-    }
-    .welcomePage::after{
-        content:' ';
-        position: absolute;
-        bottom:0;
-        box-sizing: border-box;
-        width: 100%;
-        height:30vh;
-        background:linear-gradient(to bottom, transparent 0%,transparent 50%,rgba(0, 0, 0, 0.3)80%,var(--pColor) 100%);
     }
 
     .displayContents{
