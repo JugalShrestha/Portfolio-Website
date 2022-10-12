@@ -78,6 +78,19 @@
         transform: translateX(-100%);
     }
 }
+
+@keyframes change-color{
+    0%{
+        text-shadow: 0 0 1vh var(--Red-Color);
+    }
+    50%{
+        text-shadow: 0 0 .2vh var(--Red-Color);
+    }
+    100%{
+        text-shadow: 0vh 0vh 1vh var(--Red-Color);
+    }
+}
+
 @keyframes remove2{
     98%{
         opacity:100%;
@@ -251,6 +264,18 @@ body{
                         opacity: 50%;
                     }
                 }
+            }
+        }
+
+        .scroll-down {
+            .nav {
+                transform: translate3d(0, -100%, 0);
+            }
+        }
+        
+        .scroll-up {
+            .nav {
+                filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
             }
         }
         
@@ -732,9 +757,9 @@ body{
         
         /*For the main Menu System*/
         #box1{
-            background-image:repeating-linear-gradient(45deg,var(--sColor)2vh,var(--pColor)4vh,transparent 20%),
-                            repeating-linear-gradient(315deg,var(--sColor)2vh,var(--pColor)4vh,transparent 20%),
-                            repeating-linear-gradient(0deg,var(--sColor)5vh,var(--pColor)10vh);
+            background-image:repeating-linear-gradient(45deg,var(--pColor)2vh,var(--sColor)4vh,transparent 20%),
+                            repeating-linear-gradient(315deg,var(--pColor)2vh,var(--sColor)4vh,transparent 20%),
+                            repeating-linear-gradient(0deg,var(--pColor)5vh,var(--sColor)10vh);
             
         }
         #box2{
@@ -754,29 +779,35 @@ body{
             box-sizing: border-box;
             position: relative;
             display:flex;
+            flex-direction: column;
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             width: 100%;
             min-height: 100vh;
-            background:linear-gradient(to bottom,var(--s2Color),var(--sColor));
+            background:linear-gradient(to bottom,var(--s2Color),seashell);
             overflow: hidden;
             color:var(--pColor);
+            padding:5vh;
 
             .notInMobile{
                 box-sizing: border-box;
             }
             .headerForProject{
                 position: absolute;
-                right:5%;
-                top:20%;
-                font-size: 9vh;
+                top:0;
+                left:50%;
+                transform: translate(-50%,0);
+                font-size: 6vh;
                 letter-spacing: .1vh;
-                margin-right: -1vh;
                 font-family: 'Monoton', cursive;
                 text-transform: uppercase;
-                transform: rotate(45deg);
                 text-align: center;
+                span{
+                    color:var(--pColor);
+                    font-size: 7vh;
+                    animation: change-color 1s infinite .1s forwards;
+                }
             }
             .projectsIntro{
                 position: absolute;
@@ -854,7 +885,7 @@ body{
                 max-width: 72vh;
                 overflow: hidden;
                 flex-wrap:wrap;
-                z-index: 1;
+                z-index: 2;
                 .container{
                     overflow:hidden;
                     width:35vh;
@@ -1051,45 +1082,6 @@ body{
             right:0;
             transform:translateX(-300%);
         }
-        .photosDisplay
-        {
-            transition:ease-in-out .3s;
-            border-left:0;
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-            background:var(--sColor);
-            z-index:9;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            top:0;
-            left:0;
-            bottom:0;
-            right:0;
-            transform:translateX(-300%);
-        }
-        .gamesDisplay
-        {
-            transition:ease-in-out .3s;
-            border-left:0;
-            box-sizing: border-box;
-            padding: 0;
-            background:var(--sColor);
-            z-index:9;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            top:0;
-            left:0;
-            bottom:0;
-            right:0;
-            transform:translateX(-300%);
-        }
             .active{
                 transform:translateX(0);
             }
@@ -1099,7 +1091,7 @@ body{
     .aboutSection{
         width: 100%;
         min-height: 100vh;
-        background:var(--s2Color);
+        background:linear-gradient(to bottom, seashell, var(--s2Color));
         color:var(--pColor);
         transition: linear .2s;
         position: relative;
@@ -1118,20 +1110,6 @@ body{
             letter-spacing: 1vh;
             margin-right: -1vh;
             padding-bottom: 2vh;
-        }
-        .overlayForAboutSec
-        {
-            position: absolute;
-            width:30vh;
-            height: 100%;
-            top:0;
-            left:1%;
-            background-image:repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--s2Color) 4vh, transparent 10%),
-            repeating-linear-gradient(45deg ,var(--pColor) 2vh, var(--s2Color) 4vh, transparent 10%),
-            repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--s2Color) 4vh, transparent 10%),
-            repeating-linear-gradient(45deg ,var(--pColor) -2vh, var(--s2Color) 4vh);
-            background-position: center;
-            background-attachment: fixed;
         }
 
         .introForAboutSection{
@@ -1227,32 +1205,39 @@ body{
             }
             .skill-section{
                 z-index: 1;
-                min-height: 20vh;
+                max-height: 20vh;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 margin-top: 5vh;
+                background-image:repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--s2Color) 4vh, transparent 10%),
+                repeating-linear-gradient(45deg ,var(--pColor) 2vh, var(--s2Color) 4vh, transparent 10%),
+                repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--s2Color) 4vh, transparent 10%),
+                repeating-linear-gradient(45deg ,var(--pColor) -2vh, var(--s2Color) 4vh);
+                background-position: center;
+                background-attachment: fixed;
+                overflow-x: auto;
 
                 .header{
                     font-family: var(--Header);
                     font-size: 4vh;
                     letter-spacing: .5vh;
+                    font-weight: bold;
                 }
 
                 .icons{
                     display: flex;
-                    flex-wrap: wrap;
                     justify-content: center;
                     align-items: center;
                     img{
                         margin:1vh 3vh;
                         width:10vh;
                         height: 10vh;
-                        opacity: 50%;
+                        padding: 1vh;
                         &:hover{
-                            opacity: 100%;
+                            transform: scale(1.1);
                         }
                     }
                 }
@@ -1264,6 +1249,7 @@ body{
     .contactSection{
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         overflow: hidden;
@@ -1381,7 +1367,8 @@ body{
         //Bottom part of contact section
         .contactSecOverlay1{
             width:100%;
-            min-height: 30vh;
+            height: auto;
+            padding: 3vh;
             color: var(--sColor);
             background: var(--Red-Color);
             overflow: hidden;
@@ -1389,9 +1376,11 @@ body{
             align-items: center;
             justify-content:space-evenly;
             flex-direction: row;
+            flex-wrap: wrap;
             //For social links
             .socialLinks{
                 overflow: hidden;
+                min-width: auto;
                 height: 100%;
                 display: flex;
                 justify-content: center;
@@ -1399,20 +1388,18 @@ body{
                 flex-direction: column;
                 .contactSecHeader{
                     opacity: 90%;
-                    border-radius: 0;
-                    text-align:left;
                     font-size: 3vh;
                     letter-spacing: .3vh;
-                    margin-bottom: 2vh;
                     color: var(--sColor);
                     font-weight: bold;
                     font-family: 'Bebas Neue', cursive;                    
                 }
                 .contactIntro{
+
                     .contactIntroDes{
-                        align-items:center;
+                        align-items:left;
                         display: flex;
-                        flex-direction: row;
+                        flex-direction: column;
                         flex-wrap: wrap;
                         justify-content: center;
                         color: var(--sColor);
@@ -1420,13 +1407,14 @@ body{
                         margin:2vh 0;
                         font-family: 'Jost', sans-serif;
                         .contactsA{
-                            margin:1vh;
+                            margin:0;
                             padding:0;
+                            text-decoration: none;
+                            font-size: 2vh;
+                            font-family: var(--Text);
+                            color:var(--sColor);
                             &:hover{
                                opacity: 50%;
-                               img{
-                                filter: saturate(0);
-                               }
                             }
                         }                        
                     }
