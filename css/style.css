@@ -198,13 +198,36 @@
     opacity: 0;
   }
 }
+@-webkit-keyframes moving-signs {
+  0% {
+    transform: translateY(0vh) translateX(0vh) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(1vh) translateX(5vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0vh) translateX(0vh) rotate(-3deg);
+  }
+}
+@keyframes moving-signs {
+  0% {
+    transform: translateY(0vh) translateX(0vh) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(1vh) translateX(5vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0vh) translateX(0vh) rotate(-3deg);
+  }
+}
 /*animations*/
 /*ScrollEdit*/
 ::-webkit-scrollbar {
   width: 0.5vh;
+  height: 0.5vh;
 }
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   margin: 0;
   padding: 0;
   border-radius: 0%;
@@ -763,11 +786,117 @@ body .allBody2 {
   /*For CLosing the tab opened from 4 menus*/
   /*overlay for ARTS MENU*/
 }
+body .allBody2 .screen-signs-decoration {
+  font-size: 10vh;
+  opacity: 50%;
+  pointer-events: none;
+}
+body .allBody2 .welcomePage .screen-signs-decoration:nth-child(even) {
+  font-size: 7vh;
+}
+body .allBody2 .welcomePage .screen-signs-decoration:nth-child(1) {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+body .allBody2 .welcomePage .screen-signs-decoration:nth-child(2) {
+  position: absolute;
+  bottom: 70%;
+  right: 10%;
+}
+body .allBody2 .welcomePage .screen-signs-decoration:nth-child(3) {
+  position: absolute;
+  top: 10%;
+  right: 30%;
+}
+body .allBody2 .welcomePage .screen-signs-decoration:nth-child(4) {
+  position: absolute;
+  bottom: 40%;
+  left: 20%;
+}
+body .allBody2 .welcomePage .screen-signs-decoration:nth-child(5) {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+}
+body .allBody2 .welcomePage .screen-signs-decoration:nth-child(6) {
+  position: absolute;
+  bottom: 40%;
+  left: 90%;
+}
+body .allBody2 .projects .screen-signs-decoration {
+  font-size: 4vh;
+  opacity: 50%;
+  pointer-events: none;
+  font-family: var(--Text);
+  -webkit-animation: change-color 1s infinite 0.1s forwards;
+          animation: change-color 1s infinite 0.1s forwards;
+  -webkit-animation: moving-signs 5s infinite forwards;
+          animation: moving-signs 5s infinite forwards;
+}
+body .allBody2 .projects .screen-signs-decoration:nth-child(even) {
+  font-size: 10vh;
+  font-family: var(--Text);
+  text-transform: uppercase;
+}
+body .allBody2 .projects .screen-signs-decoration:nth-child(1) {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+}
+body .allBody2 .projects .screen-signs-decoration:nth-child(2) {
+  position: absolute;
+  bottom: 80%;
+  right: 10%;
+}
+body .allBody2 .projects .screen-signs-decoration:nth-child(3) {
+  position: absolute;
+  top: 20%;
+  right: 30%;
+  transform: rotate(15deg);
+}
+body .allBody2 .projects .screen-signs-decoration:nth-child(4) {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+}
+body .allBody2 .projects .screen-signs-decoration:nth-child(5) {
+  position: absolute;
+  bottom: 20%;
+  left: 40%;
+}
+body .allBody2 .projects .screen-signs-decoration:nth-child(6) {
+  position: absolute;
+  bottom: 20%;
+  left: 70%;
+  transform: rotate(315deg);
+}
+body .allBody2 .projects .screen-signs-decoration:nth-child(7) {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+}
+body .allBody2 .projects .screen-signs-decoration:nth-child(8) {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+}
+body .allBody2 .welcomePage::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50vh;
+  background: linear-gradient(to bottom, transparent 0%, transparent 50%, var(--s2Color) 80%, var(--s2Color) 100%);
+}
 body .allBody2 .welcomePage {
   position: relative;
   width: 100%;
   min-height: 100vh;
   background: conic-gradient(seashell, var(--s2Color));
+  background-position: center;
+  background-attachment: fixed;
   margin: 0;
   padding: 1vh 0;
   overflow: hidden;
@@ -775,15 +904,6 @@ body .allBody2 .welcomePage {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-body .allBody2 .welcomePage ::after {
-  content: " ";
-  position: absolute;
-  bottom: 0;
-  box-sizing: border-box;
-  width: 100%;
-  height: 30vh;
-  background: linear-gradient(to bottom, transparent 0%, transparent 50%, var(--s2Color) 80%, var(--s2Color) 100%);
 }
 body .allBody2 .welcomePage .introduction {
   color: var(--pColor);
@@ -838,6 +958,15 @@ body .allBody2 #box2 .imagesP {
   background: transparent;
   color: var(--pColor);
 }
+body .allBody2 .projects::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 30vh;
+  background: linear-gradient(to bottom, transparent 0%, transparent 50%, var(--nColor) 100%);
+}
 body .allBody2 .projects {
   box-sizing: border-box;
   position: relative;
@@ -848,7 +977,7 @@ body .allBody2 .projects {
   justify-content: center;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to bottom, var(--s2Color), seashell);
+  background: linear-gradient(to bottom, var(--s2Color) 80%, var(--nColor));
   overflow: hidden;
   color: var(--pColor);
   padding: 5vh;
@@ -872,24 +1001,6 @@ body .allBody2 .projects .headerForProject span {
   font-size: 7vh;
   -webkit-animation: change-color 1s infinite 0.1s forwards;
           animation: change-color 1s infinite 0.1s forwards;
-}
-body .allBody2 .projects .projectsIntro {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  transform: translate(-10%, -10%);
-}
-body .allBody2 .projects .projectsIntro .headerForProjectsIntro {
-  letter-spacing: 0.5vh;
-  margin-right: -0.5vh;
-  text-align: center;
-  font-family: "Bebas Neue", cursive;
-  font-size: 4vh;
-}
-body .allBody2 .projects .projectsIntro .desForProjectsIntro {
-  font-family: "Jost", sans-serif;
-  text-align: center;
-  font-size: 2vh;
 }
 body .allBody2 .projects .projectsBackdrop {
   position: absolute;
@@ -1127,8 +1238,8 @@ body .allBody2 .active {
 body .aboutSection {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to bottom, seashell, var(--s2Color));
-  color: var(--pColor);
+  background: conic-gradient(var(--nColor), var(--nColor));
+  color: var(--Text-Color);
   transition: linear 0.2s;
   position: relative;
   padding: 1vh;
@@ -1140,32 +1251,13 @@ body .aboutSection {
   align-items: center;
 }
 body .aboutSection .headerForAboutSection {
+  z-index: 1;
   font-size: 5vh;
   font-family: "Monoton", cursive;
   text-transform: uppercase;
   letter-spacing: 1vh;
   margin-right: -1vh;
   padding-bottom: 2vh;
-}
-body .aboutSection .introForAboutSection {
-  position: absolute;
-  bottom: 5%;
-  right: 2%;
-  transform: translate(-2%, -5%);
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-body .aboutSection .introForAboutSection .headerForIntroOfAboutSec {
-  font-size: 4vh;
-  font-weight: bold;
-  font-family: "Bebas Neue", cursive;
-  letter-spacing: 0.3vh;
-  margin-right: -0.3vh;
-}
-body .aboutSection .introForAboutSection .desForIntroOfAboutSec {
-  font-size: 2vh;
-  font-family: "Jost", sans-serif;
 }
 body .aboutSection .aboutAllBoxes {
   display: flex;
@@ -1188,6 +1280,7 @@ body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Photo {
   padding: 0;
   overflow: hidden;
   border: 1vh solid var(--sColor);
+  border-radius: 5vh;
 }
 body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Photo img {
   width: 40vh;
@@ -1206,6 +1299,7 @@ body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Resume {
   margin: 1vh;
 }
 body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Resume a {
+  border-radius: 10vh;
   transition: ease-in-out 0.2s;
   font-family: var(--Header);
   text-decoration: none;
@@ -1213,7 +1307,7 @@ body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Resume a {
   padding: 1vh;
   text-align: center;
   width: 95%;
-  background: var(--Red-Color);
+  background: var(--s2Color);
   color: var(--pColor);
 }
 body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Resume a:hover {
@@ -1247,9 +1341,6 @@ body .aboutSection .skill-section {
   align-items: center;
   justify-content: center;
   margin-top: 5vh;
-  background-image: repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--s2Color) 4vh, transparent 10%), repeating-linear-gradient(45deg, var(--pColor) 2vh, var(--s2Color) 4vh, transparent 10%), repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--s2Color) 4vh, transparent 10%), repeating-linear-gradient(45deg, var(--pColor) -2vh, var(--s2Color) 4vh);
-  background-position: center;
-  background-attachment: fixed;
   overflow-x: auto;
 }
 body .aboutSection .skill-section .header {
@@ -1290,10 +1381,10 @@ body .contactSection .contact-sec-overlay2 {
   width: 100%;
   margin: 0;
   padding: 5vh 0;
-  background: var(--s2Color);
+  background-image: linear-gradient(to bottom, var(--nColor) 80%, var(--Red-Color));
+  color: var(--sColor);
 }
 body .contactSection .contact-sec-overlay2 .headerForContactSec {
-  color: var(--pColor);
   font-size: 9vh;
   font-family: "Monoton", cursive;
   margin: 1vh;
@@ -1324,9 +1415,9 @@ body .contactSection .contact-sec-overlay2 .emailForm .part1OfEmail input {
   height: 1vh;
   border: 0.1vh solid var(--pColor);
   border-radius: 1vh;
+  color: var(--Text-Color);
   background: transparent;
   margin: 1vh;
-  color: var(--pColor);
 }
 body .contactSection .contact-sec-overlay2 .emailForm .part2OfEmail {
   display: flex;
@@ -1343,15 +1434,15 @@ body .contactSection .contact-sec-overlay2 .emailForm .part2OfEmail textarea {
   border: 0.1vh solid var(--pColor);
   border-radius: 1vh;
   background-color: transparent;
-  color: var(--pColor);
+  color: var(--Text-Color);
   font-size: 2vh;
   font-family: var(--Text);
 }
 body .contactSection .contact-sec-overlay2 .emailForm .part2OfEmail button {
   width: 10vh;
   height: 5vh;
-  background: var(--pColor);
-  color: var(--sColor);
+  background: var(--s2Color);
+  color: var(--pColor);
   border-radius: 1vh;
   font-size: 2vh;
   font-family: var(--Header);
@@ -1385,20 +1476,22 @@ body .contactSection .contactSecOverlay1 {
   color: var(--sColor);
   background: var(--Red-Color);
   overflow: hidden;
+  gap: 1vh;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
 body .contactSection .contactSecOverlay1 .socialLinks {
   overflow: hidden;
-  min-width: auto;
+  min-width: 33vh;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 body .contactSection .contactSecOverlay1 .socialLinks .contactSecHeader {
   opacity: 90%;
@@ -1433,6 +1526,7 @@ body .contactSection .contactSecOverlay1 .socialLinks .contactIntro .contactIntr
 body .contactSection .contactSecOverlay1 .contactSecDesAboutMe {
   display: flex;
   align-items: left;
+  min-width: 33vh;
   flex-direction: column;
   justify-content: center;
   color: var(--sColor);
@@ -1461,7 +1555,7 @@ body .contactSection .contactSecOverlay1 .contactSecDesAboutMe .introForContactS
 }
 body .contactSection .contactSecOverlay1 .thanks-section {
   overflow: hidden;
-  width: auto;
+  width: 33vh;
   height: 100%;
   display: flex;
   justify-content: center;

@@ -102,13 +102,27 @@
         opacity:0;
     }
 }
+
+@keyframes moving-signs {
+    0%{
+        transform: translateY(0vh) translateX(0vh) rotate(-3deg);
+    }
+    50%{
+        transform: translateY(1vh) translateX(5vh) rotate(0deg);
+    }
+    100%{
+        transform: translateY(0vh) translateX(0vh) rotate(-3deg);
+    }
+}
 /*animations*/
 
 /*ScrollEdit*/
 ::-webkit-scrollbar{
     width:.5vh;
+    height: .5vh;
 }
-body::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track{
     margin:0;
     padding: 0;
     border-radius: 0%;
@@ -155,6 +169,7 @@ body{
     background: var(--sColor);
     margin:0;
     padding: 0;
+
     /*For Cross Icon in About and Contact and Nav section*/
     .cross{
         z-index:9;
@@ -684,12 +699,123 @@ body{
         padding: 0;
         margin:0;
 
+        //decorations
+        .screen-signs-decoration{
+            font-size: 10vh;
+            opacity: 50%;
+            pointer-events: none;
+        }
+        .welcomePage{
+            .screen-signs-decoration:nth-child(even){
+                font-size: 7vh;
+            }
+            .screen-signs-decoration:nth-child(1){
+                position: absolute;
+                top:10%;
+                left:10%;
+            }
+            .screen-signs-decoration:nth-child(2){
+                position: absolute;
+                bottom:70%;
+                right:10%;
+            }
+            .screen-signs-decoration:nth-child(3){
+                position: absolute;
+                top:10%;
+                right:30%;
+            }
+            .screen-signs-decoration:nth-child(4){
+                position: absolute;
+                bottom:40%;
+                left:20%;
+            }
+            .screen-signs-decoration:nth-child(5){
+                position: absolute;
+                bottom:20%;
+                left:50%;
+            }
+            .screen-signs-decoration:nth-child(6){
+                position: absolute;
+                bottom:40%;
+                left:90%;
+            }    
+        }
+        .projects{
+            .screen-signs-decoration{
+                font-size: 4vh;
+                opacity: 50%;
+                pointer-events: none;
+                font-family: var(--Text);
+                animation: change-color 1s infinite .1s forwards;
+                animation: moving-signs 5s infinite forwards;
+            }
+            .screen-signs-decoration:nth-child(even){
+                font-size: 10vh;
+                font-family: var(--Text);
+                text-transform: uppercase;
+                
+            }
+            .screen-signs-decoration:nth-child(1){
+                position: absolute;
+                top:0%;
+                left:10%;
+            }
+            .screen-signs-decoration:nth-child(2){
+                position: absolute;
+                bottom:80%;
+                right:10%;
+            }
+            .screen-signs-decoration:nth-child(3){
+                position: absolute;
+                top:20%;
+                right:30%;
+                transform: rotate(15deg);
+            }
+            .screen-signs-decoration:nth-child(4){
+                position: absolute;
+                bottom:10%;
+                left:20%;
+            }
+            .screen-signs-decoration:nth-child(5){
+                position: absolute;
+                bottom:20%;
+                left:40%;
+            }
+            .screen-signs-decoration:nth-child(6){
+                position: absolute;
+                bottom:20%;
+                left:70%;
+                transform: rotate(315deg);
+            }
+            .screen-signs-decoration:nth-child(7){
+                position: absolute;
+                bottom:20%;
+                left:10%;
+            }
+            .screen-signs-decoration:nth-child(8){
+                position: absolute;
+                top:15%;
+                left:20%;
+            }
+    
+        }
         /*For welcome Screen*/
+        .welcomePage::after{
+            content:' ';
+            position: absolute;
+            bottom:0;
+            box-sizing: border-box;
+            width: 100%;
+            height:50vh;
+            background:linear-gradient(to bottom, transparent 0%,transparent 50%,var(--s2Color)80%,var(--s2Color) 100%);
+        }
         .welcomePage{
             position:relative;
             width:100%;
             min-height: 100vh;
             background: conic-gradient(seashell, var(--s2Color));
+            background-position: center;
+            background-attachment: fixed;
             margin:0;
             padding: 1vh 0;
             overflow: hidden;
@@ -697,15 +823,6 @@ body{
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            ::after{
-                content:' ';
-                position: absolute;
-                bottom:0;
-                box-sizing: border-box;
-                width: 100%;
-                height:30vh;
-                background:linear-gradient(to bottom, transparent 0%,transparent 50%,var(--s2Color)80%,var(--s2Color) 100%);
-            }
 
             //Namaste part
             .introduction{
@@ -775,6 +892,15 @@ body{
         }
 
         //Menu Section
+        .projects::after{
+            content:' ';
+            position: absolute;
+            bottom:0;
+            box-sizing: border-box;
+            width: 100%;
+            height:30vh;
+            background:linear-gradient(to bottom, transparent 0%,transparent 50%,var(--nColor) 100%);
+        }
         .projects{
             box-sizing: border-box;
             position: relative;
@@ -785,7 +911,7 @@ body{
             justify-content: center;
             width: 100%;
             min-height: 100vh;
-            background:linear-gradient(to bottom,var(--s2Color),seashell);
+            background:linear-gradient(to bottom,var(--s2Color)80%,var(--nColor));
             overflow: hidden;
             color:var(--pColor);
             padding:5vh;
@@ -809,25 +935,7 @@ body{
                     animation: change-color 1s infinite .1s forwards;
                 }
             }
-            .projectsIntro{
-                position: absolute;
-                top: 10%;
-                left:10%;
-                transform: translate(-10%,-10%);
-                .headerForProjectsIntro{
-                    letter-spacing: .5vh;
-                    margin-right: -.5vh;
-                    text-align: center;
-                    font-family: 'Bebas Neue', cursive;
-                    font-size: 4vh;
-                }
-                .desForProjectsIntro{
-                    font-family: 'Jost', sans-serif;
-                    text-align: center;
-                    font-size: 2vh;
-                }
-                
-            }
+
             .projectsBackdrop{
                 position: absolute;
                 top: 35%;
@@ -1091,8 +1199,8 @@ body{
     .aboutSection{
         width: 100%;
         min-height: 100vh;
-        background:linear-gradient(to bottom, seashell, var(--s2Color));
-        color:var(--pColor);
+        background: conic-gradient(var(--nColor),var(--nColor));
+        color:var(--Text-Color);
         transition: linear .2s;
         position: relative;
         padding: 1vh;
@@ -1104,6 +1212,7 @@ body{
         align-items: center;
 
         .headerForAboutSection{
+            z-index: 1;
             font-size: 5vh;
             font-family: 'Monoton', cursive;
             text-transform: uppercase;
@@ -1112,26 +1221,7 @@ body{
             padding-bottom: 2vh;
         }
 
-        .introForAboutSection{
-            position:absolute;
-            bottom:5%;
-            right:2%;
-            transform: translate(-2%,-5%);
-            display:flex;
-            flex-direction: column;
-            text-align: center;
-            .headerForIntroOfAboutSec{
-                font-size: 4vh;
-                font-weight: bold;
-                font-family: 'Bebas Neue', cursive;
-                letter-spacing: .3vh;
-                margin-right: -.3vh;
-            }
-            .desForIntroOfAboutSec{
-                font-size: 2vh;
-                font-family: 'Jost', sans-serif;
-            }
-        }
+
         .aboutAllBoxes{
                 display: flex;
                 flex-direction: row;
@@ -1151,6 +1241,7 @@ body{
                         padding: 0;
                         overflow: hidden;
                         border:1vh solid var(--sColor);
+                        border-radius: 5vh;
                         img{
                             width:40vh;
                             height:40vh;
@@ -1167,6 +1258,7 @@ body{
                         padding: 0;
                         margin: 1vh;
                         a{
+                            border-radius: 10vh;
                             transition: ease-in-out .2s;
                             font-family: var(--Header);
                             text-decoration: none;
@@ -1174,7 +1266,7 @@ body{
                             padding: 1vh;
                             text-align: center;
                             width: 95%;
-                            background: var(--Red-Color);
+                            background: var(--s2Color);
                             color:var(--pColor);
                             &:hover{
                                 background: var(--sColor);
@@ -1212,12 +1304,6 @@ body{
                 align-items: center;
                 justify-content: center;
                 margin-top: 5vh;
-                background-image:repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--s2Color) 4vh, transparent 10%),
-                repeating-linear-gradient(45deg ,var(--pColor) 2vh, var(--s2Color) 4vh, transparent 10%),
-                repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--s2Color) 4vh, transparent 10%),
-                repeating-linear-gradient(45deg ,var(--pColor) -2vh, var(--s2Color) 4vh);
-                background-position: center;
-                background-attachment: fixed;
                 overflow-x: auto;
 
                 .header{
@@ -1265,11 +1351,11 @@ body{
             width: 100%;
             margin:0;
             padding:5vh 0;
-            background: var(--s2Color);
+            background-image: linear-gradient(to bottom,var(--nColor) 80%,var(--Red-Color));
+            color:var(--sColor);
 
             //Header For Contact Section
             .headerForContactSec{
-                color:var(--pColor);
                 font-size: 9vh;
                 font-family: 'Monoton', cursive;
                 margin: 1vh;
@@ -1301,9 +1387,9 @@ body{
                             height: 1vh;
                             border:.1vh solid var(--pColor);
                             border-radius: 1vh;
+                            color: var(--Text-Color);
                             background: transparent;
                             margin: 1vh;
-                            color: var(--pColor);
                         }
                     }
 
@@ -1321,7 +1407,7 @@ body{
                             border:.1vh solid var(--pColor);
                             border-radius: 1vh;
                             background-color: transparent;
-                            color: var(--pColor);
+                            color: var(--Text-Color);
                             font-size: 2vh;
                             font-family: var(--Text);
                             
@@ -1329,8 +1415,8 @@ body{
                         button{
                             width:10vh;
                             height: 5vh;
-                            background: var(--pColor);
-                            color:var(--sColor);
+                            background: var(--s2Color);
+                            color:var(--pColor);
                             border-radius: 1vh;
                             font-size: 2vh;
                             font-family: var(--Header);
@@ -1372,20 +1458,22 @@ body{
             color: var(--sColor);
             background: var(--Red-Color);
             overflow: hidden;
+            gap:1vh;
             display: flex;
             align-items: center;
-            justify-content:space-evenly;
+            justify-content:center;
             flex-direction: row;
             flex-wrap: wrap;
             //For social links
             .socialLinks{
                 overflow: hidden;
-                min-width: auto;
+                min-width: 33vh;
                 height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                position: relative;
                 .contactSecHeader{
                     opacity: 90%;
                     font-size: 3vh;
@@ -1395,7 +1483,6 @@ body{
                     font-family: 'Bebas Neue', cursive;                    
                 }
                 .contactIntro{
-
                     .contactIntroDes{
                         align-items:left;
                         display: flex;
@@ -1426,6 +1513,7 @@ body{
             .contactSecDesAboutMe{
                 display: flex;
                 align-items: left;
+                min-width: 33vh;
                 flex-direction: column;
                 justify-content: center;
                 color:var(--sColor);
@@ -1458,7 +1546,7 @@ body{
             //For Thanks section
             .thanks-section{
                 overflow: hidden;
-                width: auto;
+                width: 33vh;
                 height: 100%;
                 display: flex;
                 justify-content: center;
