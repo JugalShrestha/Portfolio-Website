@@ -45,7 +45,7 @@
     </div>
    
     <!--Inside the about and contact menu-->
-    <div class="MobileNav" id="navId">
+    <div class="MobileNav">
         <div onclick="navClose()" class="navCross">
             &cross;
         </div>
@@ -73,7 +73,7 @@
             <li><a id="allALink" onclick="scrollTo2()">About Me</a></li>
         </ul>
         <label class="logo">
-            <a>Jugal</a> 
+            <a onclick="scrollTo4()">Jugal</a> 
         </label>
         <nav>
         <ul class="navOptions">
@@ -197,42 +197,48 @@
         <div class="welcomePage" id="allWel1">
 
             <!--decorations for screen-->
-            <div id="notInMobileId">
-                <div id="screen-signs-id" class="screen-signs-decoration">
-                    &cross;
+            <div class="overlay-for-signs" id="notInMobileId">
+                <div id="screen-signs-id-1" data-value="5" class="screen-signs-decoration">
+                    📸
                 </div>
                 
-                <div  id="screen-signs-id"  class="screen-signs-decoration">
-                    &cross;
+                <div  id="screen-signs-id-2"  data-value="2"  class="screen-signs-decoration">
+                    ⚽
                 </div>
                 
-                <div  id="screen-signs-id"  class="screen-signs-decoration">
-                    &cross;
+                <div  id="screen-signs-id-3" data-value="-5"  class="screen-signs-decoration">
+                    🎸
                 </div>
                 
-                <div  id="screen-signs-id"  class="screen-signs-decoration">
-                    &cross;
+                <div  id="screen-signs-id-4" data-value="-4"  class="screen-signs-decoration">
+                    🎮
                 </div>
 
-                <div  id="screen-signs-id"  class="screen-signs-decoration">
-                    &cross;
+                <div  id="screen-signs-id-5" data-value="4"  class="screen-signs-decoration">
+                    🎬
                 </div>
 
-                <div  id="screen-signs-id"  class="screen-signs-decoration">
-                    &cross;
+                <div  id="screen-signs-id-6" data-value="-1"  class="screen-signs-decoration">
+                    💻
                 </div>
             </div>
 
             <!--hi part-->
             <div id="allWel2" class="introduction">
                 <div id="landing-hi" class="hi-part">
-                    Hi I am
+                    <div>Hi</div>
+                    <div><span>I</span></div>
+                    <div>am</div>
                 </div>
                 <div id="notInMobileId" class="short-des-part">
-                    Web-Designer &cross; Web-Developer &cross; Artist
+                    Web-Designer &cross; Web-Developer &cross; Artist    
                 </div>
                 <div id="landing-name" class="name-part">
-                    Jugal<span id="notInMobileId"> Shrestha</span>
+                    <div>Jugal</div>
+                    <div><span> Shrestha</span></div>
+                </div>
+                <div class="moto-part">
+                    Working for any projects that suits my fit.
                 </div>
             </div>
         </div>
@@ -242,35 +248,35 @@
 
             <!--decorations for screen-->
             <div id="notInMobileId">
-                <div id="screen-signs-id" class="screen-signs-decoration">
+                <div id="screen-signsP-id-1" data-value="9" class="screen-signs-decoration">
                     Hard Work
                 </div>
                 
-                <div  id="screen-signs-id"  class="screen-signs-decoration">
+                <div  id="screen-signsP-id-2" data-value="5"  class="screen-signs-decoration">
                     Joy
                 </div>
                 
-                <div  id="screen-signs-id"  class="screen-signs-decoration">
+                <div  id="screen-signsP-id-3" data-value="6"  class="screen-signs-decoration">
                     Knowledge
                 </div>
                 
-                <div  id="screen-signs-id"  class="screen-signs-decoration">
+                <div  id="screen-signsP-id-4" data-value="-8"  class="screen-signs-decoration">
                     Power
                 </div>
 
-                <div  id="screen-signs-id"  class="screen-signs-decoration">
+                <div  id="screen-signsP-id-5" data-value="-6" class="screen-signs-decoration">
                     IQ
                 </div>
 
-                <div  id="screen-signs-id"  class="screen-signs-decoration">
+                <div  id="screen-signsP-id-6"  data-value="-10" class="screen-signs-decoration">
                     Book
                 </div>
 
-                <div  id="screen-signs-id"  class="screen-signs-decoration">
+                <div  id="screen-signsP-id-7" data-value="-5"  class="screen-signs-decoration">
                     Tear
                 </div>
 
-                <div  id="screen-signs-id"  class="screen-signs-decoration">
+                <div  id="screen-signsP-id-8" data-value="3"  class="screen-signs-decoration">
                     Code
                 </div>
             </div>
@@ -545,7 +551,8 @@
 </body>
 <script src="Scripts/deviceWidth.js"></script>
 <script src="Scripts/loader.js"></script>
-<script src="Scripts/parallax.js"></script>
+<script src="Scripts/parallax-welcome.js"></script>
+<script src="Scripts/parallax-projects.js"></script>
 <script src="Scripts/scroll-reveal.js"></script>
 <script src="Scripts/form-send.js"></script>
 </html>

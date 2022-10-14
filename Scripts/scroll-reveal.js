@@ -17,3 +17,17 @@ ScrollReveal().reveal('#Contacts-Header',{delay: 300,origin:'left'});
 ScrollReveal().reveal('#landing-hi',{origin:'left'});
 ScrollReveal().reveal('#landing-name',{origin:'right',delay: 500});
 ScrollReveal().reveal('.welcomePage .short-des-part',{distance:'30px',origin:'top',delay: 300});
+
+
+const navbar= document.getElementById('navId')
+let scrollTop = window.scrollY;
+    window.addEventListener('scroll',function(){
+        if(scrollTop < this.window.scrollY)
+        {
+            navbar.style.top = '-100px';
+        }
+        else{
+            navbar.style.top="1%";
+        }
+        scrollTop =window.scrollY;
+    })

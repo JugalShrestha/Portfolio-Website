@@ -105,14 +105,15 @@
 
 @keyframes moving-signs {
     0%{
-        transform: translateY(0vh) translateX(0vh) rotate(-3deg);
+        opacity: 100%;
     }
     50%{
-        transform: translateY(1vh) translateX(5vh) rotate(0deg);
+        opacity: 20%;
     }
     100%{
-        transform: translateY(0vh) translateX(0vh) rotate(-3deg);
+        opacity: 100%;
     }
+    
 }
 /*animations*/
 
@@ -226,7 +227,7 @@ body{
         margin: 0vh;
         padding: 0vh;
         z-index: 8;
-        position: absolute;
+        position: fixed;
         top:1%;
         width: 100%;
         height: 10%;
@@ -236,6 +237,7 @@ body{
         justify-content: center;
         color:var(--pColor);
         gap: 3vh;
+        transition: .2s ease-in-out;
         .logo{
             box-sizing: border-box;
             margin: 0;
@@ -704,7 +706,10 @@ body{
             font-size: 10vh;
             opacity: 50%;
             pointer-events: none;
+            transition: .1s linear;
+            
         }
+        //Decoration of Welcome page
         .welcomePage{
             .screen-signs-decoration:nth-child(even){
                 font-size: 7vh;
@@ -712,7 +717,7 @@ body{
             .screen-signs-decoration:nth-child(1){
                 position: absolute;
                 top:10%;
-                left:10%;
+                left:20%;
             }
             .screen-signs-decoration:nth-child(2){
                 position: absolute;
@@ -732,28 +737,27 @@ body{
             .screen-signs-decoration:nth-child(5){
                 position: absolute;
                 bottom:20%;
-                left:50%;
+                left:30%;
             }
             .screen-signs-decoration:nth-child(6){
                 position: absolute;
                 bottom:40%;
-                left:90%;
+                left:80%;
             }    
         }
         .projects{
             .screen-signs-decoration{
                 font-size: 4vh;
                 opacity: 50%;
+                transition: .1s linear;
                 pointer-events: none;
                 font-family: var(--Text);
                 animation: change-color 1s infinite .1s forwards;
-                animation: moving-signs 5s infinite forwards;
             }
             .screen-signs-decoration:nth-child(even){
                 font-size: 10vh;
                 font-family: var(--Text);
                 text-transform: uppercase;
-                
             }
             .screen-signs-decoration:nth-child(1){
                 position: absolute;
@@ -769,7 +773,6 @@ body{
                 position: absolute;
                 top:20%;
                 right:30%;
-                transform: rotate(15deg);
             }
             .screen-signs-decoration:nth-child(4){
                 position: absolute;
@@ -785,7 +788,6 @@ body{
                 position: absolute;
                 bottom:20%;
                 left:70%;
-                transform: rotate(315deg);
             }
             .screen-signs-decoration:nth-child(7){
                 position: absolute;
@@ -829,7 +831,7 @@ body{
                 color:var(--pColor);
                 padding: 0;
                 margin: 10vh 0;
-                width: 50%;
+                width: fit-content;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -839,19 +841,31 @@ body{
 
                 //hi part
                 .hi-part{
-                    font-size: 10vh;
+                    font-size: 20vh;
+                    margin-bottom: -5vh;
                     font-family: var(--Header);
                     font-weight: bold;
                     width: 100%;
                     letter-spacing: 1vh;
                     overflow: hidden;
+                    display: flex;
+                    gap: 1vh;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    span{
+                        font-weight: lighter;
+                        font-family: 'Monoton',cursive;
+                        color: var(--Red-Color);
+                    }
                 }
                 .short-des-part{
                     padding: 1vh 2vh;
-                    background: var(--sColor);
-                    width: auto;
+                    background: var(--pColor);
+                    color: var(--Text-Color);
+                    width: 100%;
                     font-size: 2vh;
-                    letter-spacing: 1vh;
+                    letter-spacing: .5vh;
                     font-family: var(--Text);
                     text-transform: uppercase;
                     border-radius: 10vh;
@@ -863,11 +877,27 @@ body{
                     font-weight: bold;
                     color: var(--Red-Color);
                     width: 100%;
+                    gap: 1vh;
                     letter-spacing: 1vh;
                     overflow: hidden;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content:space-evenly;
+                    align-items: center;
                     span{
                         color:var(--pColor);
                     }
+                }
+                .moto-part{
+                    font-size: 2vh;
+                    letter-spacing: .2vh;
+                    padding: 1vh;
+                    font-family: var(--Text);
+                    background: var(--Red-Color);
+                    color: var(--sColor);
+                    width:auto;
+                    font-weight: bold;
+                    border-radius: 5vh;
                 }
             }
         }

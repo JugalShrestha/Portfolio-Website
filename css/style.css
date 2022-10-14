@@ -200,24 +200,24 @@
 }
 @-webkit-keyframes moving-signs {
   0% {
-    transform: translateY(0vh) translateX(0vh) rotate(-3deg);
+    opacity: 100%;
   }
   50% {
-    transform: translateY(1vh) translateX(5vh) rotate(0deg);
+    opacity: 20%;
   }
   100% {
-    transform: translateY(0vh) translateX(0vh) rotate(-3deg);
+    opacity: 100%;
   }
 }
 @keyframes moving-signs {
   0% {
-    transform: translateY(0vh) translateX(0vh) rotate(-3deg);
+    opacity: 100%;
   }
   50% {
-    transform: translateY(1vh) translateX(5vh) rotate(0deg);
+    opacity: 20%;
   }
   100% {
-    transform: translateY(0vh) translateX(0vh) rotate(-3deg);
+    opacity: 100%;
   }
 }
 /*animations*/
@@ -337,7 +337,7 @@ body .nav {
   margin: 0vh;
   padding: 0vh;
   z-index: 8;
-  position: absolute;
+  position: fixed;
   top: 1%;
   width: 100%;
   height: 10%;
@@ -347,6 +347,7 @@ body .nav {
   justify-content: center;
   color: var(--pColor);
   gap: 3vh;
+  transition: 0.2s ease-in-out;
 }
 body .nav .logo {
   box-sizing: border-box;
@@ -790,6 +791,7 @@ body .allBody2 .screen-signs-decoration {
   font-size: 10vh;
   opacity: 50%;
   pointer-events: none;
+  transition: 0.1s linear;
 }
 body .allBody2 .welcomePage .screen-signs-decoration:nth-child(even) {
   font-size: 7vh;
@@ -797,7 +799,7 @@ body .allBody2 .welcomePage .screen-signs-decoration:nth-child(even) {
 body .allBody2 .welcomePage .screen-signs-decoration:nth-child(1) {
   position: absolute;
   top: 10%;
-  left: 10%;
+  left: 20%;
 }
 body .allBody2 .welcomePage .screen-signs-decoration:nth-child(2) {
   position: absolute;
@@ -817,22 +819,21 @@ body .allBody2 .welcomePage .screen-signs-decoration:nth-child(4) {
 body .allBody2 .welcomePage .screen-signs-decoration:nth-child(5) {
   position: absolute;
   bottom: 20%;
-  left: 50%;
+  left: 30%;
 }
 body .allBody2 .welcomePage .screen-signs-decoration:nth-child(6) {
   position: absolute;
   bottom: 40%;
-  left: 90%;
+  left: 80%;
 }
 body .allBody2 .projects .screen-signs-decoration {
   font-size: 4vh;
   opacity: 50%;
+  transition: 0.1s linear;
   pointer-events: none;
   font-family: var(--Text);
   -webkit-animation: change-color 1s infinite 0.1s forwards;
           animation: change-color 1s infinite 0.1s forwards;
-  -webkit-animation: moving-signs 5s infinite forwards;
-          animation: moving-signs 5s infinite forwards;
 }
 body .allBody2 .projects .screen-signs-decoration:nth-child(even) {
   font-size: 10vh;
@@ -853,7 +854,6 @@ body .allBody2 .projects .screen-signs-decoration:nth-child(3) {
   position: absolute;
   top: 20%;
   right: 30%;
-  transform: rotate(15deg);
 }
 body .allBody2 .projects .screen-signs-decoration:nth-child(4) {
   position: absolute;
@@ -869,7 +869,6 @@ body .allBody2 .projects .screen-signs-decoration:nth-child(6) {
   position: absolute;
   bottom: 20%;
   left: 70%;
-  transform: rotate(315deg);
 }
 body .allBody2 .projects .screen-signs-decoration:nth-child(7) {
   position: absolute;
@@ -909,7 +908,9 @@ body .allBody2 .welcomePage .introduction {
   color: var(--pColor);
   padding: 0;
   margin: 10vh 0;
-  width: 50%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -918,19 +919,31 @@ body .allBody2 .welcomePage .introduction {
   overflow: hidden;
 }
 body .allBody2 .welcomePage .introduction .hi-part {
-  font-size: 10vh;
+  font-size: 20vh;
+  margin-bottom: -5vh;
   font-family: var(--Header);
   font-weight: bold;
   width: 100%;
   letter-spacing: 1vh;
   overflow: hidden;
+  display: flex;
+  gap: 1vh;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body .allBody2 .welcomePage .introduction .hi-part span {
+  font-weight: lighter;
+  font-family: "Monoton", cursive;
+  color: var(--Red-Color);
 }
 body .allBody2 .welcomePage .introduction .short-des-part {
   padding: 1vh 2vh;
-  background: var(--sColor);
-  width: auto;
+  background: var(--pColor);
+  color: var(--Text-Color);
+  width: 100%;
   font-size: 2vh;
-  letter-spacing: 1vh;
+  letter-spacing: 0.5vh;
   font-family: var(--Text);
   text-transform: uppercase;
   border-radius: 10vh;
@@ -942,11 +955,27 @@ body .allBody2 .welcomePage .introduction .name-part {
   font-weight: bold;
   color: var(--Red-Color);
   width: 100%;
+  gap: 1vh;
   letter-spacing: 1vh;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 body .allBody2 .welcomePage .introduction .name-part span {
   color: var(--pColor);
+}
+body .allBody2 .welcomePage .introduction .moto-part {
+  font-size: 2vh;
+  letter-spacing: 0.2vh;
+  padding: 1vh;
+  font-family: var(--Text);
+  background: var(--Red-Color);
+  color: var(--sColor);
+  width: auto;
+  font-weight: bold;
+  border-radius: 5vh;
 }
 body .allBody2 #box1 {
   background-image: repeating-linear-gradient(45deg, var(--pColor) 2vh, var(--sColor) 4vh, transparent 20%), repeating-linear-gradient(315deg, var(--pColor) 2vh, var(--sColor) 4vh, transparent 20%), repeating-linear-gradient(0deg, var(--pColor) 5vh, var(--sColor) 10vh);
