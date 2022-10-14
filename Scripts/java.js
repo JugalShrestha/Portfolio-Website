@@ -59,40 +59,28 @@ function closeContactOl(){
 
 function openProjects(){
   const overlay= document.getElementById('projectOpen')
+  const screen=document.getElementById('box-screen')
   overlay.classList.add('active')
+  screen.classList.add('remove-menu')
 }
 function projectDisplayClose()
 {
   const overlay= document.getElementById('projectOpen')
+  const screen=document.getElementById('box-screen')
   overlay.classList.remove('active')
+  screen.classList.remove('remove-menu')
 }
 
 function openArts(){
   const overlay= document.getElementById('artOpen')
+  const screen=document.getElementById('box-screen')
   overlay.classList.add('active')
+  screen.classList.add('remove-menu')
 }
 function artDisplayClose()
 {
   const overlay= document.getElementById('artOpen')
+  const screen=document.getElementById('box-screen')
   overlay.classList.remove('active')
-}
-
-function openPhotos(){
-  const overlay= document.getElementById('photoOpen')
-  overlay.classList.add('active')
-}
-function photoDisplayClose()
-{
-  const overlay= document.getElementById('photoOpen')
-  overlay.classList.remove('active')
-}
-
-function openGames(){
-  const overlay= document.getElementById('gameOpen')
-  overlay.classList.add('active')
-}
-function gameDisplayClose()
-{
-  const overlay= document.getElementById('gameOpen')
-  overlay.classList.remove('active')
+  screen.classList.remove('remove-menu')
 }

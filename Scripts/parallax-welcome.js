@@ -7,12 +7,12 @@ const sign6= document.getElementById('screen-signs-id-6')
 
 const screenW=document.getElementById('allWel1')
 
-screenW.addEventListener('mousemove',parallax);
+window.addEventListener('mousemove',parallax);
 
 function parallax()
 {
     var e = window.event;
-    var rate= 50;
+    var rate= 500;
 
     const speed1= sign1.getAttribute('data-value');
     var posX1 = ((e.clientX)*speed1)/rate;

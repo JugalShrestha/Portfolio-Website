@@ -9,12 +9,12 @@ const signP8= document.getElementById('screen-signsP-id-8')
 
 const screenP=document.getElementById('allP1')
 
-screenP.addEventListener('mousemove',parallaxP);
+window.addEventListener('mousemove',parallaxP);
 
 function parallaxP()
 {
     var eP = window.event;
-    var rateP= 100;
+    var rateP= 500;
 
     const speedP1= signP1.getAttribute('data-value');
     var posX1P = ((eP.clientX)*speedP1)/rateP;

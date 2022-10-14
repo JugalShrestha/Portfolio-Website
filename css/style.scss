@@ -119,10 +119,14 @@
 
 /*ScrollEdit*/
 ::-webkit-scrollbar{
+    width: 1vh;
+    height: 1vh;
+}
+
+body::-webkit-scrollbar{
     width:.5vh;
     height: .5vh;
 }
-
 ::-webkit-scrollbar-track{
     margin:0;
     padding: 0;
@@ -130,7 +134,7 @@
     background: var(--nColor);
 }
 ::-webkit-scrollbar-thumb{
-    border-radius: 10%;
+    border-radius: 10vh;
     background: var(--sColor);
     opacity:90%;
     margin: 0;
@@ -713,6 +717,7 @@ body{
         .welcomePage{
             .screen-signs-decoration:nth-child(even){
                 font-size: 7vh;
+                filter: blur(.3vh);
             }
             .screen-signs-decoration:nth-child(1){
                 position: absolute;
@@ -759,6 +764,9 @@ body{
                 font-family: var(--Text);
                 text-transform: uppercase;
             }
+            .screen-signs-decoration:nth-child(odd){
+                filter: blur(.2vh);
+            }
             .screen-signs-decoration:nth-child(1){
                 position: absolute;
                 top:0%;
@@ -782,7 +790,7 @@ body{
             .screen-signs-decoration:nth-child(5){
                 position: absolute;
                 bottom:20%;
-                left:40%;
+                left:80%;
             }
             .screen-signs-decoration:nth-child(6){
                 position: absolute;
@@ -1016,14 +1024,17 @@ body{
             //Menu's
             .boxes{
                 padding:0;
-                margin:1vh;
+                gap:1vh;
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                max-width: 72vh;
-                overflow: hidden;
-                flex-wrap:wrap;
+                flex-wrap:nowrap;
                 z-index: 2;
+                transition: .3s linear;
                 .container{
                     overflow:hidden;
                     width:35vh;
@@ -1042,7 +1053,7 @@ body{
                     transition: linear .2s;
                     
                     &:hover{
-                        transform: scale(1.5);
+                        scale: 1.5;
                     }
                     .imagesP{
                         transition: linear .1s;
@@ -1057,22 +1068,25 @@ body{
                     }
                 }
             }
+            .remove-menu{
+                left:300vh;
+            }
         }
 
         /*For overlays inside the Menu tabs*/
         .displayContents{
-        position: fixed;
-        top:10%;
-        bottom:10%;
         box-sizing: border-box;
         padding:0;
         margin:0;
         display:flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        overflow: auto;
-        max-width:70%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 80vh;
+        height: 35vh;
+        box-shadow: 1vh .1vh 1vh var(--shadow);
         }
         .descriptionOfBoxes{
             text-decoration: none;
@@ -1085,33 +1099,26 @@ body{
        }
         .resultsOfDisplay{
             padding:0;
-            margin:1vh;
+            margin:0;
             display: flex;
+            gap:1vh;
+            align-items: center;
             justify-content: center;
-            width: 100%;
-            flex-wrap:wrap;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            background-image:repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--sColor) 4vh, transparent 10%),
-            repeating-linear-gradient(45deg ,var(--pColor) 2vh, var(--sColor) 4vh, transparent 10%),
-            repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--sColor) 4vh, transparent 10%),
-            repeating-linear-gradient(45deg ,var(--pColor) -2vh, var(--sColor) 4vh);
-            background-position: center;
-            background-attachment: fixed;
-            background-size: cover;
             .boxesOfResult{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin:1vh;
+                margin:0;
                 cursor: pointer;
+                background: var(--sColor);
                 width: 35vh;
                 height: 35vh;
                 overflow: hidden;
                 padding:0;
                 position:relative;
-                box-shadow: 1vh .1vh 1vh var(--shadow);
+               
                 &:hover{
-                    animation: rotate infinite ease 3s forwards;
                     .overlayForDisplay{
                         visibility: visible;
                     }
@@ -1178,23 +1185,22 @@ body{
         //Overlay for PROJECTS menu
         .projectsDisplay
         {
-            transition:linear .2s;
-            border-left:0;
+            transition:linear 1s;
             box-sizing: border-box;
             padding: 0;
-            margin:0;
-            background:var(--sColor);
+            margin: 0;
             z-index:9;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            position: fixed;
-            top:0;
-            left:0;
-            bottom:0;
-            right:0;
-            transform:translateX(-300%);
+            position: absolute;
+            top:50%;
+            left:5%;
+            right: 5%;
+            width: 90%;
+            height: 50%;
+            transform:translateX(-300%) translateY(-50%);
         }
         
         /*overlay for ARTS MENU*/
@@ -1203,25 +1209,25 @@ body{
         }
         .artsDisplay
         {
-            transition:ease-in-out .2s;
+            transition:linear 1s;
             box-sizing: border-box;
             padding: 0;
-            margin:0;
-            background:var(--sColor);
+            margin: 0;
             z-index:9;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            position: fixed;
-            top:0;
-            left:0;
-            bottom:0;
-            right:0;
-            transform:translateX(-300%);
+            position: absolute;
+            top:50%;
+            left:5%;
+            right: 5%;
+            width: 90%;
+            height: 50%;
+            transform:translateX(-300%) translateY(-50%);
         }
             .active{
-                transform:translateX(0);
+                transform:translateX(0) translateY(-50%);
             }
     }
 
