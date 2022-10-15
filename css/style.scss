@@ -1078,74 +1078,114 @@ body{
         box-sizing: border-box;
         padding:0;
         margin:0;
+        position: relative;
         display:flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        overflow-x: auto;
-        overflow-y: hidden;
+        overflow: visible;
         width: 80vh;
-        height: 35vh;
+        height: 40vh;
         box-shadow: 1vh .1vh 1vh var(--shadow);
-        }
-        .descriptionOfBoxes{
-            text-decoration: none;
-            margin-right:-.2em;
-            letter-spacing: 1vh;
-            color: var(--pColor);
-            font-size: 5vh;
+
+        .prev,.next{
+            position: absolute;
+            top:50%;
+            color:var(--Red-Color);
+            font-size: 4vh;
             font-weight: bold;
-            font-family:monospace;
-       }
+            text-decoration: none;
+            cursor: pointer;
+            padding: 2vh;
+            background: var(--sColor);
+            border-radius: 1vh;
+        }
+        .prev{
+            left:-10%;
+        }
+        .next{
+            right:-10%;
+        }
+
+        }
         .resultsOfDisplay{
             padding:0;
             margin:0;
+            position: relative;
             display: flex;
+            min-width: 75vh;
+            min-height: 35vh;
             gap:1vh;
-            align-items: center;
-            justify-content: center;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            
             .boxesOfResult{
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                margin:0;
-                cursor: pointer;
-                background: var(--sColor);
-                width: 35vh;
-                height: 35vh;
-                overflow: hidden;
-                padding:0;
-                position:relative;
-               
-                &:hover{
-                    .overlayForDisplay{
-                        visibility: visible;
-                    }
-                } 
-                
-               .overlayForDisplay{
-                    transition: ease-in-out .2s;
-                    background: var(--sColor);
-                    position: absolute;
-                    top:0;
-                    right:0;
-                    left:0;
-                    bottom:0;
-                    opacity:90%;
-                    visibility: hidden;
+                position: absolute;      
+                width: 100%;
+                height: 100%;
+                transition: .2s linear;
+
+                .image-of-project{
+                    position: relative;
+                    min-width: 35vh;
                     display: flex;
+                    flex-direction: column;
+                    min-height: 35vh;
+                    align-items: center;
+                    justify-content: center;
+                    color:var(--Text-Color);
+                    font-family: var(--Header);
+                    background: var(--pColor);
+                    font-size: 4vh;
+
+                    .number-count{
+                        position: absolute;
+                        top:2%;
+                        left:2%;
+                        font-size: 2vh;
+                        font-weight: lighter;
+                        font-family: var(--Text);
+                    }
+
+                    .view-code{
+                        text-decoration: none;
+                        position: absolute;
+                        bottom:5%;
+                        font-size: 2vh;
+                        font-family: var(--Header);
+                        color:var(--Text-Color);
+                        cursor: pointer;
+                    }
+                }
+                
+               .discription-of-project{
+                    background: var(--sColor);
+                    min-width: 35vh;
+                    min-height: 35vh;
+                    display: flex;
+                    flex-direction: column;
+                    padding:2vh;
                     align-items: center;
                     justify-content: center;
                     color: var(--pColor);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 3vh;
-                    font-weight: bold;
-                    text-align: center;
-                    text-decoration: none;
+
+                    .header-of-project{
+                        align-self: center;
+                        font-size:4vh;
+                        font-family: var(--Header);
+                        font-weight: bold;
+                    }
+                    .intro-of-project{
+                        font-size: 2vh;
+                        font-family: var(--Text);
+                        text-align: justify;
+                    }
                }
+            }
+            .next-project{
+                display: flex;
+            }
+            .prev-project{
+                display: none;
             }
         }
 
@@ -1156,13 +1196,13 @@ body{
             bottom:50%;
             right: 0%;
             transform: translate(-50%,0%);
-            padding:1vh 2vh;
+            padding:1vh;
             margin: 0;
             background: var(--sColor);
-            border-radius: 100%;
+            border-radius: 1vh;
             box-shadow: 0vh 0vh 1vh var(--shadow);
             cursor: pointer;
-            font-family: 'Jost', sans-serif;
+            font-family: var(--Text);
             color:var(--pColor);
             font-size: 3vh;
             font-weight: bold;
@@ -1178,8 +1218,8 @@ body{
             letter-spacing: 1vh;
             font-size: 5vh;
             text-transform: uppercase;
-            position: fixed;
-            top:1%;
+            position: absolute;
+            top:-10%;
         }
 
         //Overlay for PROJECTS menu
@@ -1189,7 +1229,7 @@ body{
             box-sizing: border-box;
             padding: 0;
             margin: 0;
-            z-index:9;
+            z-index:7;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -1201,6 +1241,7 @@ body{
             width: 90%;
             height: 50%;
             transform:translateX(-300%) translateY(-50%);
+
         }
         
         /*overlay for ARTS MENU*/
@@ -1213,7 +1254,7 @@ body{
             box-sizing: border-box;
             padding: 0;
             margin: 0;
-            z-index:9;
+            z-index:7;
             display: flex;
             flex-direction: column;
             justify-content: center;

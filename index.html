@@ -310,77 +310,114 @@
 
             <!--Overlay for PROJECTS menu-->
         <div class="overlays-for-projects-menu">
-            
+            <!--Every thing that is displayed-->
             <div class="projectsDisplay" id="projectOpen">
+
+                <!--Back to menu link-->
                 <div onclick="projectDisplayClose()" class="sideArrow">
-                    ◁
+                    Go back
                 </div>
+                <!--All the contents of project-->
                 <div class="displayContents">
+
+                    <!--header of the overlay-->
                     <div class="displayHeaders">Projects</div>
+
+                    <!--Actual contents / SlideShow contents-->
                     <div class="resultsOfDisplay">
-                        <div class="boxesOfResult">
-                            <a target="_blank" href="https://github.com/JugalBaucha/LIBRARY_MANAGEMENT_SYSTEM" class="descriptionOfBoxes"> L.M.S </a>
-                            <div class="overlayForDisplay">
-                                <a target="_blank" href="https://github.com/JugalBaucha/LIBRARY_MANAGEMENT_SYSTEM" class="overlayForDisplay"> Library Management System <br> in C programming</a>
+
+                        <!--Individual contents-->
+                        <div class="boxesOfResult" id="project-1">
+                            <!--Images and link to code-->
+                            <div class="image-of-project">
+                                <div class="number-count">
+                                    1/3
+                                </div>
+                                <p>Library image</p>
+                                <a target="_blank" href="https://github.com/JugalBaucha/LIBRARY_MANAGEMENT_SYSTEM" class="view-code">View code?</a>
+                            </div>
+                            <!--Description of projects-->
+                            <div class="discription-of-project">
+                                <div class="header-of-project">
+                                    L.M.S
+                                </div>
+                                <div class="intro-of-project">
+                                    I built a Library Management System 
+                                    in C programming with the features 
+                                    such as Login, Add record, Modify it,
+                                    or Terminate it and Display the records.
+                                    The purpose of this project is for the
+                                    better management of the library.
+                                </div>
                             </div>
                         </div>
-                        <div class="boxesOfResult">
-                            b
+
+                         <!--Individual contents-->
+                        <div class="boxesOfResult" id="project-2">
+                            <!--Images and link to code-->
+                            <div class="image-of-project">
+                                <div class="number-count">
+                                    2/3
+                                </div>
+                                <p>image</p>
+                                <a target="_blank" href="https://github.com/JugalBaucha/LIBRARY_MANAGEMENT_SYSTEM" class="view-code">View code?</a>
+                            </div>
+                            <!--Description of projects-->
+                            <div class="discription-of-project">
+                                <div class="header-of-project">
+                                    Calculator
+                                </div>
+                                <div class="intro-of-project">
+                                    I built a Calculator 
+                                    in C programming. It does
+                                    a basic function of what a 
+                                    Calculator is supposed to do.
+                                </div>
+                            </div>
                         </div>
-                        <div class="boxesOfResult">
-                            c
+
+                        
+                        <!--Individual contents-->
+                        <div class="boxesOfResult" id="project-1">
+                            <!--Images and link to code-->
+                            <div class="image-of-project">
+                                <div class="number-count">
+                                    3/3
+                                </div>
+                                <p>image</p>
+                                <a target="_blank" href="" class="view-code">View code?</a>
+                            </div>
+                            <!--Description of projects-->
+                            <div class="discription-of-project">
+                                <div class="header-of-project">
+                                    BACHAT
+                                </div>
+                                <div class="intro-of-project">
+                                    An financial app made using java
+                                    which will help one to save thier
+                                    investments and make one's life 
+                                    effective and efficient
+                                </div>
+                            </div>
                         </div>
-                        <div class="boxesOfResult">
-                            d
-                        </div>
-                        <div class="boxesOfResult">
-                            e
-                        </div>
-                        <div class="boxesOfResult">
-                            f
-                        </div>
-                        <div class="boxesOfResult">
-                            g
-                        </div>
-                        <div class="boxesOfResult">
-                            h
-                        </div>
+
                     </div>
+                    
+                        <a class="prev" onclick="goPrev()">❮</a>
+                        <a class="next" onclick="goNext()">❯</a>
+                                            
                 </div>
             </div>
     
             <!--Overlay for ARTS menu-->
             <div class="artsDisplay" id="artOpen">    
                 <div onclick="artDisplayClose()" class="sideArrow">
-                    ◁
+                    Go back
                 </div>
                 <div class="displayContents">
                     <p class="displayHeaders">Arts</p>
                     <div class="resultsOfDisplay">
-                        <div class="boxesOfResult">
-                            
-                        </div>
-                        <div  class="boxesOfResult">
-                           
-                        </div>
-                        <div class="boxesOfResult">
-                           
-                        </div>
-                        <div class="boxesOfResult">
-                            
-                        </div>
-                        <div class="boxesOfResult">
-                            
-                        </div>
-                        <div  class="boxesOfResult">
-                            
-                        </div>
-                        <div class="boxesOfResult">
-                            
-                        </div>
-                        <div class="boxesOfResult">
-                            
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -556,6 +593,7 @@
 
     </div>
 </body>
+<script src="Scripts/slider.js"></script>
 <script src="Scripts/deviceWidth.js"></script>
 <script src="Scripts/loader.js"></script>
 <script src="Scripts/parallax-welcome.js"></script>

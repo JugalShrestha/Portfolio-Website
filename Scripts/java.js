@@ -60,6 +60,7 @@ function closeContactOl(){
 function openProjects(){
   const overlay= document.getElementById('projectOpen')
   const screen=document.getElementById('box-screen')
+  
   overlay.classList.add('active')
   screen.classList.add('remove-menu')
 }
@@ -67,6 +68,7 @@ function projectDisplayClose()
 {
   const overlay= document.getElementById('projectOpen')
   const screen=document.getElementById('box-screen')
+  
   overlay.classList.remove('active')
   screen.classList.remove('remove-menu')
 }
