@@ -1032,7 +1032,8 @@ body{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                flex-wrap:nowrap;
+                min-width: 75vh;
+                flex-wrap:wrap;
                 z-index: 2;
                 transition: .3s linear;
                 .container{
@@ -1051,6 +1052,7 @@ body{
                     height: 35vh;
                     overflow: hidden;
                     transition: linear .2s;
+                    border-radius: 2vh;
                     
                     &:hover{
                         scale: 1.5;
@@ -1076,7 +1078,8 @@ body{
         /*For overlays inside the Menu tabs*/
         .displayContents{
         box-sizing: border-box;
-        padding:0;
+        padding:2vh;
+        border-radius: 2vh;
         margin:0;
         position: relative;
         display:flex;
@@ -1084,20 +1087,23 @@ body{
         align-items: center;
         justify-content: center;
         overflow: visible;
-        width: 80vh;
+        width: auto;
         height: 40vh;
-        box-shadow: 1vh .1vh 1vh var(--shadow);
+        background-image:repeating-linear-gradient(180deg,var(--pColor)2vh,var(--Red-Color)2vh,transparent 20%),
+            repeating-linear-gradient(315deg,var(--pColor)2vh,var(--Red-Color)2vh,transparent 20%),
+            repeating-linear-gradient(0deg,var(--pColor)5vh,var(--Red-Color)10vh);
 
         .prev,.next{
             position: absolute;
             top:50%;
-            color:var(--Red-Color);
+            transform: translateY(-50%);
+            color:var(--pColor);
             font-size: 4vh;
             font-weight: bold;
             text-decoration: none;
             cursor: pointer;
             padding: 2vh;
-            background: var(--sColor);
+            background: var(--s2Color);
             border-radius: 1vh;
         }
         .prev{
@@ -1117,8 +1123,10 @@ body{
             min-height: 35vh;
             gap:1vh;
             
-            .boxesOfResult{
+            //For Projects
+            .boxesOfResultP{
                 display: flex;
+                flex-wrap: wrap;
                 position: absolute;      
                 width: 100%;
                 height: 100%;
@@ -1159,8 +1167,8 @@ body{
                 
                .discription-of-project{
                     background: var(--sColor);
-                    min-width: 35vh;
-                    min-height: 35vh;
+                    width: 40vh;
+                    height: 35vh;
                     display: flex;
                     flex-direction: column;
                     padding:2vh;
@@ -1181,24 +1189,50 @@ body{
                     }
                }
             }
-            .next-project{
+
+            //For Arts
+            .boxesOfResultA{
                 display: flex;
-            }
-            .prev-project{
-                display: none;
+                position: absolute;      
+                width: 100%;
+                height: 35vh;
+                transition: .2s linear;
+
+                .image-of-art{
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    min-height: 35vh;
+                    align-items: center;
+                    justify-content: center;
+                    color:var(--Text-Color);
+                    font-family: var(--Header);
+                    background: var(--pColor);
+                    font-size: 4vh;
+
+                    .number-count{
+                        position: absolute;
+                        top:2%;
+                        left:2%;
+                        font-size: 2vh;
+                        font-weight: lighter;
+                        font-family: var(--Text);
+                    }
+                }
             }
         }
 
         /*For CLosing the tab opened from 4 menus*/
         .sideArrow{
             z-index:9;
-            position:fixed;
-            bottom:50%;
-            right: 0%;
-            transform: translate(-50%,0%);
+            position:absolute;
+            top:50%;
+            right: 5%;
+            transform: translateY(-50%) translateX(200vh);
             padding:1vh;
             margin: 0;
-            background: var(--sColor);
+            background: var(--s2Color);
             border-radius: 1vh;
             box-shadow: 0vh 0vh 1vh var(--shadow);
             cursor: pointer;
@@ -1206,6 +1240,8 @@ body{
             color:var(--pColor);
             font-size: 3vh;
             font-weight: bold;
+            text-transform: capitalize;
+            transition: 1s linear;
             &:hover{
                 opacity: 50%;
             }

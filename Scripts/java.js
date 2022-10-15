@@ -60,7 +60,9 @@ function closeContactOl(){
 function openProjects(){
   const overlay= document.getElementById('projectOpen')
   const screen=document.getElementById('box-screen')
+  const goBack= document.getElementById('go-back')
   
+  goBack.classList.add('active')
   overlay.classList.add('active')
   screen.classList.add('remove-menu')
 }
@@ -68,21 +70,25 @@ function projectDisplayClose()
 {
   const overlay= document.getElementById('projectOpen')
   const screen=document.getElementById('box-screen')
+  const goBack= document.getElementById('go-back')
   
+  goBack.classList.remove('active')
   overlay.classList.remove('active')
   screen.classList.remove('remove-menu')
+  
+  const overlay2= document.getElementById('artOpen')
+  const screen2=document.getElementById('box-screen')
+  
+  overlay2.classList.remove('active')
+  screen2.classList.remove('remove-menu')
 }
 
 function openArts(){
   const overlay= document.getElementById('artOpen')
   const screen=document.getElementById('box-screen')
+  const goBack= document.getElementById('go-back')
+  
+  goBack.classList.add('active')
   overlay.classList.add('active')
   screen.classList.add('remove-menu')
-}
-function artDisplayClose()
-{
-  const overlay= document.getElementById('artOpen')
-  const screen=document.getElementById('box-screen')
-  overlay.classList.remove('active')
-  screen.classList.remove('remove-menu')
 }

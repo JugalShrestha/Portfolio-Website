@@ -1,4 +1,4 @@
-const projects= document.querySelectorAll('.boxesOfResult')
+const projects= document.querySelectorAll('.boxesOfResultP')
 var counter= 0;
 
 projects.forEach(
@@ -6,7 +6,7 @@ projects.forEach(
         project.style.left =''+(index * 100)+'%';
     }
 )
-const goPrev = () => {
+const goPrevP = () => {
     if(counter > 0)
     {
         counter--
@@ -15,7 +15,7 @@ const goPrev = () => {
    
 }
 
-const goNext = () => {
+const goNextP = () => {
     if(counter < 2)
     {
         counter++
@@ -27,6 +27,38 @@ const slideProject = () => {
     projects.forEach(
         (project) => {
             project.style.transform= 'translateX(-'+(counter*100)+'%)'
+        }
+    )
+}
+
+const projectsA= document.querySelectorAll('.boxesOfResultA')
+var counterA= 0;
+projectsA.forEach(
+    (projectA,indexA) =>{
+        projectA.style.left =''+(indexA * 100)+'%';
+    }
+)
+const goPrevA = () => {
+    if(counterA > 0)
+    {
+        counterA--
+        slideProjectA()
+    }
+   
+}
+
+const goNextA = () => {
+    if(counterA < 2)
+    {
+        counterA++
+        slideProjectA()
+    }
+}
+
+const slideProjectA = () => {
+    projectsA.forEach(
+        (projectA) => {
+            projectA.style.transform= 'translateX(-'+(counterA*100)+'%)'
         }
     )
 }

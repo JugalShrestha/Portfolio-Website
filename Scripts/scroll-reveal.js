@@ -17,7 +17,8 @@ ScrollReveal().reveal('#Contacts-Header',{delay: 300,origin:'left'});
 ScrollReveal().reveal('#landing-hi',{origin:'left'});
 ScrollReveal().reveal('#landing-name',{origin:'right',delay: 500});
 ScrollReveal().reveal('.welcomePage .short-des-part',{distance:'30px',origin:'top',delay: 300});
-
+ScrollReveal().reveal('.moto-part',{origin: 'bottom'});
+ScrollReveal().reveal('.skill-section',{origin: 'right'});
 
 const navbar= document.getElementById('navId')
 let scrollTop = window.scrollY;

@@ -307,16 +307,16 @@
                 </div>
               
             </div>
+             <!--Back to menu link-->
+             <div onclick="projectDisplayClose()" id="go-back" class="sideArrow">
+                Go back
+            </div>
 
             <!--Overlay for PROJECTS menu-->
         <div class="overlays-for-projects-menu">
             <!--Every thing that is displayed-->
             <div class="projectsDisplay" id="projectOpen">
-
-                <!--Back to menu link-->
-                <div onclick="projectDisplayClose()" class="sideArrow">
-                    Go back
-                </div>
+                
                 <!--All the contents of project-->
                 <div class="displayContents">
 
@@ -327,13 +327,13 @@
                     <div class="resultsOfDisplay">
 
                         <!--Individual contents-->
-                        <div class="boxesOfResult" id="project-1">
+                        <div class="boxesOfResultP" id="project-1">
                             <!--Images and link to code-->
                             <div class="image-of-project">
                                 <div class="number-count">
                                     1/3
                                 </div>
-                                <p>Library image</p>
+                                <img width="150px" height="150px" src="/images/Projects images/online-library.png" alt="Book">
                                 <a target="_blank" href="https://github.com/JugalBaucha/LIBRARY_MANAGEMENT_SYSTEM" class="view-code">View code?</a>
                             </div>
                             <!--Description of projects-->
@@ -353,13 +353,13 @@
                         </div>
 
                          <!--Individual contents-->
-                        <div class="boxesOfResult" id="project-2">
+                        <div class="boxesOfResultP" id="project-2">
                             <!--Images and link to code-->
                             <div class="image-of-project">
                                 <div class="number-count">
                                     2/3
                                 </div>
-                                <p>image</p>
+                                <img width="150px" height="150px" src="images/Projects images/calculator.png" alt="Calculator">
                                 <a target="_blank" href="https://github.com/JugalBaucha/LIBRARY_MANAGEMENT_SYSTEM" class="view-code">View code?</a>
                             </div>
                             <!--Description of projects-->
@@ -378,7 +378,7 @@
 
                         
                         <!--Individual contents-->
-                        <div class="boxesOfResult" id="project-1">
+                        <div class="boxesOfResultP" id="project-3">
                             <!--Images and link to code-->
                             <div class="image-of-project">
                                 <div class="number-count">
@@ -403,22 +403,57 @@
 
                     </div>
                     
-                        <a class="prev" onclick="goPrev()">❮</a>
-                        <a class="next" onclick="goNext()">❯</a>
+                        <a class="prev" onclick="goPrevP()">❮</a>
+                        <a class="next" onclick="goNextP()">❯</a>
                                             
                 </div>
             </div>
     
             <!--Overlay for ARTS menu-->
             <div class="artsDisplay" id="artOpen">    
-                <div onclick="artDisplayClose()" class="sideArrow">
-                    Go back
-                </div>
                 <div class="displayContents">
                     <p class="displayHeaders">Arts</p>
                     <div class="resultsOfDisplay">
 
+                        <!--Individual contents-->
+                        <div class="boxesOfResultA" id="art-1">
+                            <!--Images and link to code-->
+                            <div class="image-of-art">
+                                <div class="number-count">
+                                    1/3
+                                </div>
+                                <img width="150px" height="150px" src="/images/Projects images/online-library.png" alt="Book">
+                            </div>
+                        </div>
+
+                        <!--Individual contents-->
+                        <div class="boxesOfResultA" id="art-2">
+                            <!--Images and link to code-->
+                            <div class="image-of-art">
+                                <div class="number-count">
+                                    2/3
+                                </div>
+                                <img width="150px" height="150px" src="/images/Projects images/online-library.png" alt="Book">
+                            </div>
+                        </div>
+
+                        <!--Individual contents-->
+                        <div class="boxesOfResultA" id="art-3">
+                            <!--Images and link to code-->
+                            <div class="image-of-art">
+                                <div class="number-count">
+                                    3/3
+                                </div>
+                                <img width="150px" height="150px" src="/images/Projects images/online-library.png" alt="Book">
+                            </div>
+                        </div>
+
                     </div>
+
+                    
+                    <a class="prev" onclick="goPrevA()">❮</a>
+                    <a class="next" onclick="goNextA()">❯</a>
+                      
                 </div>
             </div>
             
