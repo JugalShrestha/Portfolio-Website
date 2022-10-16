@@ -115,6 +115,17 @@
     }
     
 }
+
+@keyframes moving-bubbles {
+    0%{
+        transform: translateY(110vh);
+    }
+    100%{
+        transform: translateY(-20vh);
+        opacity: 0;
+    }
+    
+}
 /*animations*/
 
 /*ScrollEdit*/
@@ -737,12 +748,12 @@ body{
             .screen-signs-decoration:nth-child(4){
                 position: absolute;
                 bottom:40%;
-                left:20%;
+                left:15%;
             }
             .screen-signs-decoration:nth-child(5){
                 position: absolute;
-                bottom:20%;
-                left:30%;
+                bottom:15%;
+                left:22%;
             }
             .screen-signs-decoration:nth-child(6){
                 position: absolute;
@@ -809,6 +820,72 @@ body{
             }
     
         }
+        .screen-bubbles-decoration{
+            position: absolute;
+            min-height: 20vh;
+            min-width: 20vh;
+            pointer-events: none;
+            z-index: 0;
+            background: linear-gradient(to top,var(--nColor),var(--sColor));
+            border-radius: 100%;
+            box-shadow: .2vh .2vh 1vh var(--shadow);
+            opacity: 30%;
+            //animation: moving-bubbles 5s infinite forwards;
+            filter: blur(4vh);
+        }
+        .aboutSection{
+            .screen-bubbles-decoration:nth-child(even){
+                filter: blur(7vh);
+                animation: none;
+                width: 50vh;
+                height: 50vh;
+                background: linear-gradient(to top,var(--nColor),var(--sColor));
+            }
+            .screen-bubbles-decoration:nth-child(1)
+            {
+                top:10%;
+                left:10%;
+            }
+            .screen-bubbles-decoration:nth-child(2)
+            {
+                top:30%;
+                left:-10%;
+            }
+            .screen-bubbles-decoration:nth-child(3)
+            {
+                top:80%;
+                left:20%;
+            }
+            .screen-bubbles-decoration:nth-child(4)
+            {
+                top:150%;
+                left:10%;
+                background: linear-gradient(to top,var(--nColor),var(--Red-Color));
+            
+            }
+            .screen-bubbles-decoration:nth-child(5)
+            {
+                top:20%;
+                right:10%;
+            }
+            .screen-bubbles-decoration:nth-child(6)
+            {
+                top:40%;
+                right:-10%;
+            }
+            .screen-bubbles-decoration:nth-child(7)
+            {
+                top:70%;
+                right:20%;
+            }
+            .screen-bubbles-decoration:nth-child(8)
+            {
+                top:100%;
+                right:10%;
+                background: linear-gradient(to top,var(--nColor),var(--Red-Color));
+            
+            }
+        }
         /*For welcome Screen*/
         .welcomePage::after{
             content:' ';
@@ -852,7 +929,6 @@ body{
                     font-size: 20vh;
                     margin-bottom: -5vh;
                     font-family: var(--Header);
-                    font-weight: bold;
                     width: 100%;
                     letter-spacing: 1vh;
                     overflow: hidden;
@@ -862,9 +938,9 @@ body{
                     align-items: center;
                     justify-content: space-evenly;
                     span{
-                        font-weight: lighter;
                         font-family: 'Monoton',cursive;
                         color: var(--Red-Color);
+                        letter-spacing: 0; 
                     }
                 }
                 .short-des-part{
@@ -901,8 +977,7 @@ body{
                     letter-spacing: .2vh;
                     padding: 1vh;
                     font-family: var(--Text);
-                    background: var(--Red-Color);
-                    color: var(--sColor);
+                    color: var(--pColor);
                     width:auto;
                     font-weight: bold;
                     border-radius: 5vh;
@@ -1323,6 +1398,7 @@ body{
         flex-wrap:nowrap;
         justify-content: center;
         align-items: center;
+        overflow: visible;
 
         .headerForAboutSection{
             z-index: 1;

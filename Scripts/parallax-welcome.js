@@ -12,7 +12,7 @@ window.addEventListener('mousemove',parallax);
 function parallax()
 {
     var e = window.event;
-    var rate= 500;
+    var rate= 400;
 
     const speed1= sign1.getAttribute('data-value');
     var posX1 = ((e.clientX)*speed1)/rate;
