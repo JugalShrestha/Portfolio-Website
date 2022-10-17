@@ -167,6 +167,7 @@ body::-webkit-scrollbar{
     --Red-Color:#F20505;
     --Header:'Bebas Neue', cursive;
     --Text:'Jost', sans-serif;
+    --cursive:'Cedarville Cursive', cursive;
 }
 *{
     margin:0;
@@ -216,28 +217,62 @@ body{
     }
 
 
-    /*Inside the Nav bar*/
-    .questionMark{
+    /*Inside the Nav bar mobile*/
+    .nav-mobile{
         z-index: 8;
         overflow: hidden;
         cursor: pointer;
         position: fixed;
-        bottom:1%;
+        bottom:0%;
         left:50%;
+        transition: .2s linear;
         transform: translate(-50%, -1%);
         margin:0;
-        padding: 1vh;
+        background: var(--sColor);
+        font-weight: bold;
+        font-size: 2vh;
+        color:var(--pColor);
+        font-family: var(--Text);
+        text-transform: uppercase;
+        width: 100%;
+        height: fit-content;
         display: flex;
-        text-align: center;
         align-items: center;
         justify-content: center;
-        font-size: 2vh;
-        border-radius: 10vh;
-        box-shadow: 0 0 1vh var(--shadow);
-        background: var(--sColor);
-        color:var(--pColor);
-        font-family: 'Monoton',cursive;
+        gap: 1vh;
+        .navOptions-mobile{
+          width: 10vh;
+        }
+        li{
+            list-style: none;
+            a{
+                text-decoration: none;
+                color:var(--pColor);
+            }
+        }
+        .logo{
+            font-weight: lighter;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 3vh 1vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: linear .2s;
+            background: var(--Red-Color);
+                a{
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    letter-spacing: .5vh;
+                    font-size: 3vh;
+                    color:var(--Text-Color);
+                    font-family: 'Monoton',cursive;
+                }
+        }
     }
+
+    //Nav bar for pc
     .nav{
         margin: 0vh;
         padding: 0vh;
@@ -280,6 +315,8 @@ body{
             flex-direction: row;
             align-items: center;
             justify-content: center;
+            width: 25vh;
+           
             li{
                 display: inline-block;
                 margin: 0 1vh;
@@ -312,262 +349,6 @@ body{
         }
         
     }
-
-    //For Mobile Nav bar
-    .MobileNav
-    {
-        z-index:9;
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        right:0;
-        margin:0;
-        padding: 0;
-        transform: translateX(-400vh);
-        width: 100%;
-        height: 100vh;
-        background:var(--sColor);
-        align-items: center;
-        justify-content: center;
-        
-        //Cross icon
-        .navCross{
-            position: fixed;
-            top:1%;
-            right:1%;
-            font-size: 3vh;
-            color:var(--pColor);
-            font-weight: bold;
-            cursor: pointer;
-        }
-        /*About button*/
-        .about{
-            cursor: pointer;
-            height: 20vh;
-            width: 30vh;
-            background: var(--pColor);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 90%;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            overflow: hidden;
-            &:hover{
-                opacity: 50%;
-            }
-            .aboutIcon{
-                letter-spacing: .1em;
-                font-weight: bold;
-                color: var(--sColor);
-                font-size: 7vh;
-                padding: 1vh;
-                font-family: 'Bebas Neue', cursive;
-            }
-        }
-        
-        /*Contact Button*/
-        .contact{
-            height: 20vh;
-            width: 30vh;
-            background: var(--s2Color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            cursor: pointer;
-            opacity: 90%;
-            margin:1vh 0vh 1vh 0;
-            padding:0 1vh;
-            text-align: center;
-            &:hover{
-                opacity: 50%;
-            }
-            .contactIcon{
-                letter-spacing: .1em;
-                font-weight: bold;
-                color: var(--pColor);
-                font-size: 7vh;
-                padding: 1vh;
-                font-family: 'Bebas Neue', cursive;
-            }
-        }
-    }
-    
-    
-        /*Inside the about section for Mobile*/
-        .aboutOverlay{
-            transition: linear .2s;
-            padding: 0;
-            margin: 0;
-            background: var(--sColor);
-            z-index:9;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            top:0;
-            left:0;
-            bottom:0;
-            right:0;
-            transform: translateY(-200vh);
-            overflow: hidden;
-            .aboutAllBoxes{
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                background: transparent;
-                margin:0;
-                padding: 1vh;
-                text-align: left;
-                position: absolute;
-                top:1%;
-                bottom: 1%;
-                overflow: auto;
-            }
-            .aboutDes{
-                display: flex;
-                flex-direction:column;
-                flex-wrap: nowrap;
-                align-items: center;
-                justify-content: center;
-                box-shadow: 1vh 1vh 2vh  var(--pColor);
-                background-image:repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--sColor) 4vh, transparent 20%),
-                                repeating-linear-gradient(45deg ,var(--pColor) 2vh, var(--sColor) 4vh, transparent 20%),
-                                repeating-linear-gradient(315deg ,var(--pColor) 2vh, var(--sColor) 4vh, transparent 20%),
-                                repeating-linear-gradient(45deg ,var(--pColor) -2vh, var(--sColor) 4vh);
-                border-radius: 5%;
-                margin:2vh;
-                padding: 1vh;
-                text-align: left;
-                height: 65vh;
-                width: 40vh;
-                position: relative;
-                overflow: hidden;
-                &:hover{
-                    .aboutIntro{
-                        visibility: visible;
-                    }
-                    .aboutHeader{
-                        background: var(--pColor);
-                        color:var(--sColor);
-                    }
-                }
-                .aboutHeader{
-                    font-size: 4vh;
-                    font-weight: bold;
-                    font-family: 'Bebas Neue', cursive;
-                    letter-spacing: 1vh;
-                    background: var(--sColor);
-                    padding: 1vh;
-                    margin-right: -1vh;
-                    opacity: 90%;
-                }
-                .aboutIntro{
-                    transition: ease-in-out .2s;
-                    background: var(--sColor);
-                    padding: 1vh;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    border-radius: 5%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    opacity: 90%;
-                    visibility: hidden;
-                    .aboutIntroDes{
-                        font-size: 2vh;
-                        font-family: 'Jost', sans-serif;
-                    }
-                }
-                .educationLink{
-                    text-decoration: none;
-                    color:var(--pColor);
-                    font-weight: bold;
-                    font-size: 3vh;
-                    letter-spacing: .1vh;
-                    font-family: 'Bebas Neue', cursive;
-                }
-            }
-            
-        }
-        /*inside the contact section*/
-        .contactOverlay{
-            transition: linear .2s;
-            padding: 0;
-            margin: 0;
-            background: var(--sColor);
-            z-index:9;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            top:0;
-            left:0;
-            bottom:0;
-            right:0;
-            transform: translateY(-200vh);
-            overflow: hidden;
-
-                .contactDes1{
-                    .contactHeader{
-                        background-image:repeating-linear-gradient(45deg ,var(--sColor) 4vh, var(--pColor) 4vh, var(--sColor)2vh, transparent 30%),
-                        repeating-linear-gradient(315deg ,var(--sColor) 6vh, var(--pColor) 10vh);
-                        padding: 1vh;
-                        opacity: 90%;
-                        border-radius: 0;
-                        text-align: center;
-                        font-size: 4vh;
-                        color: var(--sColor);
-                        font-weight: bold;
-                        text-shadow: 0 0 1vh var(--shadow);
-                        font-family: 'Bebas Neue', cursive;
-                        pointer-events: none;
-                    }
-                    .contactIntro{
-                        .contactIntroDes{
-                            width: auto;
-                            align-items: center;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            color: var(--pColor);
-                            font-size: medium;
-                            font-family: 'Jost', sans-serif;
-                            .contactsA{
-                                margin-top:1em;
-                                &:hover{
-                                   opacity:50%;
-
-                                }
-                            }
-                            a{
-                                letter-spacing: .5vh;
-                                text-decoration: none;
-                                margin-right: -.5vh;
-                                font-size: 4vh;
-                                color: var(--pColor);
-                                font-family: 'Jost', sans-serif;
-                            }
-                        }
-                    }
-                }
-            }
-        /*For activation of the contact and about overlays*/
-        .active{
-            transform:translateY(0);
-        }
 
     /*The loading Screen*/
     #allB1{
@@ -720,15 +501,14 @@ body{
         //Decoration of Welcome page
         .welcomePage{
             .screen-signs-decoration{
-                font-size: 25vh;
                 pointer-events: none;
                 transition: .1s linear;
                 position: absolute;
                 opacity: 100%;
-                filter:brightness(50%);
-            }
-            .screen-signs-decoration:nth-child(even){
-                font-size: 25vh;
+                width: 32vh;
+                border-radius: 100%;
+                background: var(--s2Color);
+                height: 32vh;
             }
             .screen-signs-decoration:nth-child(1){
                 top:20%;
@@ -773,60 +553,99 @@ body{
         }
         .projects{
             .screen-signs-decoration{
-                font-size: 4vh;
+                font-size: 10vh;
                 opacity: 50%;
                 transition: .1s linear;
                 pointer-events: none;
-                font-family: var(--Text);
+                position: absolute;
+                filter: blur(1px);
+                font-family: var(--cursive);
                 animation: change-color 1s infinite .1s forwards;
             }
             .screen-signs-decoration:nth-child(even){
-                font-size: 10vh;
-                font-family: var(--Text);
-                text-transform: uppercase;
-            }
-            .screen-signs-decoration:nth-child(odd){
-                filter: blur(.2vh);
+                font-size: 7vh;
+                font-family: var(--cursive);
+                filter: blur(3px);
             }
             .screen-signs-decoration:nth-child(1){
-                position: absolute;
-                top:0%;
-                left:10%;
+                top:10%;
+                left:0%;
             }
             .screen-signs-decoration:nth-child(2){
-                position: absolute;
-                bottom:80%;
-                right:10%;
+                top:20%;
+                left:10%;
             }
             .screen-signs-decoration:nth-child(3){
-                position: absolute;
                 top:20%;
-                right:30%;
-            }
-            .screen-signs-decoration:nth-child(4){
-                position: absolute;
-                bottom:10%;
                 left:20%;
             }
+            .screen-signs-decoration:nth-child(4){
+                top:10%;
+                left:30%;
+            }
             .screen-signs-decoration:nth-child(5){
-                position: absolute;
-                bottom:20%;
-                left:80%;
+                top:10%;
+                left:40%;
             }
             .screen-signs-decoration:nth-child(6){
-                position: absolute;
+                top:20%;
+                left:50%;
+            }
+            .screen-signs-decoration:nth-child(7){
+                top:20%;
+                left:60%;
+            }
+            .screen-signs-decoration:nth-child(8){
+                top:10%;
+                left:60%;
+            }
+            .screen-signs-decoration:nth-child(9){
+                top:20%;
+                left:75%;
+            }
+            .screen-signs-decoration:nth-child(10){
+                top:10%;
+                left:80%;
+            }
+            .screen-signs-decoration:nth-child(11){
+                bottom:10%;
+                left:0%;
+            }
+            .screen-signs-decoration:nth-child(12){
+                bottom:20%;
+                left:10%;
+            }
+            .screen-signs-decoration:nth-child(13){
+                bottom:20%;
+                left:20%;
+            }
+            .screen-signs-decoration:nth-child(14){
+                bottom:10%;
+                left:30%;
+            }
+            .screen-signs-decoration:nth-child(15){
+                bottom:10%;
+                left:40%;
+            }
+            .screen-signs-decoration:nth-child(16){
+                bottom:20%;
+                left:50%;
+            }
+            .screen-signs-decoration:nth-child(17){
+                bottom:10%;
+                left:60%;
+            }
+            .screen-signs-decoration:nth-child(18){
+                bottom:20%;
+                left:65%;
+            }
+            .screen-signs-decoration:nth-child(19){
                 bottom:20%;
                 left:70%;
             }
-            .screen-signs-decoration:nth-child(7){
-                position: absolute;
-                bottom:20%;
-                left:10%;
-            }
-            .screen-signs-decoration:nth-child(8){
-                position: absolute;
-                top:15%;
-                left:20%;
+            .screen-signs-decoration:nth-child(20){
+                bottom:10%;
+                left:85%;
             }
     
         }
@@ -939,7 +758,6 @@ body{
                 align-items: center;
                 text-align: center;
                 overflow: hidden;
-                background: rgb(232, 236, 246,.8);
                 padding: 2vh;
                 //hi part
                 .hi-part{
@@ -1188,7 +1006,7 @@ body{
         justify-content: center;
         overflow: visible;
         width: auto;
-        height: 40vh;
+        min-height: 40vh;
         background-image:repeating-linear-gradient(180deg,var(--pColor)2vh,var(--Red-Color)2vh,transparent 20%),
             repeating-linear-gradient(315deg,var(--pColor)2vh,var(--Red-Color)2vh,transparent 20%),
             repeating-linear-gradient(0deg,var(--pColor)5vh,var(--Red-Color)10vh);
@@ -1198,7 +1016,7 @@ body{
             top:50%;
             transform: translateY(-50%);
             color:var(--pColor);
-            font-size: 4vh;
+            font-size: 2vh;
             font-weight: bold;
             text-decoration: none;
             cursor: pointer;
@@ -1207,10 +1025,10 @@ body{
             border-radius: 1vh;
         }
         .prev{
-            left:30%;
+            left:1%;
         }
         .next{
-            right:-10%;
+            right:1%;
         }
 
         }
@@ -1219,8 +1037,8 @@ body{
             margin:0;
             position: relative;
             display: flex;
-            min-width: 75vh;
-            min-height: 35vh;
+            width: 75vh;
+            height: 35vh;
             gap:1vh;
             
             //For Projects
@@ -1328,8 +1146,30 @@ body{
             z-index:9;
             position:absolute;
             top:50%;
-            right: 5%;
+            right: 1%;
             transform: translateY(-50%) translateX(200vh);
+            padding:1vh;
+            margin: 0;
+            background: var(--s2Color);
+            border-radius: 1vh;
+            box-shadow: 0vh 0vh 1vh var(--shadow);
+            cursor: pointer;
+            font-family: var(--Text);
+            color:var(--pColor);
+            font-size: 3vh;
+            font-weight: bold;
+            text-transform: capitalize;
+            transition: 1s linear;
+            &:hover{
+                opacity: 50%;
+            }
+        }
+        .sideArrow-mobile{
+            z-index:9;
+            position:absolute;
+            bottom:-10%;
+            left: 50%;
+            transform: translate(-50%,-10%);
             padding:1vh;
             margin: 0;
             background: var(--s2Color);
@@ -1442,26 +1282,49 @@ body{
                 flex-wrap: wrap;
                 align-items: center;
                 justify-content:center;
+                overflow: visible;
                 padding: 1vh;
                 .Part1-With-Photo-Resume{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
+                    overflow: visible;
                     margin: 1vh;
                     .Photo{
                         box-sizing: border-box;
                         margin: 1vh;
                         padding: 0;
-                        overflow: hidden;
-                        border:1vh solid var(--sColor);
-                        border-radius: 5vh;
-                        img{
-                            width:40vh;
-                            height:40vh;
-                            object-fit: contain;
-                            transform: scale(2);
+                        overflow: visible;
+                        .main-photo{
+                            position: relative;
+                            overflow:visible;
+                            border-radius: 1vh;
+                            img{
+                                border-radius: 1vh;
+                                width:40vh;
+                                height:50vh;
+                                overflow: hidden;
+                                object-fit: cover;
+                                box-shadow: 0 0 1vh var(--shadow);
+                            }
+                            .side-photo{
+                                position: absolute;
+                                left: -20%;
+                                top:10%;
+                                overflow: hidden;
+                                box-shadow: 0 0 1vh var(--shadow);
+                                border-radius: 1vh;
+                                img{
+                                    box-shadow: none;
+                                    width:20vh;
+                                    height:40vh;
+                                    object-fit: cover;
+                                    transform: scale(2);
+                                }
+                            }
                         }
+                        
                     }
                     .Resume{
                         overflow: hidden;
@@ -1474,8 +1337,9 @@ body{
                         a{
                             border-radius: 10vh;
                             transition: ease-in-out .2s;
-                            font-family: var(--Header);
+                            font-family: var(--Text);
                             text-decoration: none;
+                            font-weight: bold;
                             font-size: 3vh;
                             padding: 1vh;
                             text-align: center;
@@ -1484,6 +1348,12 @@ body{
                             color:var(--pColor);
                             &:hover{
                                 background: var(--sColor);
+                            }
+                            span{
+                                color:var(--Red-Color);
+                                font-family: var(--Text);
+                                font-weight: bold;
+                                text-transform: capitalize;
                             }
                         }
                     }
@@ -1495,11 +1365,17 @@ body{
                     align-items: left;
                     justify-content: center;
                     .Sub-Header{
-                        font-family: var(--Header);
+                        font-family: var(--Text);
                         font-size: 4vh;
                         text-align: left;
                         font-weight: bold;
-                        letter-spacing: .5vh;
+                        span{
+                            text-transform: uppercase;
+                            font-family: 'Monoton',cursive;
+                            font-weight: lighter;
+                            color:var(--s2Color);
+                            letter-spacing: .5vh;
+                        }
                     }
                     .Body-Part{
                         font-family: var(--Text);
@@ -1511,17 +1387,16 @@ body{
             }
             .skill-section{
                 z-index: 1;
-                max-height: 20vh;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 margin-top: 5vh;
-                overflow-x: auto;
 
                 .header{
                     font-family: var(--Header);
+                    color: var(--s2Color);
                     font-size: 4vh;
                     letter-spacing: .5vh;
                     font-weight: bold;
@@ -1529,6 +1404,7 @@ body{
 
                 .icons{
                     display: flex;
+                    flex-wrap: wrap;
                     justify-content: center;
                     align-items: center;
                     img{
@@ -1536,8 +1412,10 @@ body{
                         width:10vh;
                         height: 10vh;
                         padding: 1vh;
+                        opacity: 50%;
                         &:hover{
                             transform: scale(1.1);
+                            opacity: 100%;
                         }
                     }
                 }
@@ -1570,9 +1448,9 @@ body{
 
             //Header For Contact Section
             .headerForContactSec{
-                font-size: 9vh;
+                font-size: 7vh;
                 font-family: 'Monoton', cursive;
-                margin: 1vh;
+                margin: 1vh 0;
             }
 
             //Email Form
@@ -1612,7 +1490,7 @@ body{
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
-                        width: 100%;
+                        flex-wrap: wrap;
                         textarea{
                             margin: 1vh;
                             padding: 1vh;
@@ -1638,7 +1516,6 @@ body{
                             font-weight: bold;
                             border: none;
                             cursor: pointer;
-                            align-self: flex-end;
                             margin: 1vh;
                             opacity: 50%;
                             &:hover{
@@ -1684,8 +1561,8 @@ body{
                 min-width: 33vh;
                 height: 100%;
                 display: flex;
-                justify-content: center;
-                align-items: center;
+                justify-content: left;
+                align-items: left;
                 flex-direction: column;
                 position: relative;
                 .contactSecHeader{
@@ -1694,7 +1571,7 @@ body{
                     letter-spacing: .3vh;
                     color: var(--sColor);
                     font-weight: bold;
-                    font-family: 'Bebas Neue', cursive;                    
+                    font-family: var(--Header);                  
                 }
                 .contactIntro{
                     .contactIntroDes{
@@ -1702,11 +1579,11 @@ body{
                         display: flex;
                         flex-direction: column;
                         flex-wrap: wrap;
-                        justify-content: center;
+                        justify-content: left;
                         color: var(--sColor);
                         font-size: 2vh;
                         margin:2vh 0;
-                        font-family: 'Jost', sans-serif;
+                        font-family: var(--Text);
                         .contactsA{
                             margin:0;
                             padding:0;
@@ -1728,10 +1605,10 @@ body{
                 display: flex;
                 align-items: left;
                 min-width: 33vh;
+                height: auto;
                 flex-direction: column;
                 justify-content: center;
                 color:var(--sColor);
-                padding: 1vh;
                 .headerForContactSecDes
                 {
                     opacity: 90%;
@@ -1740,7 +1617,7 @@ body{
                     font-size: 3vh;
                     letter-spacing: .3vh;
                     color: var(--sColor);
-                    font-family: 'Bebas Neue', cursive; 
+                    font-family: var(--Header);
                 }
                 .introForContactSecDes
                 {
@@ -1748,10 +1625,9 @@ body{
                     text-decoration: none;
                     font-size: 2vh;
                     color: var(--sColor);
-                    font-family: 'Jost', sans-serif;
+                    font-family: var(--Text);
                     .introDesForContactSecDes{
                         font-size: 2vh;
-                        margin: 1vh;
                         opacity: 50%;
                     }
                 }
@@ -1760,12 +1636,14 @@ body{
             //For Thanks section
             .thanks-section{
                 overflow: hidden;
-                width: 33vh;
+                min-width: 33vh;
                 height: 100%;
                 display: flex;
-                justify-content: center;
-                align-items: left;
+                justify-content: flex-end;
+                align-items: flex-end;
+                text-align: end;
                 flex-direction: column;
+                position: relative;
                
                 .contactSecHeader{
                     opacity: 90%;
@@ -1774,7 +1652,7 @@ body{
                     letter-spacing: .3vh;
                     color: var(--sColor);
                     font-weight: bold;
-                    font-family: 'Bebas Neue', cursive; 
+                    font-family: var(--Header); 
     
                 }
                 li{
@@ -1857,11 +1735,49 @@ body{
             min-width: 35vh;
             flex-wrap: wrap;
         }
-
+        .resultsOfDisplay{
+            max-width: 35vh;
+        }
+        .sideArrow{
+            visibility: collapse;
+        }
+        .sideArrow-mobile{
+            visibility: visible;
+        }
     }
-
+    .part2OfEmail{
+        align-self: center;
+        textarea{
+            max-width: 30vh;
+        }
+        button{
+            min-width:30vh;
+            align-self: center;
+        }
+    }
+    .emailForm{
+        width: 40vh;
+    }
+    .contactSecDesAboutMe{
+        max-width: 33vh;
+    }
     .displayContents{
         border: 2px solid black;
+    }
+
+    .Photo{
+        .main-photo{
+            img{
+                max-width: 30vh;
+                max-height: 40vh;
+            }
+            .side-photo{
+                img{
+                    max-width: 15vh;
+                    max-height: 30vh;
+                }
+            }
+        }
     }
     .notInMobile{
         display: none;
@@ -1876,17 +1792,6 @@ body{
 
     .aboutSection{
         display:none;
-    }
-    .contactSection{
-        display:none;
-    }
-
-    .skill-section{
-        .icons{
-            img{
-                margin:0;
-            }
-        }
     }
     .nav{
         visibility: collapse;

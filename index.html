@@ -40,30 +40,18 @@
 </head>
 
 <body>
-    <div id="cursor-id" class="cursor">
-
-    </div>
-   
-    <!--Inside the about and contact menu-->
-    <div class="MobileNav">
-        <div onclick="navClose()" class="navCross">
-            &cross;
+    <!--Mobile Nav Bar-->
+    <div id="navId-mobile" onclick="navOpen()" class="nav-mobile">
+        <div class="navOptions-mobile">
+            <li><a id="allPLink" onclick="scrollTo1()">Projects</a></li>
         </div>
-        <div class="navOptionsForMobile">
-            <div onclick="openAboutOl()"  id="aboutId" class="about">
-                <p class="aboutIcon">
-                    ABOUT ME
-                </p>
-            </div>
-            <div onclick="openContactOl()" id="contactId" class="contact">
-                <p class="contactIcon">
-                    CONTACT
-                </p>
-            </div>
+        <label class="logo">
+            <a onclick="scrollTo4()">Jugal</a> 
+        </label>
+        <div class="navOptions-mobile">
+            <li><a id="allALink" onclick="scrollTo2()">About Me</a></li>
         </div>
-    </div>
-    <div id="questionMarkId" onclick="navOpen()" class="questionMark">
-        Menu
+        
     </div>
 
     <!--PC Nav Bar-->
@@ -91,79 +79,6 @@
         </ul>
         </nav>
     </div>
-
-        <!--Inside the about Section-->
-        <div id="aboutOl" class="aboutOverlay">
-            <div class="cross">
-                <p onclick="closeAboutOl()" class="crossIcon">
-                    ^
-                </p>
-            </div>
-            <div class="aboutAllBoxes">
-                <div class="aboutDes">
-                    <p class="aboutHeader">
-                        EDUCATION
-                    </p>
-                    <div class="aboutIntro">
-                        <p class="aboutIntroDes">
-                            <a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/MountGloryEBHS">SCHOOL</a> &check; 3.7<br>
-                            <a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/nccspaknajol">HIGH SCHOOL</a> &check; 3.3<br>
-                            <a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sxcmaitighar">COLLEGE</a> On going...<br>
-                        </p>
-                    </div>
-                </div>
-                <div class="aboutDes">
-                    <p class="aboutHeader">
-                        SKILLS 
-                    </p>
-                    <div class="aboutIntro">
-                        <p class="aboutIntroDes">
-                            HTML &check;<br>
-                            CSS &check;<br>
-                            Java &check;<br>
-                            C &check;<br>
-                            JS &check;<br>
-                        </p>
-                    </div>
-                </div>
-                <div class="aboutDes">
-                    <p class="aboutHeader">
-                        EXPERIENCE
-                    </p>
-                    <div class="aboutIntro">
-                        <p class="aboutIntroDes">
-                            <a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://www.transperfect.com/about">TRANSPERFECT:</a>&check;
-                            <br><a class="educationLink" target="_blank" rel="noopener noreferrer" href="https://appen.com">APPEN:</a> &check;<br>
-                            FREELANCING &check;
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--inside the Contact section of mobile-->
-        <div id="contactOl" class="contactOverlay">
-            <div class="cross">
-                <p onclick="closeContactOl()" class="crossIcon">
-                    ^
-                </p>
-            </div>
-             <div class="contactDes1">
-                <p class="contactHeader">
-                    FIND <br>ME<br> ON 
-                </p>
-                <div class="contactIntro">
-                    <p class="contactIntroDes">
-                        <a class="contactsA" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jugal-shrestha-8870b8226/">LinkedIn</a>
-                        <a class="contactsA" target="_blank" rel="noopener noreferrer" href="https://github.com/JugalBaucha">Github<a>
-                        <a class="contactsA" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/jugal_baucha/">Instagram</a>
-                        <a class="contactsA" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCuh9gYFLFtXmX-EzIIUYnOg">Youtube</a>
-                        <a class="contactsA" target="_blank" rel="noopener noreferrer" href="mailto: jugalnepali@gmail.com">Email</a>
-                        <br>🇳🇵 +977 9845257756
-                    </p>
-                </div>
-            </div>
-        </div>
 
     <!--Not used overlay-->
     <div id="overlay1"class="overlay"></div>
@@ -199,34 +114,34 @@
             <!--decorations for screen-->
             <div class="overlay-for-signs" id="notInMobileId">
                 <div data-value="5" class="screen-signs-decoration">
-                    📸
+                    
                 </div>
                 <div data-value="2"  class="screen-signs-decoration">
-                    ⚽
+                    
                 </div>
                 <div data-value="-5"  class="screen-signs-decoration">
-                    🎸
+                    
                 </div>
                 <div data-value="-4"  class="screen-signs-decoration">
-                    🎮
+                    
                 </div>
                 <div data-value="4"  class="screen-signs-decoration">
-                    🎬
+                    
                 </div>
                 <div data-value="-4"  class="screen-signs-decoration">
-                    💻
+                    
                 </div>
                 <div data-value="-3"  class="screen-signs-decoration">
-                    ⏰
+                    
                 </div>
                 <div data-value="2"  class="screen-signs-decoration">
-                    🎨
+                    
                 </div>
                 <div data-value="-5"  class="screen-signs-decoration">
-                    🏀
+                    
                 </div>
                 <div data-value="4"  class="screen-signs-decoration">
-                    🏆
+                    
                 </div>
             </div>
 
@@ -254,16 +169,16 @@
         <div class="projects" id="allP1">
 
             <!--decorations for screen-->
-            <div id="notInMobileId">
+            <div>
                 <div data-value="9" class="screen-signs-decoration">
                     Hard Work
                 </div>
                 
-                <div data-value="5"  class="screen-signs-decoration">
+                <div data-value="3"  class="screen-signs-decoration">
                     Joy
                 </div>
                 
-                <div data-value="6"  class="screen-signs-decoration">
+                <div data-value="-5"  class="screen-signs-decoration">
                     Knowledge
                 </div>
                 
@@ -285,6 +200,51 @@
 
                 <div data-value="3"  class="screen-signs-decoration">
                     Code
+                </div>
+                <div data-value="-5"  class="screen-signs-decoration">
+                    Journey
+                </div>
+
+                <div data-value="3"  class="screen-signs-decoration">
+                    Sacrifice
+                </div>
+                <div data-value="-9" class="screen-signs-decoration">
+                    Deligiency
+                </div>
+                
+                <div data-value="-3"  class="screen-signs-decoration">
+                    Versatality
+                </div>
+                
+                <div data-value="5"  class="screen-signs-decoration">
+                    Motivation
+                </div>
+                
+                <div data-value="8"  class="screen-signs-decoration">
+                    Automatic
+                </div>
+
+                <div data-value="6" class="screen-signs-decoration">
+                    Idol
+                </div>
+
+                <div data-value="10" class="screen-signs-decoration">
+                    Money
+                </div>
+
+                <div data-value="5"  class="screen-signs-decoration">
+                    Tool
+                </div>
+
+                <div data-value="-3"  class="screen-signs-decoration">
+                    Happy
+                </div>
+                <div data-value="5"  class="screen-signs-decoration">
+                    Entertainment
+                </div>
+
+                <div data-value="-3"  class="screen-signs-decoration">
+                    Sad
                 </div>
             </div>
 
@@ -409,7 +369,9 @@
                         </div>
 
                     </div>
-                    
+                    <div onclick="projectDisplayClose()" id="sideArrow-mobileP" class="sideArrow-mobile">
+                        Go back
+                    </div>
                         <a class="prev" onclick="goPrevP()">❮</a>
                         <a class="next" onclick="goNextP()">❯</a>
                                             
@@ -456,7 +418,9 @@
                         </div>
 
                     </div>
-
+                    <div onclick="projectDisplayClose()" id="sideArrow-mobileA" class="sideArrow-mobile">
+                        Go back
+                    </div>
                     
                     <a class="prev" onclick="goPrevA()">❮</a>
                     <a class="next" onclick="goNextA()">❯</a>
@@ -493,18 +457,24 @@
 
                 <div class="Part1-With-Photo-Resume">
                     <div class="Photo">
-                        <img src="images/Jugal Photo/About-Section-Photo.jpg" alt="">
+                        <div class="main-photo">
+                            <img src="images/Jugal Photo/StandingProud.jpg" alt="">
+                            
+                        <div class="side-photo">
+                            <img src="/images/Jugal Photo/About-Section-Photo.jpg" alt="">
+                        </div>
+                        </div>
                     </div>
                     <div class="Resume">
                         <a target="_blank" href="Resume.pdf">
-                           See my résumé ?
+                           See my <span>résumé</span> ?
                         </a>
                     </div>
                 </div>
 
                 <div class="Part2-With-Des">
                     <div class="Sub-Header">
-                        Hi I am Jugal,
+                        Hi I'm <span>Jugal</span>,
                     </div>
                     <div class="Body-Part">
                         Currentlty, I am a student pursuing
@@ -547,14 +517,14 @@
         <div id="allC1" class="contactSection">
 
             <!--Upper Part of contacts-->
-            <div id="notInMobileId" class="contact-sec-overlay2">
+            <div class="contact-sec-overlay2">
                 <!--Header for contact Section-->
                 <div id="Contacts-Header" class="headerForContactSec">
                     CONTACTS
                 </div> 
                 
                   <!--Email form of contact-->
-                    <div id="notInMobileId" class="emailForm">
+                    <div class="emailForm">
                         <form id="my-form" action="https://formspree.io/f/xaykbdoj" method="post">
                             <!--Part 1 of email-->
                             <div class="part1OfEmail">
@@ -627,6 +597,8 @@
                     <ul>
                         <li>Google Fonts</li>
                         <li>Formspree</li>
+                        <li>Flaticon</li>
+                        <li>Flaticon</li>
                         <li>Flaticon</li>
                     </ul>
                 </div>

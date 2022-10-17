@@ -18,16 +18,20 @@ ScrollReveal().reveal('#landing-name',{origin:'right',delay: 500});
 ScrollReveal().reveal('.welcomePage .short-des-part',{distance:'30px',origin:'top',delay: 300});
 ScrollReveal().reveal('.moto-part',{origin: 'bottom'});
 ScrollReveal().reveal('.skill-section',{origin: 'right'});
+ScrollReveal().reveal('.side-photo',{origin: 'left',delay:600});
 
 const navbar= document.getElementById('navId')
+const navbarM= document.getElementById('navId-mobile')
 let scrollTop = window.scrollY;
     window.addEventListener('scroll',function(){
         if(scrollTop < this.window.scrollY)
         {
             navbar.style.top = '-100px';
+            navbarM.style.bottom= '-100px';
         }
         else{
             navbar.style.top="1%";
+            navbarM.style.bottom="0%";
         }
         scrollTop =window.scrollY;
     })
