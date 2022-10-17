@@ -810,45 +810,56 @@ body .allBody2 {
   /*For CLosing the tab opened from 4 menus*/
   /*overlay for ARTS MENU*/
 }
-body .allBody2 .screen-signs-decoration {
-  font-size: 10vh;
-  opacity: 50%;
+body .allBody2 .welcomePage .screen-signs-decoration {
+  font-size: 25vh;
   pointer-events: none;
   transition: 0.1s linear;
+  position: absolute;
+  opacity: 100%;
+  filter: brightness(50%);
 }
 body .allBody2 .welcomePage .screen-signs-decoration:nth-child(even) {
-  font-size: 7vh;
-  filter: blur(0.3vh);
+  font-size: 25vh;
 }
 body .allBody2 .welcomePage .screen-signs-decoration:nth-child(1) {
-  position: absolute;
-  top: 10%;
-  left: 20%;
+  top: 20%;
+  left: 35%;
 }
 body .allBody2 .welcomePage .screen-signs-decoration:nth-child(2) {
-  position: absolute;
-  bottom: 70%;
-  right: 10%;
+  top: 30%;
+  left: 35%;
 }
 body .allBody2 .welcomePage .screen-signs-decoration:nth-child(3) {
-  position: absolute;
-  top: 10%;
-  right: 30%;
+  top: 40%;
+  left: 35%;
 }
 body .allBody2 .welcomePage .screen-signs-decoration:nth-child(4) {
-  position: absolute;
-  bottom: 40%;
-  left: 15%;
+  top: 20%;
+  left: 40%;
 }
 body .allBody2 .welcomePage .screen-signs-decoration:nth-child(5) {
-  position: absolute;
-  bottom: 15%;
-  left: 22%;
+  top: 30%;
+  left: 40%;
 }
 body .allBody2 .welcomePage .screen-signs-decoration:nth-child(6) {
-  position: absolute;
-  bottom: 40%;
-  left: 80%;
+  top: 40%;
+  left: 40%;
+}
+body .allBody2 .welcomePage .screen-signs-decoration:nth-child(7) {
+  top: 20%;
+  left: 50%;
+}
+body .allBody2 .welcomePage .screen-signs-decoration:nth-child(8) {
+  top: 30%;
+  left: 50%;
+}
+body .allBody2 .welcomePage .screen-signs-decoration:nth-child(9) {
+  top: 40%;
+  left: 50%;
+}
+body .allBody2 .welcomePage .screen-signs-decoration:nth-child(10) {
+  top: 40%;
+  left: 40%;
 }
 body .allBody2 .projects .screen-signs-decoration {
   font-size: 4vh;
@@ -933,7 +944,7 @@ body .allBody2 .aboutSection .screen-bubbles-decoration:nth-child(1) {
 }
 body .allBody2 .aboutSection .screen-bubbles-decoration:nth-child(2) {
   top: 30%;
-  left: -10%;
+  left: 30%;
 }
 body .allBody2 .aboutSection .screen-bubbles-decoration:nth-child(3) {
   top: 80%;
@@ -963,15 +974,17 @@ body .allBody2 .aboutSection .screen-bubbles-decoration:nth-child(8) {
 }
 body .allBody2 .welcomePage::after {
   content: " ";
+  z-index: 2;
   position: absolute;
   bottom: 0;
   box-sizing: border-box;
   width: 100%;
-  height: 50vh;
+  height: 30vh;
   background: linear-gradient(to bottom, transparent 0%, transparent 50%, var(--s2Color) 80%, var(--s2Color) 100%);
 }
 body .allBody2 .welcomePage {
   position: relative;
+  pointer-events: none;
   width: 100%;
   min-height: 100vh;
   background: conic-gradient(seashell, var(--s2Color));
@@ -986,9 +999,13 @@ body .allBody2 .welcomePage {
   justify-content: center;
 }
 body .allBody2 .welcomePage .introduction {
+  pointer-events: none;
   color: var(--pColor);
-  padding: 0;
-  margin: 10vh 0;
+  padding: 1vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -998,56 +1015,67 @@ body .allBody2 .welcomePage .introduction {
   align-items: center;
   text-align: center;
   overflow: hidden;
+  background: rgba(232, 236, 246, 0.8);
+  padding: 2vh;
 }
 body .allBody2 .welcomePage .introduction .hi-part {
-  font-size: 20vh;
-  margin-bottom: -5vh;
+  font-size: 150px;
   font-family: var(--Header);
   width: 100%;
-  letter-spacing: 1vh;
+  gap: 20px;
+  margin-bottom: -40px;
   overflow: hidden;
   display: flex;
-  gap: 1vh;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
-body .allBody2 .welcomePage .introduction .hi-part span {
+body .allBody2 .welcomePage .introduction .hi-part div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .allBody2 .welcomePage .introduction .hi-part .i-part {
   font-family: "Monoton", cursive;
   color: var(--Red-Color);
-  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 body .allBody2 .welcomePage .introduction .short-des-part {
-  padding: 1vh 2vh;
+  padding: 1vh;
   background: var(--pColor);
   color: var(--Text-Color);
   width: 100%;
-  font-size: 2vh;
-  letter-spacing: 0.5vh;
+  font-size: 15px;
   font-family: var(--Text);
   text-transform: uppercase;
-  border-radius: 10vh;
   overflow: hidden;
 }
 body .allBody2 .welcomePage .introduction .name-part {
-  font-size: 10vh;
-  font-family: var(--Header);
-  font-weight: bold;
-  color: var(--Red-Color);
+  font-size: 40px;
+  font-family: "Monoton", cursive;
+  text-transform: uppercase;
+  color: var(--Text-Color);
   width: 100%;
-  gap: 1vh;
-  letter-spacing: 1vh;
-  overflow: hidden;
+  letter-spacing: 0.2vh;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
 }
-body .allBody2 .welcomePage .introduction .name-part span {
+body .allBody2 .welcomePage .introduction .name-part .first-name {
+  background-color: var(--Red-Color);
+  padding: 1vh;
+}
+body .allBody2 .welcomePage .introduction .name-part .last-name {
+  background: var(--s2Color);
+  font-size: 50px;
+  padding: 1vh;
+  font-weight: bold;
+  font-family: var(--Header);
   color: var(--pColor);
 }
 body .allBody2 .welcomePage .introduction .moto-part {
-  font-size: 2vh;
+  font-size: 15px;
   letter-spacing: 0.2vh;
   padding: 1vh;
   font-family: var(--Text);
@@ -1161,8 +1189,7 @@ body .allBody2 .projects .boxes {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 75vh;
-  flex-wrap: wrap;
+  max-width: 75vh;
   z-index: 2;
   transition: 0.3s linear;
 }
@@ -1185,7 +1212,7 @@ body .allBody2 .projects .boxes .boxed {
   border-radius: 2vh;
 }
 body .allBody2 .projects .boxes .boxed:hover {
-  scale: 1.5;
+  border: 1vh solid var(--shadow);
 }
 body .allBody2 .projects .boxes .boxed .imagesP {
   transition: linear 0.1s;
@@ -1230,7 +1257,7 @@ body .allBody2 .displayContents .prev, body .allBody2 .displayContents .next {
   border-radius: 1vh;
 }
 body .allBody2 .displayContents .prev {
-  left: -10%;
+  left: 30%;
 }
 body .allBody2 .displayContents .next {
   right: -10%;
@@ -1792,9 +1819,22 @@ body .activeOverlay {
 
 /*Optimized for mobile screen*/
 @media only screen and (max-width: 1620px) {
+  .welcomePage .hi-part {
+    font-size: 10vh;
+  }
+  .welcomePage .short-des-part {
+    font-size: 1px;
+  }
+  .welcomePage .name-part {
+    font-size: 2px;
+  }
   .projects {
     margin: 0;
     padding: 10vh 0;
+  }
+  .projects .boxes {
+    min-width: 35vh;
+    flex-wrap: wrap;
   }
   .displayContents {
     border: 2px solid black;

@@ -5,7 +5,6 @@ ScrollReveal({
      delay: 100 
     });
 
-ScrollReveal().reveal('#screen-signs-id',{origin:'top',distance:'2px',delay: 100});
 ScrollReveal().reveal('#allWel3',{origin: 'left'});
 ScrollReveal().reveal('.boxes',{origin: 'right'});
 ScrollReveal().reveal('#projectsIntroId');
