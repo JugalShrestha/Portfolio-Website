@@ -669,8 +669,6 @@ body .allBody2 .projects .screen-signs-decoration {
   position: absolute;
   filter: blur(1px);
   font-family: var(--cursive);
-  -webkit-animation: change-color 1s infinite 0.1s forwards;
-          animation: change-color 1s infinite 0.1s forwards;
 }
 body .allBody2 .projects .screen-signs-decoration:nth-child(even) {
   font-size: 7vh;
@@ -905,7 +903,7 @@ body .allBody2 .welcomePage .introduction .name-part .first-name {
   padding: 1vh;
 }
 body .allBody2 .welcomePage .introduction .name-part .last-name {
-  background: var(--s2Color);
+  background: var(--sColor);
   font-size: 50px;
   padding: 1vh;
   font-weight: bold;
@@ -1181,13 +1179,19 @@ body .allBody2 .resultsOfDisplay .boxesOfResultA .image-of-art {
   width: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 35vh;
+  max-height: 35vh;
   align-items: center;
   justify-content: center;
   color: var(--Text-Color);
   font-family: var(--Header);
   background: var(--pColor);
   font-size: 4vh;
+}
+body .allBody2 .resultsOfDisplay .boxesOfResultA .image-of-art img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body .allBody2 .resultsOfDisplay .boxesOfResultA .image-of-art .number-count {
   position: absolute;
@@ -1346,7 +1350,7 @@ body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Photo .main-photo {
   border-radius: 1vh;
 }
 body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Photo .main-photo img {
-  border-radius: 1vh;
+  border: 1vh solid var(--sColor);
   width: 40vh;
   height: 50vh;
   overflow: hidden;
@@ -1356,19 +1360,18 @@ body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Photo .main-photo im
 }
 body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Photo .main-photo .side-photo {
   position: absolute;
-  left: -20%;
+  left: -30%;
   top: 10%;
   overflow: hidden;
   box-shadow: 0 0 1vh var(--shadow);
-  border-radius: 1vh;
 }
 body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Photo .main-photo .side-photo img {
+  filter: grayscale(100%);
   box-shadow: none;
   width: 20vh;
-  height: 40vh;
+  height: 20vh;
   -o-object-fit: cover;
      object-fit: cover;
-  transform: scale(2);
 }
 body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Resume {
   overflow: hidden;
@@ -1437,7 +1440,7 @@ body .aboutSection .skill-section {
 }
 body .aboutSection .skill-section .header {
   font-family: var(--Header);
-  color: var(--s2Color);
+  color: var(--Text-Color);
   font-size: 4vh;
   letter-spacing: 0.5vh;
   font-weight: bold;
@@ -1766,9 +1769,22 @@ body .activeOverlay {
     max-width: 30vh;
     max-height: 40vh;
   }
+  .Photo .main-photo .side-photo {
+    transform: translateX(30%);
+  }
   .Photo .main-photo .side-photo img {
     max-width: 15vh;
-    max-height: 30vh;
+    max-height: 15vh;
+  }
+  .background-mobile-projects {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to top, var(--nColor) 1%, var(--Red-Color), var(--s2Color));
   }
   .notInMobile {
     display: none;

@@ -26,8 +26,8 @@ let scrollTop = window.scrollY;
     window.addEventListener('scroll',function(){
         if(scrollTop < this.window.scrollY)
         {
-            navbar.style.top = '-100px';
-            navbarM.style.bottom= '-100px';
+            navbar.style.top = '-100vh';
+            navbarM.style.bottom= '-100vh';
         }
         else{
             navbar.style.top="1%";
