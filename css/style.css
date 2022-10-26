@@ -90,12 +90,12 @@
 }
 @-webkit-keyframes redEye {
   100% {
-    background: var(--sColor);
+    background: var(--s2Color);
   }
 }
 @keyframes redEye {
   100% {
-    background: var(--sColor);
+    background: var(--s2Color);
   }
 }
 @-webkit-keyframes rotate360 {
@@ -271,7 +271,7 @@ body::-webkit-scrollbar {
 /*COLOR PALATE*/
 :root {
   --shadow:black;
-  --pigColor: rgb(21, 20, 20);
+  --landing-page-loader: rgb(21, 20, 20);
   --pColor: #0D0D0D;
   --sColor: rgb(232, 236, 246);
   --Text-Color: white;
@@ -458,7 +458,7 @@ body .nav .scroll-up .nav {
 }
 body #allB1 {
   z-index: 10;
-  background: var(--sColor);
+  background: var(--s2Color);
   position: fixed;
   height: 100vh;
   width: 100%;
@@ -497,7 +497,7 @@ body .faceUpper {
   position: relative;
   width: 24vh;
   height: 10vh;
-  background: var(--pigColor);
+  background: var(--landing-page-loader);
   margin: 0;
   padding: 0;
   border-radius: 100% 100% 0 0;
@@ -518,7 +518,7 @@ body .faceUpper .eye {
 body .faceUpper .eye .eyeL {
   height: 3vh;
   width: 3vh;
-  background: var(--pigColor);
+  background: var(--landing-page-loader);
   border-radius: 0 100% 0 100%;
   margin-left: 1.5em;
   -webkit-animation: redEye 0.1s ease 0.1s forwards;
@@ -527,7 +527,7 @@ body .faceUpper .eye .eyeL {
 body .faceUpper .eye .eyeR {
   height: 3vh;
   width: 3vh;
-  background: var(--pigColor);
+  background: var(--landing-page-loader);
   border-radius: 100% 0 100% 0;
   margin-right: 1.5em;
   -webkit-animation: redEye 0.1s ease 0.1s forwards;
@@ -547,7 +547,7 @@ body .faceUpper .ears .earL {
           animation-iteration-count: infinite;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  background: var(--pigColor);
+  background: var(--landing-page-loader);
   position: absolute;
   height: 3vh;
   width: 2vh;
@@ -560,7 +560,7 @@ body .faceUpper .ears .earR {
           animation-iteration-count: infinite;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  background: var(--pigColor);
+  background: var(--landing-page-loader);
   position: absolute;
   border-radius: 100% 0% 0 0;
   right: 0;
@@ -574,7 +574,7 @@ body .faceLower {
   flex-direction: column;
   height: 0;
   width: 0;
-  border-top: 12vh solid var(--pigColor);
+  border-top: 12vh solid var(--landing-page-loader);
   border-left: 12vh solid transparent;
   border-right: 12vh solid transparent;
   margin: 0;
@@ -1415,14 +1415,7 @@ body .aboutSection .aboutAllBoxes .Part2-With-Des .Sub-Header {
   font-family: var(--Text);
   font-size: 4vh;
   text-align: left;
-  font-weight: bold;
-}
-body .aboutSection .aboutAllBoxes .Part2-With-Des .Sub-Header span {
-  text-transform: uppercase;
-  font-family: "Monoton", cursive;
-  font-weight: lighter;
-  color: var(--s2Color);
-  letter-spacing: 0.5vh;
+  margin-bottom: 1vh;
 }
 body .aboutSection .aboutAllBoxes .Part2-With-Des .Body-Part {
   font-family: var(--Text);
@@ -1480,7 +1473,7 @@ body .contactSection .contact-sec-overlay2 {
   width: 100%;
   margin: 0;
   padding: 5vh 0;
-  background-image: linear-gradient(to bottom, var(--nColor) 80%, var(--Red-Color));
+  background-image: linear-gradient(to bottom, var(--nColor) 70%, var(--pColor));
   color: var(--sColor);
 }
 body .contactSection .contact-sec-overlay2 .headerForContactSec {
@@ -1572,7 +1565,7 @@ body .contactSection .contactSecOverlay1 {
   height: auto;
   padding: 3vh;
   color: var(--sColor);
-  background: var(--Red-Color);
+  background: var(--pColor);
   overflow: hidden;
   gap: 1vh;
   display: flex;
