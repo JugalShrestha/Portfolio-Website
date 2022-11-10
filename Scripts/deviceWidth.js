@@ -2,7 +2,7 @@ const s= document.getElementById('navId-mobile')
 const sideArrowP= document.getElementById('sideArrow-mobileP')
 const sideArrowA= document.getElementById('sideArrow-mobileA')
     var width= window.innerWidth;
-    if(width>1180)
+    if(width>820)
     {
         s.style.display="none"
         sideArrowP.style.display="none";

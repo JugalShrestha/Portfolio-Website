@@ -1712,7 +1712,7 @@ body .activeOverlay {
 }
 
 /*Optimized for mobile screen*/
-@media only screen and (max-width: 1620px) {
+@media only screen and (max-width: 820px) {
   .welcomePage .hi-part {
     font-size: 10vh;
   }
