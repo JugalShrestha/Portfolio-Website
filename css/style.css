@@ -1093,10 +1093,10 @@ body .allBody2 .displayContents .prev, body .allBody2 .displayContents .next {
   border-radius: 1vh;
 }
 body .allBody2 .displayContents .prev {
-  left: 1%;
+  left: -3%;
 }
 body .allBody2 .displayContents .next {
-  right: 1%;
+  right: -3%;
 }
 body .allBody2 .resultsOfDisplay {
   padding: 0;
@@ -1347,7 +1347,7 @@ body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Photo {
 body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Photo .main-photo {
   position: relative;
   overflow: visible;
-  border-radius: 1vh;
+  border-radius: 5vh;
 }
 body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Photo .main-photo img {
   border: 1vh solid var(--sColor);
@@ -1356,6 +1356,7 @@ body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Photo .main-photo im
   overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 5vh;
   box-shadow: 0 0 1vh var(--shadow);
 }
 body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Photo .main-photo .side-photo {
@@ -1363,6 +1364,7 @@ body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Photo .main-photo .s
   left: -30%;
   top: 10%;
   overflow: hidden;
+  border-radius: 5vh;
   box-shadow: 0 0 1vh var(--shadow);
 }
 body .aboutSection .aboutAllBoxes .Part1-With-Photo-Resume .Photo .main-photo .side-photo img {

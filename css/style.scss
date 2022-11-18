@@ -1024,10 +1024,10 @@ body{
             border-radius: 1vh;
         }
         .prev{
-            left:1%;
+            left:-3%;
         }
         .next{
-            right:1%;
+            right:-3%;
         }
 
         }
@@ -1303,13 +1303,14 @@ body{
                         .main-photo{
                             position: relative;
                             overflow:visible;
-                            border-radius: 1vh;
+                            border-radius: 5vh;
                             img{
                                 border:1vh solid var(--sColor);
                                 width:40vh;
                                 height:50vh;
                                 overflow: hidden;
                                 object-fit: cover;
+                                border-radius: 5vh;
                                 box-shadow: 0 0 1vh var(--shadow);
                             }
                             .side-photo{
@@ -1317,6 +1318,7 @@ body{
                                 left: -30%;
                                 top:10%;
                                 overflow: hidden;
+                                border-radius: 5vh;
                                 box-shadow: 0 0 1vh var(--shadow);
                                 img{
                                     filter: grayscale(100%);
