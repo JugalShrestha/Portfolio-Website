@@ -12,618 +12,206 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<!--font-family: 'Monoton', cursive; Equals to line in text-->
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
- 
-<!--font-family: 'Rubik Dirt', cursive; Dirt and bold text-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
-
-<!--font-family: 'Cedarville Cursive', cursive; Pure cursive-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
-
-<!--font-family: 'Bebas Neue', cursive; For Headers-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
-<!--font-family: 'Jost', sans-serif; For texts-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <!--font-family: 'Monoton', cursive; Equals to line in text-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     
-<title>Jugal Shrestha</title>
+    <!--font-family: 'Rubik Dirt', cursive; Dirt and bold text-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+
+    <!--font-family: 'Cedarville Cursive', cursive; Pure cursive-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+
+    <!--font-family: 'Bebas Neue', cursive; For Headers-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!--font-family: 'Jost', sans-serif; For texts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+        
+    <title>Jugal Shrestha</title>
 </head>
 
-<body>
-    <!--Mobile Nav Bar-->
-    <div id="navId-mobile" onclick="navOpen()" class="nav-mobile">
-        <div class="navOptions-mobile">
-            <li><a id="allPLink" onclick="scrollTo1()">Projects</a></li>
+<body id="body-id">
+    <!--Left PART-->
+    <!--Menu System-->
+    <section class="left-section" id="left-section-id">
+        <div class="menu" id="menu-id">
+            <ul class="menu-list">
+                <li class="menu-options" id="menu-home"><img src="images/skills-icon/coder-head.png" alt=""></li>
+                <li class="menu-options" id="menu-about">About</li>
+                <li class="menu-options" id="menu-projects">Projects</li>
+                <li class="menu-options" id="menu-contacts">Contacts</li>
+                
+            </ul>
         </div>
-        <label class="logo">
-            <a onclick="scrollTo4()">Jugal</a> 
-        </label>
-        <div class="navOptions-mobile">
-            <li><a id="allALink" onclick="scrollTo2()">About Me</a></li>
-        </div>
-        
-    </div>
+    </section>
+    <!--End of Menu-->
 
-    <!--PC Nav Bar-->
-    <div id="navId" class="nav">
-        <ul class="navOptions">
-            <li><a id="allPLink" onclick="scrollTo1()">Projects</a></li>
-            <li><a id="allALink" onclick="scrollTo2()">About Me</a></li>
-        </ul>
-        <label class="logo">
-            <a onclick="scrollTo4()">Jugal</a> 
-        </label>
-        <nav>
-        <ul class="navOptions">
-            <li><a id="allCLink" onclick="scrollTo3()">Contact</a></li>
-            <li>
-                <a href="mailto:jugalnepali@gmail.com">
-                <img width="30vh" height="30vh" src="/images/Social-media-icons/email.png" alt="email">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/jugal_baucha/" target="_blank">
-                <img width="30vh" height="30vh" src="/images/Social-media-icons/instagram.png" alt="instagram">
-                </a>
-            </li>
-        </ul>
-        </nav>
-    </div>
-
-    <!--Not used overlay-->
-    <div id="overlay1"class="overlay"></div>
-
-    <!--The loading screen-->
-    <div class="allBody1" id="allB1">
-        <div class="instruction">
-            <p class="start1"></p>
-        </div>
-        <div class="face">
-            <div class="faceUpper">
-                <div class="ears">
-                    <div class="earL"></div>
-                    <div class="earR"></div>
+    <!--Start of Right SECTIONS-->
+    <section class="right-section" id="right-section-id">
+        <!--Start of Home Menu-->
+        <div class="home-context" id="home-context-id">
+            <!--Start of Profile card-->
+            <div class="profile-card">
+                <div class="profile-card-photo">
+                    <img src="images/Jugal Photo/StandingProud.jpg" alt="Photo">
                 </div>
-                <div class="eye">
-                    <div class="eyeL"></div>
-                    <div class="eyeR"></div>
+                <div class="profile-card-title">
+                    Jugal Shrestha
                 </div>
-            </div>
-             <div class="faceLower">
-                <div id="noseId" class="nose">
+                <div class="profile-card-discription">
+                    Developer/ Student
                 </div>
-             </div>
-        </div>
-    </div>
-
-    <!--Loaded after the loading screen-->
-    <div class="allBody2" id="allB2">
-        <!--Welcome msg-->
-        <div class="welcomePage" id="allWel1">
-
-            <!--decorations for screen-->
-            <div class="overlay-for-signs" id="notInMobileId">
-                <div data-value="5" class="screen-signs-decoration">
-                    
-                </div>
-                <div data-value="2"  class="screen-signs-decoration">
-                    
-                </div>
-                <div data-value="-5"  class="screen-signs-decoration">
-                    
-                </div>
-                <div data-value="-4"  class="screen-signs-decoration">
-                    
-                </div>
-                <div data-value="4"  class="screen-signs-decoration">
-                    
-                </div>
-                <div data-value="-4"  class="screen-signs-decoration">
-                    
-                </div>
-                <div data-value="-3"  class="screen-signs-decoration">
-                    
-                </div>
-                <div data-value="2"  class="screen-signs-decoration">
-                    
-                </div>
-                <div data-value="-5"  class="screen-signs-decoration">
-                    
-                </div>
-                <div data-value="4"  class="screen-signs-decoration">
-                    
-                </div>
-            </div>
-
-            <!--hi part-->
-            <div id="allWel2" class="introduction">
-                <div id="landing-hi" class="hi-part">
-                    <div>Hi</div>
-                    <div class="i-part">I</div>
-                    <div>am</div>
-                </div>
-                <div class="short-des-part">
-                    Freelancer &cross; Web-Developer &cross; Artist    
-                </div>
-                <div id="landing-name" class="name-part">
-                    <div class="first-name">Jugal</div>
-                    <div class="last-name">Shrestha</div>
-                </div>
-                <div class="moto-part">
-                    Working for any projects that suits my fit.
-                </div>
-            </div>
-        </div>
-        
-        <!--Menu Section-->
-        <div class="projects" id="allP1">
-
-            <!--decorations for screen-->
-            <div class="background-mobile-projects" id="for-mobile-id">
-            </div>
-            <div id="notInMobileId">
-                <div data-value="9" class="screen-signs-decoration">
-                    Hard Work
-                </div>
-                
-                <div data-value="-3"  class="screen-signs-decoration">
-                    Joy
-                </div>
-                
-                <div data-value="5"  class="screen-signs-decoration">
-                    Knowledge
-                </div>
-                
-                <div data-value="-8"  class="screen-signs-decoration">
-                    Power
-                </div>
-
-                <div data-value="6" class="screen-signs-decoration">
-                    IQ
-                </div>
-
-                <div data-value="-10" class="screen-signs-decoration">
-                    Book
-                </div>
-
-                <div data-value="5"  class="screen-signs-decoration">
-                    Tear
-                </div>
-
-                <div data-value="-3"  class="screen-signs-decoration">
-                    Code
-                </div>
-                <div data-value="5"  class="screen-signs-decoration">
-                    Journey
-                </div>
-
-                <div data-value="-3"  class="screen-signs-decoration">
-                    Sacrifice
-                </div>
-                <div data-value="-9" class="screen-signs-decoration">
-                    Deligiency
-                </div>
-                
-                <div data-value="3"  class="screen-signs-decoration">
-                    Versatality
-                </div>
-                
-                <div data-value="-5"  class="screen-signs-decoration">
-                    Motivation
-                </div>
-                
-                <div data-value="8"  class="screen-signs-decoration">
-                    Automatic
-                </div>
-
-                <div data-value="-6" class="screen-signs-decoration">
-                    Idol
-                </div>
-
-                <div data-value="10" class="screen-signs-decoration">
-                    Money
-                </div>
-
-                <div data-value="-5"  class="screen-signs-decoration">
-                    Tool
-                </div>
-
-                <div data-value="3"  class="screen-signs-decoration">
-                    Happy
-                </div>
-                <div data-value="-5"  class="screen-signs-decoration">
-                    Entertainment
-                </div>
-
-                <div data-value="3"  class="screen-signs-decoration">
-                    Sad
-                </div>
-            </div>
-
-                <div id="notInMobileId" class="projectsBackdrop">
-                    <div class="projectsBackdrop2"></div>
-                    <div class="projectsBackdrop3"></div>
-                </div>
-                <div id="notInMobileId" class="bgOverlay"></div>
-                
-                    <div id="headerForProjectId" class="headerForProject">
-                        <span>projects</span>
-                        <br><p id="notInMobileId">menu</p>
-                    </div>
-
-            <div id="box-screen" class="boxes">
-
-                <div class="container">
-                    <div onclick="openArts()"  class="boxed"id="box1">
-                        <p class="imagesP">ARTS</p>
-                    </div>
-                </div>
-                
-                <div class="container">
-                    <div onclick="openProjects()" class="boxed"id="box2">
-                        <p class="imagesP">PROJECTS</p>
-                    </div>
-                </div>
-              
-            </div>
-             <!--Back to menu link-->
-             <div onclick="projectDisplayClose()" id="go-back" class="sideArrow">
-                Go back
-            </div>
-
-            <!--Overlay for PROJECTS menu-->
-        <div class="overlays-for-projects-menu">
-            <!--Every thing that is displayed-->
-            <div class="projectsDisplay" id="projectOpen">
-                
-                <!--All the contents of project-->
-                <div class="displayContents">
-
-                    <!--header of the overlay-->
-                    <div class="displayHeaders">Projects</div>
-
-                    <!--Actual contents / SlideShow contents-->
-                    <div class="resultsOfDisplay">
-
-                        <!--Individual contents-->
-                        <div class="boxesOfResultP" id="project-1">
-                            <!--Images and link to code-->
-                            <div class="image-of-project">
-                                <div class="number-count">
-                                    1/3
-                                </div>
-                                <img width="150px" height="150px" src="/images/Projects images/online-library.png" alt="Book">
-                                <a target="_blank" href="https://github.com/JugalBaucha/LIBRARY_MANAGEMENT_SYSTEM" class="view-code">View code?</a>
-                            </div>
-                            <!--Description of projects-->
-                            <div class="discription-of-project">
-                                <div class="header-of-project">
-                                    L.M.S
-                                </div>
-                                <div class="intro-of-project">
-                                    I built a Library Management System 
-                                    in C programming with the features 
-                                    such as Login, Add record, Modify it,
-                                    or Terminate it and Display the records.
-                                    The purpose of this project is for the
-                                    better management of the library.
-                                </div>
-                            </div>
-                        </div>
-
-                         <!--Individual contents-->
-                        <div class="boxesOfResultP" id="project-2">
-                            <!--Images and link to code-->
-                            <div class="image-of-project">
-                                <div class="number-count">
-                                    2/3
-                                </div>
-                                <img width="150px" height="150px" src="images/Projects images/calendar.png" alt="Finance-Tracker">
-                                <a target="_blank" href="https://github.com/JugalShrestha/Finance-app-tracker" class="view-code">View code?</a>
-                            </div>
-                            <!--Description of projects-->
-                            <div class="discription-of-project">
-                                <div class="header-of-project">
-                                    Finance-Tracker
-                                </div>
-                                <div class="intro-of-project">
-                                    I built a Finance-Tracker in C programming. 
-                                    It keeps tracks the cash in-flow and cash out-flow.
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <!--Individual contents-->
-                        <div class="boxesOfResultP" id="project-3">
-                            <!--Images and link to code-->
-                            <div class="image-of-project">
-                                <div class="number-count">
-                                    3/3
-                                </div>
-                                <p>image</p>
-                                <a target="_blank" href="" class="view-code">Code N/A</a>
-                            </div>
-                            <!--Description of projects-->
-                            <div class="discription-of-project">
-                                <div class="header-of-project">
-                                    BACHAT
-                                </div>
-                                <div class="intro-of-project">
-                                    An financial app made using java
-                                    which will help one to save thier
-                                    investments and make one's life 
-                                    effective and efficient
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div onclick="projectDisplayClose()" id="sideArrow-mobileP" class="sideArrow-mobile">
-                        Go back
-                    </div>
-                        <a class="prev" onclick="goPrevP()">❮</a>
-                        <a class="next" onclick="goNextP()">❯</a>
-                                            
-                </div>
-            </div>
-    
-            <!--Overlay for ARTS menu-->
-            <div class="artsDisplay" id="artOpen">    
-                <div class="displayContents">
-                    <p class="displayHeaders">Arts</p>
-                    <div class="resultsOfDisplay">
-
-                        <!--Individual contents-->
-                        <div class="boxesOfResultA" id="art-1">
-                            <!--Images and link to code-->
-                            <div class="image-of-art">
-                                <div class="number-count">
-                                    1/3
-                                </div>
-                                <img src="/images/Arts/guitar.jpg" alt="guitar">
-                            </div>
-                        </div>
-
-                        <!--Individual contents-->
-                        <div class="boxesOfResultA" id="art-2">
-                            <!--Images and link to code-->
-                            <div class="image-of-art">
-                                <div class="number-count">
-                                    2/3
-                                </div>
-                                <img src="/images/Arts/ManuLogo.jpg" alt="logo">
-                            </div>
-                        </div>
-
-                        <!--Individual contents-->
-                        <div class="boxesOfResultA" id="art-3">
-                            <!--Images and link to code-->
-                            <div class="image-of-art">
-                                <div class="number-count">
-                                    3/3
-                                </div>
-                                <img src="/images/Arts/mountainsLake.jpg" alt="Book">
-                            </div>
-                        </div>
-
-                    </div>
-                    <div onclick="projectDisplayClose()" id="sideArrow-mobileA" class="sideArrow-mobile">
-                        Go back
-                    </div>
-                    
-                    <a class="prev" onclick="goPrevA()">❮</a>
-                    <a class="next" onclick="goNextA()">❯</a>
-                      
-                </div>
-            </div>
-            
-        </div>
-
-        </div>
-
-        
-        
-        <!--About Section-->
-        <div id="allA1" class="aboutSection">
-
-            <!--Decoration stuff-->
-            <!--<div id="notInMobileId">
-                <div class="screen-bubbles-decoration"></div>
-                <div class="screen-bubbles-decoration"></div>
-                <div class="screen-bubbles-decoration"></div>
-                <div class="screen-bubbles-decoration"></div>
-                <div class="screen-bubbles-decoration"></div>
-                <div class="screen-bubbles-decoration"></div>
-                <div class="screen-bubbles-decoration"></div>
-                <div class="screen-bubbles-decoration"></div>    
-            </div>-->
-            <!--header for about section-->
-            <div id="headerForAboutSectionId" class="headerForAboutSection">
-                About Me
-            </div>
-
-            <div id="aboutAllBoxesId" class="aboutAllBoxes">
-
-                <div class="Part1-With-Photo-Resume">
-                    <div class="Photo">
-                        <div class="main-photo">
-                            <img src="images/Jugal Photo/StandingProud.jpg" alt="">
-                            
-                        <div class="side-photo">
-                            <img src="/images/Jugal Photo/About-Section-Photo.jpg" alt="">
-                        </div>
-                        </div>
-                    </div>
-                    <div class="Resume">
-                        <a target="_blank" href="Resume.pdf">
-                           See my <span>résumé</span> ?
-                        </a>
-                    </div>
-                </div>
-
-                <div class="Part2-With-Des">
-                    <div class="Sub-Header">
-                        Hi I'm Jugal,
-                    </div>
-                    <div class="Body-Part">
-                        Currentlty, I am a student pursuing
-                        bachelor's degree in BIM (IT) who is
-                        working as a Freelancer for any projects
-                        that suits my fit, I am an Artist
-                        on side, a web developer on need and overall
-                        a creative problem solver.<br><br>
-                        I have worked with company such as,
-                        transperfect and appen doing Freelancing
-                        for them. I have a little experience of
-                        leading and working in a team through my
-                        own little clubs that I run. Also, I am someone
-                        who has worked with many other creative minds
-                        So, working in a team won't be a problem for me.<br><br>
-                        That's it for me! What about you?
-                    </div>
-                </div>
-            </div>
-
-            <div class="skill-section">
-                <div class="header">
-                    Skills that I have,
-                </div>
-                <div class="icons">
-                    <img src="images/skills-icon/html-5.png" alt="html">
-                    <img src="images/skills-icon/java.png" alt="java">
-                    <img src="images/skills-icon/java-script.png" alt="JS">
-                    <img src="images/skills-icon/css.png" alt="CSs">
-                    <img src="images/skills-icon/c-document.png" alt="C">
-                    <img src="images/skills-icon/photoshop.png" alt="Ps">
-                </div>
-            </div>
-
-        </div>
-
-
-        
-        <!--Contact Section-->
-        <div id="allC1" class="contactSection">
-
-            <!--Upper Part of contacts-->
-            <div class="contact-sec-overlay2">
-                <!--Header for contact Section-->
-                <div id="Contacts-Header" class="headerForContactSec">
-                    CONTACTS
-                </div> 
-                
-                  <!--Email form of contact-->
-                    <div class="emailForm">
-                        <form id="my-form" action="https://formspree.io/f/xaykbdoj" method="post">
-                            <!--Part 1 of email-->
-                            <div class="part1OfEmail">
-                                <input id="nameOfEmail" placeholder="Name Here" class="emailInput" type="text">
-                                <input id="emailOfEmail" placeholder="Email Here" class="emailInput" type="text" title="Subject">
-                            </div>
-                            <!--Part 2 of email-->
-                            <div class="part2OfEmail">
-                                <textarea placeholder="Message Here" name="message" id="email-msg" cols="30" rows="10"></textarea>
-                                <button type="submit">Send</button>
-                                <p id=my-form-status></p>
-                            </div>
-                        </form>
-                    </div>
-
-            </div>
-            
-            
-            <!--Bottom part of contact section-->
-            <div class="contactSecOverlay1">
-
-                <!--social media links-->
-                <div class="socialLinks">
-                    <div class="contactSecHeader">
-                        Find Me On
-                    </div>
-                    <div class="contactIntro">
-                        <p class="contactIntroDes">
-                            <a class="contactsA" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jugal-shrestha-8870b8226/">
-                                LinkedIn
-                            </a>
-                            <a class="contactsA" target="_blank" rel="noopener noreferrer" href="https://github.com/JugalBaucha">
-                                Github
-                                <a>
-                            <a class="contactsA" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/jugal_baucha/">
-                                Instagram
-                            </a>
-                            <a class="contactsA" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCuh9gYFLFtXmX-EzIIUYnOg">
-                                Youtube
-                            </a>
-                            <a id="emailLink" class="contactsA" target="_blank" rel="noopener noreferrer" href="mailto: jugalnepali@gmail.com">
-                                Mail
-                            </a>
-                        </p>
-                    </div>
-                </div>
-
-                <!--Description about me-->
-                <div class="contactSecDesAboutMe">
-                    <div class="headerForContactSecDes">
-                        Jugal Shrestha.
-                    </div>
-                    <div class="introForContactSecDes">
-                        Let's not be a stranger to one another,<br>
-                         remember for your any projects my skills
-                         may come in handy.
-                         <div class="introDesForContactSecDes">
-                            <br>Email: jugalnepali@gmail.com
-                            <br>Ph.no: NP +977 9845257756
-                        </div>
-                       
-                    </div>
-                </div>
-
-                <!--Thanks section-->
-                <div class="thanks-section">
-                    <div class="contactSecHeader">
-                        Worked with
-                    </div>
-                    <ul>
-                        <li>Transperfect</li>
-                        <li>Appen</li>
-                        <li>CloudFactory</li>
-                        <li>BrainFest</li>
-                        <li>External Clients</li>
+                <div class="profile-card-contacts">
+                    <ul class="profile-card-social-link-list">
+                        <li class="profile-card-social-link"><img src="images/Social-media-icons/github.png" alt=""></li>
+                        <li class="profile-card-social-link"><img src="images/Social-media-icons/instagram.png" alt=""></li>
+                        <li class="profile-card-social-link"><img src="images/Social-media-icons/email.png" alt=""></li>
                     </ul>
                 </div>
+            </div>
+            <!--End of Profile card-->
+        </div>
+        <!--End of Home Menu-->
+        
+        <!--Start of About Menu-->
+        <div class="about-context" id="about-context-id">
+            <!--Contents photo and text material-->
+            <div class="about-me">
+                <div class="about-me-photo">
+                    <img src="images/Jugal Photo/StandingProud.jpg" alt="image">
+                </div>
+                <div class="about-me-paragraph">
+                    <div class="about-me-paragraph-header">
+                        Hi! I am Jugal
+                    </div>
+                    Currentlty, I am a student pursuing bachelor's degree in BIM (IT) who is working as a Freelancer
+                     for any projects that suits my fit, I am an
+                      Artist on side, a web developer on need and overall
+                       a creative problem solver.
+                       <br><br>
+                       I have worked with company such as, transperfect and appen doing Freelancing for them.
+                        I have a little experience of leading and working in a
+                         team through my own little clubs that I run.
+                          Also, I am someone who has worked with many other creative minds So,
+                           working in a team won't be a problem for me.
+                        <br><br>
+                        That's it for me! What about you?
+                </div>
+            </div>
+        </div>
+        <!--End of About Menu-->
 
+        <!--Start of Projects Menu-->
+        <div class="projects-context" id="projects-context-id">
+            PROJECTS
+        </div>
+        <!--End OF Projects Menu-->
+
+        <!--Start of Contacts Menu-->
+        <div class="contacts-context" id="contacts-context-id">
+            CONTACTS
+        </div>
+        <!--End of Contacts Menu-->
+    </section>
+    <!--End of Right Section-->
+
+    <!--Start of mobile section-->
+    <section class="mobile-section" id="mobile-section-id">
+        <!--Start of mobile Nav-->
+        <div id="nav-m-id" class="nav-m">
+            MENU
+        </div>
+        <!--End of Mobile Nav-->
+        <!--Start of Menu for Mobile-->
+        <div class="menu-m" id="menu-m-id">
+            <ul class="menu-m-list">
+                <li class="menu-m-options" id="menu-m-home"><img src="images/skills-icon/coder-head.png" alt=""></li>
+                <li class="menu-m-options" id="menu-m-about">About</li>
+                <li class="menu-m-options" id="menu-m-projects">Projects</li>
+                <li class="menu-m-options" id="menu-m-contacts">Contacts</li>
                 
-
-            </div>
-
-          
-            <!--Extra part of contact-->
-            <div class="contactSecOverlay3">
-
-            </div>
-
+            </ul>
         </div>
-        <div id="notInMobileId">
+        <!--End of Menu for Mobile-->
+        <!--Start of Home Page Mobile-->
+        <div class="home-context-m" id="home-context-m-id">
+             <!--Start of Profile card-->
+             <div class="profile-card">
+                <div class="profile-card-photo">
+                    <img src="images/Jugal Photo/StandingProud.jpg" alt="Photo">
+                </div>
+                <div class="profile-card-title">
+                    Jugal Shrestha
+                </div>
+                <div class="profile-card-discription">
+                    Developer/ Student
+                </div>
+                <div class="profile-card-contacts">
+                    <ul class="profile-card-social-link-list">
+                        <li class="profile-card-social-link"><img src="images/Social-media-icons/github.png" alt=""></li>
+                        <li class="profile-card-social-link"><img src="images/Social-media-icons/instagram.png" alt=""></li>
+                        <li class="profile-card-social-link"><img src="images/Social-media-icons/email.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <!--End of Profile card-->
         </div>
+        <!--End of Home page Mobile-->
 
-    </div>
+        <!--Start of About Menu-->
+        <div class="about-context-m" id="about-context-m-id">
+            <!--Contents photo and text material-->
+            <div class="about-me">
+                <div class="about-me-photo">
+                    <img src="images/Jugal Photo/StandingProud.jpg" alt="image">
+                </div>
+                <div class="about-me-paragraph">
+                    <div class="about-me-paragraph-header">
+                        Hi! I am Jugal
+                    </div>
+                    Currentlty, I am a student pursuing bachelor's degree in BIM (IT) who is working as a Freelancer
+                     for any projects that suits my fit, I am an
+                      Artist on side, a web developer on need and overall
+                       a creative problem solver.
+                       <br><br>
+                       I have worked with company such as, transperfect and appen doing Freelancing for them.
+                        I have a little experience of leading and working in a
+                         team through my own little clubs that I run.
+                          Also, I am someone who has worked with many other creative minds So,
+                           working in a team won't be a problem for me.
+                        <br><br>
+                        That's it for me! What about you?
+                </div>
+            </div>
+        </div>
+        <!--End of About Menu-->
+
+        <!--Start of Projects Menu-->
+        <div class="projects-context-m" id="projects-context-m-id">
+            PROJECTS
+        </div>
+        <!--End OF Projects Menu-->
+
+        <!--Start of Contacts Menu-->
+        <div class="contacts-context-m" id="contacts-context-m-id">
+            CONTACTS
+        </div>
+        <!--End of Contacts Menu-->
+
+    </section>
+    <!--End of mobile seciton-->
+    <!--SCRIPTS-->
+    <script src="Scripts/device-width.js"></script>
+    <script src="Scripts/page-shuffle.js"></script>
 </body>
-<script src="Scripts/slider.js"></script>
-<script src="Scripts/deviceWidth.js"></script>
-<script src="Scripts/loader.js"></script>
-<script src="Scripts/parallax-signs.js"></script>
-<script src="Scripts/scroll-reveal.js"></script>
-<script src="Scripts/form-send.js"></script>
 </html>
 

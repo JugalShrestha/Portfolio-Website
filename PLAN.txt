@@ -1,0 +1,5 @@
+-First Making Two parts of the website
+-Left -Right
+-Left will contain Menu
+-Right will contain the context
+
