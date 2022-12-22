@@ -25,70 +25,70 @@ const mobileContactsOverlay= document.getElementById('contacts-context-m-id')
 const mobileAboutOverlay= document.getElementById('about-context-m-id')
 
 homeButton.addEventListener("click",function(){
-    aboutOverlay.style.zIndex="0";
-    homeOverlay.style.zIndex="1";
-    projectsOverlay.style.zIndex="0";
-    contactsOverlay.style.zIndex="0";
+    aboutOverlay.style.display="none";
+    homeOverlay.style.display="flex";
+    projectsOverlay.style.display="none";
+    contactsOverlay.style.display="none";
 });
 
 aboutButton.addEventListener("click",function(){
-    aboutOverlay.style.zIndex="1";
-    homeOverlay.style.zIndex="0";
-    projectsOverlay.style.zIndex="0";
-    contactsOverlay.style.zIndex="0";
+    aboutOverlay.style.display="flex";
+    homeOverlay.style.display="none";
+    projectsOverlay.style.display="none";
+    contactsOverlay.style.display="none";
 });
 
 projectsButton.addEventListener("click",function(){
-    aboutOverlay.style.zIndex="0";
-    homeOverlay.style.zIndex="0";
-    projectsOverlay.style.zIndex="1";
-    contactsOverlay.style.zIndex="0";
+    aboutOverlay.style.display="none";
+    homeOverlay.style.display="none";
+    projectsOverlay.style.display="flex";
+    contactsOverlay.style.display="none";
 });
 
 contactsButton.addEventListener("click",function(){
-    aboutOverlay.style.zIndex="0";
-    homeOverlay.style.zIndex="0";
-    projectsOverlay.style.zIndex="0";
-    contactsOverlay.style.zIndex="1";
+    aboutOverlay.style.display="none";
+    homeOverlay.style.display="none";
+    projectsOverlay.style.display="none";
+    contactsOverlay.style.display="flex";
 });
 
 //For Mobile Menu
 
 mobileMenuButton.addEventListener("click",function(){
-    mobileMenuOverlay.style.zIndex="1";
-    mobileMenuButton.style.zIndex="0";
+    mobileMenuOverlay.style.display="flex";
+    mobileMenuButton.style.display="none";
 
-    mobileHomeOverlay.style.zIndex="0";
-    mobileProjectsOverlay.style.zIndex="0";
-    mobileContactsOverlay.style.zIndex="0";
-    mobileAboutOverlay.style.zIndex="0";
+    mobileHomeOverlay.style.display="none";
+    mobileProjectsOverlay.style.display="none";
+    mobileContactsOverlay.style.display="none";
+    mobileAboutOverlay.style.display="none";
 })
 
 mobileHomeButton.addEventListener("click",function(){
-    mobileMenuOverlay.style.zIndex="0";
-    mobileMenuButton.style.zIndex="2";
+    mobileMenuOverlay.style.display="none";
+    mobileMenuButton.style.display="flex";
 
-    mobileHomeOverlay.style.zIndex="1";
+    mobileHomeOverlay.style.display="flex";
 })
 
 mobileAboutButton.addEventListener("click",function(){
-    mobileMenuOverlay.style.zIndex="0";
-    mobileMenuButton.style.zIndex="2";
+    mobileMenuOverlay.style.display="none";
+    mobileMenuButton.style.display="flex";
 
-    mobileAboutOverlay.style.zIndex="1";
+    mobileAboutOverlay.style.display="flex";
 })
 
 mobileProjectsButton.addEventListener("click",function(){
-    mobileMenuOverlay.style.zIndex="0";
-    mobileMenuButton.style.zIndex="2";
+    mobileMenuOverlay.style.display="none";
+    mobileMenuButton.style.display="flex";
 
-    mobileProjectsOverlay.style.zIndex="1";
+    mobileProjectsOverlay.style.display="flex";
 })
 
 mobileContactsButton.addEventListener("click",function(){
-    mobileMenuOverlay.style.zIndex="0";
-    mobileMenuButton.style.zIndex="2";
+    mobileMenuOverlay.style.display="none";
+    mobileMenuButton.style.display="flex";
 
-    mobileContactsOverlay.style.zIndex="1";
+    mobileContactsOverlay.style.display="flex";
 })
 

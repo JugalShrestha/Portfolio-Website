@@ -13,12 +13,12 @@ body::-webkit-scrollbar {
   margin: 0;
   padding: 0;
   border-radius: 0%;
-  background: var(--nColor);
+  background: var(--s-color);
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10vh;
-  background: var(--sColor);
+  background: var(--p1-color);
   opacity: 90%;
   margin: 0;
   padding: 0;
@@ -64,7 +64,6 @@ body .left-section .menu .menu-list {
   list-style: none;
 }
 body .left-section .menu .menu-list .menu-options {
-  transition: 0.1s linear;
   font-size: 4vh;
   font-family: var(--header);
   cursor: pointer;
@@ -74,6 +73,9 @@ body .left-section .menu .menu-list .menu-options {
 }
 body .left-section .menu .menu-list .menu-options:hover {
   transform: translateY(-5px);
+}
+body .left-section .menu .menu-list .menu-options:active {
+  color: red;
 }
 body .left-section .menu .menu-list img {
   height: 20vh;
@@ -119,8 +121,9 @@ body .right-section .profile-card .profile-card-photo img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50% 15%;
-     object-position: 50% 15%;
+  -o-object-position: 10% 55%;
+     object-position: 10% 55%;
+  transform: scale(2);
 }
 body .right-section .profile-card .profile-card-title {
   font-size: 4vh;
@@ -145,6 +148,18 @@ body .right-section .profile-card .profile-card-contacts .profile-card-social-li
   border-radius: 100%;
   height: 4vh;
   width: 4vh;
+}
+body .right-section .profile-card .profile-card-resume {
+  padding: 1vh;
+  font-size: 2vh;
+  font-family: var(--text);
+  background: var(--shadow);
+  border-radius: 1vh;
+  border: 0.5vh double var(--s-color);
+}
+body .right-section .profile-card .profile-card-resume a {
+  text-decoration: none;
+  color: var(--text-color);
 }
 body .right-section .about-context {
   position: absolute;
@@ -171,6 +186,10 @@ body .right-section .about-context .about-me .about-me-photo {
   overflow: hidden;
   border: 1vh solid var(--s-color);
   border-radius: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
 }
 body .right-section .about-context .about-me .about-me-photo img {
   width: 100%;
@@ -189,7 +208,109 @@ body .right-section .about-context .about-me .about-me-paragraph .about-me-parag
   font-size: 3vh;
   font-weight: bold;
 }
+body .right-section .about-context .about-me .about-me-paragraph .resume {
+  margin: 2vh;
+  align-self: center;
+  padding: 1vh;
+  width: 50%;
+  text-align: center;
+  background: var(--p-color);
+  font-size: 2vh;
+  font-family: var(--text);
+  border-radius: 2vh;
+}
+body .right-section .about-context .about-me .about-me-paragraph .resume a {
+  text-decoration: none;
+  color: var(--s-color);
+}
 body .right-section .projects-context {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  box-shadow: inset 0 0 30vh var(--shadow);
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='71.141' height='42' patternTransform='scale(3) rotate(50)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 100%, 1)'/><path d='M69.212 40H46.118L34.57 20 46.118 0h23.094l11.547 20zM57.665 60H34.57L23.023 40 34.57 20h23.095l11.547 20zm0-40H34.57L23.023 0 34.57-20h23.095L69.212 0zM34.57 60H11.476L-.07 40l11.547-20h23.095l11.547 20zm0-40H11.476L-.07 0l11.547-20h23.095L46.118 0zM23.023 40H-.07l-11.547-20L-.07 0h23.094L34.57 20z' transform='translate(1,0)' stroke-width='1' stroke='hsla(0, 0%, 0%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+  display: flex;
+  flex-direction: column;
+  padding: 1vh;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+body .right-section .projects-context .project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1vh;
+}
+body .right-section .projects-context .project-container .project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  gap: 2vh;
+  padding: 2vh;
+  background: var(--p-color);
+  margin-top: 10vh;
+  border-radius: 2vh;
+  box-shadow: 0 0 1vh var(--shadow);
+}
+body .right-section .projects-context .project-container .project .project-header {
+  font-size: 4vh;
+  font-family: var(--header);
+  padding: 1vh;
+  background: var(--s-color);
+  color: var(--shadow);
+  width: 100%;
+  text-align: center;
+  border-radius: 1vh;
+}
+body .right-section .projects-context .project-container .project .project-photo {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 1vh;
+  overflow: hidden;
+  box-shadow: 0 0 1vh var(--shadow);
+  pointer-events: none;
+}
+body .right-section .projects-context .project-container .project .project-photo img {
+  width: 100%;
+  height: 100%;
+}
+body .right-section .projects-context .project-container .project .project-photo .project-video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+body .right-section .projects-context .project-container .project .project-bio {
+  font-size: 2vh;
+  font-family: var(--text);
+  text-align: justify;
+  padding: 1vh;
+  background: var(--shadow);
+  border-radius: 1vh;
+}
+body .right-section .projects-context .project-container .project .project-code {
+  font-size: 2vh;
+  font-family: var(--text);
+  padding: 1vh;
+  background: var(--s1-color);
+  width: 100%;
+  text-align: center;
+  border-radius: 1vh;
+  font-weight: bold;
+}
+body .right-section .projects-context .project-container .project .project-code a {
+  color: var(--p-color);
+}
+body .right-section .contacts-context {
   position: absolute;
   right: 0;
   width: 50%;
@@ -200,18 +321,36 @@ body .right-section .projects-context {
   padding: 1vh;
   align-items: center;
   justify-content: center;
+  gap: 5vh;
 }
-body .right-section .contacts-context {
-  position: absolute;
-  right: 0;
-  width: 50%;
-  height: 100vh;
-  background: var(--p1-color);
+body .right-section .contacts-context .social-links {
   display: flex;
   flex-direction: column;
-  padding: 1vh;
   align-items: center;
   justify-content: center;
+}
+body .right-section .contacts-context .social-links .social-link-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
+  list-style: none;
+}
+body .right-section .contacts-context .social-links .social-link-list .social-link a img {
+  border: 0.2vh solid var(--s-color);
+  border-radius: 100%;
+  background: var(--s-color);
+  width: 5vh;
+  height: 5vh;
+}
+body .right-section .contacts-context .social-links .social-link-list .social-link a img:hover {
+  transform: scale(1.2);
+}
+body .right-section .contacts-context .phone-no {
+  padding: 1vh;
+  font-size: 2vh;
+  font-family: var(--text);
 }
 body .mobile-section {
   display: none;
@@ -242,7 +381,6 @@ body .mobile-section .menu-m .menu-m-list {
   list-style: none;
 }
 body .mobile-section .menu-m .menu-m-list .menu-m-options {
-  transition: 0.1s linear;
   font-size: 4vh;
   font-family: var(--header);
   cursor: pointer;
@@ -343,7 +481,7 @@ body .mobile-section .about-context-m .about-me {
   align-items: center;
 }
 body .mobile-section .about-context-m .about-me .about-me-photo {
-  width: 30vh;
+  width: 40vh;
   height: 40vh;
   overflow: hidden;
   border: 1vh solid var(--s-color);
@@ -366,6 +504,20 @@ body .mobile-section .about-context-m .about-me .about-me-paragraph .about-me-pa
   font-size: 3vh;
   font-weight: bold;
 }
+body .mobile-section .about-context-m .about-me .about-me-paragraph .resume {
+  margin: 2vh;
+  padding: 1vh;
+  width: 50%;
+  text-align: center;
+  background: var(--p-color);
+  font-size: 2vh;
+  font-family: var(--text);
+  border-radius: 2vh;
+}
+body .mobile-section .about-context-m .about-me .about-me-paragraph .resume a {
+  text-decoration: none;
+  color: var(--s-color);
+}
 body .mobile-section .projects-context-m {
   position: fixed;
   min-width: 100%;
@@ -376,17 +528,128 @@ body .mobile-section .projects-context-m {
   padding: 1vh;
   align-items: center;
   justify-content: center;
+  box-shadow: inset 0 0 30vh var(--shadow);
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='71.141' height='42' patternTransform='scale(3) rotate(50)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 100%, 1)'/><path d='M69.212 40H46.118L34.57 20 46.118 0h23.094l11.547 20zM57.665 60H34.57L23.023 40 34.57 20h23.095l11.547 20zm0-40H34.57L23.023 0 34.57-20h23.095L69.212 0zM34.57 60H11.476L-.07 40l11.547-20h23.095l11.547 20zm0-40H11.476L-.07 0l11.547-20h23.095L46.118 0zM23.023 40H-.07l-11.547-20L-.07 0h23.094L34.57 20z' transform='translate(1,0)' stroke-width='1' stroke='hsla(0, 0%, 0%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+  display: flex;
+  flex-direction: column;
+  padding: 1vh;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+body .mobile-section .projects-context-m .project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1vh;
+  gap: 10vh;
+}
+body .mobile-section .projects-context-m .project-container .project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  gap: 2vh;
+  padding: 2vh;
+  background: var(--p1-color);
+  border-radius: 2vh;
+  box-shadow: 0 0 1vh var(--shadow);
+}
+body .mobile-section .projects-context-m .project-container .project .project-header {
+  font-size: 4vh;
+  font-family: var(--header);
+  padding: 1vh;
+  background: var(--s-color);
+  color: var(--shadow);
+  width: 100%;
+  text-align: center;
+  border-radius: 1vh;
+}
+body .mobile-section .projects-context-m .project-container .project .project-photo {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 1vh;
+  overflow: hidden;
+  box-shadow: 0 0 1vh var(--shadow);
+  pointer-events: none;
+}
+body .mobile-section .projects-context-m .project-container .project .project-photo img {
+  width: 100%;
+  height: 100%;
+}
+body .mobile-section .projects-context-m .project-container .project .project-photo .project-video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+body .mobile-section .projects-context-m .project-container .project .project-bio {
+  font-size: 2vh;
+  font-family: var(--text);
+  text-align: justify;
+  padding: 1vh;
+  background: var(--shadow);
+  border-radius: 1vh;
+}
+body .mobile-section .projects-context-m .project-container .project .project-code {
+  font-size: 2vh;
+  font-family: var(--text);
+  padding: 1vh;
+  background: var(--s1-color);
+  width: 100%;
+  text-align: center;
+  border-radius: 1vh;
+  font-weight: bold;
+}
+body .mobile-section .projects-context-m .project-container .project .project-code a {
+  color: var(--p-color);
 }
 body .mobile-section .contacts-context-m {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: var(--p1-color);
+  background: var(--p-color);
   display: flex;
   flex-direction: column;
   padding: 1vh;
   align-items: center;
   justify-content: center;
+  gap: 5vh;
+}
+body .mobile-section .contacts-context-m .social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .mobile-section .contacts-context-m .social-links .social-link-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+  list-style: none;
+}
+body .mobile-section .contacts-context-m .social-links .social-link-list .social-link a img {
+  border: 0.2vh solid var(--s-color);
+  border-radius: 100%;
+  background: var(--s-color);
+  width: 5vh;
+  height: 5vh;
+}
+body .mobile-section .contacts-context-m .social-links .social-link-list .social-link a img:hover {
+  transform: scale(1.2);
+}
+body .mobile-section .contacts-context-m .phone-no {
+  padding: 1vh;
+  font-size: 2vh;
+  font-family: var(--text);
 }
 
 .active {

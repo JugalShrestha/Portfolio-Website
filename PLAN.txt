@@ -3,3 +3,7 @@
 -Left will contain Menu
 -Right will contain the context
 
+-For projects:
+    -LMS
+    -FMS
+    -RPS game
