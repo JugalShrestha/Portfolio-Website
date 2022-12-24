@@ -43,12 +43,53 @@ body::-webkit-scrollbar{
     box-sizing: border-box;
     color:var(--text-color);
 }
+
+//Animations
+@keyframes clickMe {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes fade-out {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes menuOpen {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
 body{
     .left-section{
+        position: absolute;
+        left:0;
+        width:50%;
         .menu{
-            position: absolute;
-            left:0;
-            width:50%;
+            position: relative;
+            width: 100%;
             height: 100vh;
             background: var(--shadow);
             display: flex;
@@ -56,33 +97,107 @@ body{
             align-items: center;
             justify-content: center;
             text-align: center;
-            .menu-list{
-                list-style: none;
-                .menu-options{
-                    font-size: 4vh;
-                    font-family: var(--header);
-                    cursor: pointer;
-                    padding: 1vh;
-                    margin: 4vh 0;
-                    letter-spacing: .5vh;
-                    &:hover{
-                        transform: translateY(-5px);
-                    }
-                    &:active{
-                        transform: scale(2);
-                    }
-                }
+            .menu-opener{
+                position: absolute;
+                top:50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                transition: .2s linear;
+                height: 25vh;
+                width: 25vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                border-radius: 100%;
+                z-index: 2;
+                outline: 1vh solid var(--p1-color);
                 img{
-                    height: 20vh;
-                    width: 20vh;
+                    height: 100%;
+                    width: 100%;    
                     background: var(--s-color);
                     border-radius: 100%;
                     border: 1vh solid var(--s-color);
+                }
+                .menu-fade-out-animation{
+                    animation: fade-out 2s ease forwards;
+                }
+                .menu-fade-in-animation{
+                    animation: fade-in 2s ease forwards;
+                }
+                .menu-opener-click-text{
+                    font-size: 3vh;
+                    font-family: "Luckiest Guy", cursive;
+                    position: absolute;
+                    top:-20%;
+                    letter-spacing: .2vh;
+                    border-radius: 100%;
+                    display: none;
+                    animation: clickMe 1s infinite forwards;
+                }
+                
+                .menu-opener-hover-text{
+                    font-size: 2vh;
+                    font-family: "Luckiest Guy", cursive;
+                    position: absolute;
+                    bottom:-20%;
+                    letter-spacing: .2vh;
+                }
+            }
+            .menu-list{
+                position: absolute;
+                transition: opacity 2s;
+                top:0;
+                left:0;
+                right: 0;
+                bottom: 0;
+                z-index: 1;
+                list-style: none;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap:2vh;
+                .open-menu-animation{
+                    animation: menuOpen 1s ease-in .2s forwards;
+                }
+                .menu-options{
+                    position: absolute;
+                    transition: .2s linear;
+                    font-size: 10vh;
+                    font-family: var(--header);
+                    font-weight: bold;
+                    cursor: pointer;
+                    padding: 2vh;
+                    overflow: none;
+                    border-radius: 1vh;
+                    &:hover{
+                        opacity: 50%;
+                    }
+                    &:nth-child(1){
+                        top:20%;
+                    }
+                    &:nth-child(4){
+                        bottom:20%;
+                    }
+                    &:nth-child(2){
+                        left:10%;
+                        rotate: 270deg;
+                    }
+                    &:nth-child(3){
+                        right: 5%;
+                        rotate: 90deg;
+                    }
                 }
             }
         }
     }
     .right-section{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100vh;
+        overflow: hidden;
         .home-context{
             position: absolute;
             right: 0;
@@ -176,26 +291,58 @@ body{
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
+                padding: 1vh;
                 gap: 1vh;
                 justify-content: center;
                 align-items: flex-start;
-                overflow: auto;
-                .about-me-photo{
-                    width: 30vh;
-                    height: 40vh;
-                    overflow: hidden;
-                    border: 1vh solid var(--s-color);
-                    border-radius: 5vh;
+                .about-me-photo-resume{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    align-content: center;
-                    img{
-                        width: 100%;
-                        height: 100%;
+                    justify-content: center;
+                    padding: 1vh;
+                    gap: 2vh;
+                    width: max-content;
+                    .about-me-photo{
+                        width: 30vh;
+                        height: 30vh;
+                        box-sizing: border-box;
+                        background: var(--s-color);
+                        // border: 1vh solid var(--p1-color);
+                        border-radius: 100%;
+                        display: flex;
+                        align-items: center;
+                        overflow: hidden;
+                        justify-content: center;
+                        box-shadow: inset 0 0 2vh var(--shadow);
+                        img{
+                            transform: scale(1.5);
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .about-me-resume{
+                        width: 90%;
+                        text-align: center;
+                        padding:1vh;
+                        background: var(--p-color);
+                        font-size: 2vh;
+                        font-family: var(--text);
+                        border-radius: 1vh;
+                        a{
+                            color:var(--text-color);
+                        }
                     }
                 }
+                
                 .about-me-paragraph{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: left;
+                    gap: 2vh;
                     width: 40%;
                     text-align: justify;
                     color: var(--p-color);
@@ -206,21 +353,6 @@ body{
                         margin-bottom: 1vh;
                         font-size: 3vh;
                         font-weight: bold;
-                    }
-                    .resume{
-                        margin: 2vh;
-                        align-self:center;
-                        padding:1vh;
-                        width: 50%;
-                        text-align: center;
-                        background: var(--p-color);
-                        font-size: 2vh;
-                        font-family: var(--text);
-                        border-radius: 2vh;
-                        a{
-                            text-decoration: none;
-                            color:var(--s-color);
-                        }
                     }
                 }
             }
@@ -239,11 +371,13 @@ body{
             align-items: center;
             justify-content: flex-start;
             overflow-y: auto;
+            padding: 5vh 0;
             .project-container{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                gap: 10vh;
                 padding: 1vh;
                 .project{
                     display: flex;
@@ -254,7 +388,6 @@ body{
                     gap: 2vh;
                     padding: 2vh;
                     background: var(--p-color);
-                    margin-top: 10vh;
                     border-radius: 2vh;
                     box-shadow: 0 0 1vh var(--shadow);
                     .project-header{

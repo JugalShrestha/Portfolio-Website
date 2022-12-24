@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
+    <!--font-family: 'Luckiest Guy', cursive; Bold and Fun text-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
     <!--font-family: 'Monoton', cursive; Equals to line in text-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
@@ -44,12 +49,20 @@
     <!--Menu System-->
     <section class="left-section" id="left-section-id">
         <div class="menu" id="menu-id">
-            <ul class="menu-list">
-                <li class="menu-options" id="menu-home"><img src="images/skills-icon/coder-head.png" alt=""></li>
+            <div class="menu-opener" id="menu-opener-id">
+                <div class="menu-opener-click-text" id="menu-opener-click-text-id">
+                    'Click Me!'
+                </div>
+                <div class="menu-opener-hover-text" id="menu-opener-hover-text-id">
+                    'Hover Over Me!'
+                </div>
+                <img src="images/skills-icon/coder-head.png" alt="Menu">
+            </div>
+            <ul class="menu-list" id="menu-list-id">
+                <li class="menu-options" id="menu-home">Home</li>
                 <li class="menu-options" id="menu-about">About</li>
                 <li class="menu-options" id="menu-projects">Projects</li>
                 <li class="menu-options" id="menu-contacts">Contacts</li>
-                
             </ul>
         </div>
     </section>
@@ -89,8 +102,13 @@
         <div class="about-context" id="about-context-id">
             <!--Contents photo and text material-->
             <div class="about-me">
-                <div class="about-me-photo">
-                    <img src="images/Jugal Photo/StandingProud.jpg" alt="image">
+                <div class="about-me-photo-resume">
+                    <div class="about-me-photo">
+                        <img src="images/Jugal Photo/StandingProud.png" alt="image">
+                    </div>
+                    <div class="about-me-resume">
+                        <a href="Resume.pdf" target="_blank" rel="noopener noreferrer">CV link</a>
+                    </div>
                 </div>
                 <div class="about-me-paragraph">
                     <div class="about-me-paragraph-header">
@@ -108,9 +126,6 @@
                            working in a team won't be a problem for me.
                         <br><br>
                         That's it for me! What about you?
-                        <div class="resume">
-                            <a href="Resume.pdf" target="_blank" rel="noopener noreferrer">->CV<-</a>
-                        </div>
                 </div>
               
             </div>
@@ -366,6 +381,7 @@
     <!--SCRIPTS-->
     <script src="Scripts/device-width.js"></script>
     <script src="Scripts/page-shuffle.js"></script>
+    <script src="Scripts/menu.js"></script>
     <script>
         const video= document.getElementById('project-video-id');
         video.playbackRate="2";

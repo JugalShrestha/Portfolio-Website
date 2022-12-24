@@ -48,10 +48,85 @@ body::-webkit-scrollbar {
   color: var(--text-color);
 }
 
-body .left-section .menu {
+@-webkit-keyframes clickMe {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes clickMe {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@-webkit-keyframes menuOpen {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes menuOpen {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body .left-section {
   position: absolute;
   left: 0;
   width: 50%;
+}
+body .left-section .menu {
+  position: relative;
+  width: 100%;
   height: 100vh;
   background: var(--shadow);
   display: flex;
@@ -60,29 +135,108 @@ body .left-section .menu {
   justify-content: center;
   text-align: center;
 }
-body .left-section .menu .menu-list {
-  list-style: none;
-}
-body .left-section .menu .menu-list .menu-options {
-  font-size: 4vh;
-  font-family: var(--header);
+body .left-section .menu .menu-opener {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.2s linear;
+  height: 25vh;
+  width: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  padding: 1vh;
-  margin: 4vh 0;
-  letter-spacing: 0.5vh;
+  border-radius: 100%;
+  z-index: 2;
+  outline: 1vh solid var(--p1-color);
 }
-body .left-section .menu .menu-list .menu-options:hover {
-  transform: translateY(-5px);
-}
-body .left-section .menu .menu-list .menu-options:active {
-  transform: scale(2);
-}
-body .left-section .menu .menu-list img {
-  height: 20vh;
-  width: 20vh;
+body .left-section .menu .menu-opener img {
+  height: 100%;
+  width: 100%;
   background: var(--s-color);
   border-radius: 100%;
   border: 1vh solid var(--s-color);
+}
+body .left-section .menu .menu-opener .menu-fade-out-animation {
+  -webkit-animation: fade-out 2s ease forwards;
+          animation: fade-out 2s ease forwards;
+}
+body .left-section .menu .menu-opener .menu-fade-in-animation {
+  -webkit-animation: fade-in 2s ease forwards;
+          animation: fade-in 2s ease forwards;
+}
+body .left-section .menu .menu-opener .menu-opener-click-text {
+  font-size: 3vh;
+  font-family: "Luckiest Guy", cursive;
+  position: absolute;
+  top: -20%;
+  letter-spacing: 0.2vh;
+  border-radius: 100%;
+  display: none;
+  -webkit-animation: clickMe 1s infinite forwards;
+          animation: clickMe 1s infinite forwards;
+}
+body .left-section .menu .menu-opener .menu-opener-hover-text {
+  font-size: 2vh;
+  font-family: "Luckiest Guy", cursive;
+  position: absolute;
+  bottom: -20%;
+  letter-spacing: 0.2vh;
+}
+body .left-section .menu .menu-list {
+  position: absolute;
+  transition: opacity 2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+}
+body .left-section .menu .menu-list .open-menu-animation {
+  -webkit-animation: menuOpen 1s ease-in 0.2s forwards;
+          animation: menuOpen 1s ease-in 0.2s forwards;
+}
+body .left-section .menu .menu-list .menu-options {
+  position: absolute;
+  transition: 0.2s linear;
+  font-size: 10vh;
+  font-family: var(--header);
+  font-weight: bold;
+  cursor: pointer;
+  padding: 2vh;
+  overflow: none;
+  border-radius: 1vh;
+}
+body .left-section .menu .menu-list .menu-options:hover {
+  opacity: 50%;
+}
+body .left-section .menu .menu-list .menu-options:nth-child(1) {
+  top: 20%;
+}
+body .left-section .menu .menu-list .menu-options:nth-child(4) {
+  bottom: 20%;
+}
+body .left-section .menu .menu-list .menu-options:nth-child(2) {
+  left: 10%;
+  rotate: 270deg;
+}
+body .left-section .menu .menu-list .menu-options:nth-child(3) {
+  right: 5%;
+  rotate: 90deg;
+}
+body .right-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  overflow: hidden;
 }
 body .right-section .home-context {
   position: absolute;
@@ -177,27 +331,60 @@ body .right-section .about-context .about-me {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 1vh;
   gap: 1vh;
   justify-content: center;
   align-items: flex-start;
-  overflow: auto;
 }
-body .right-section .about-context .about-me .about-me-photo {
-  width: 30vh;
-  height: 40vh;
-  overflow: hidden;
-  border: 1vh solid var(--s-color);
-  border-radius: 5vh;
+body .right-section .about-context .about-me .about-me-photo-resume {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: center;
+  justify-content: center;
+  padding: 1vh;
+  gap: 2vh;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
-body .right-section .about-context .about-me .about-me-photo img {
+body .right-section .about-context .about-me .about-me-photo-resume .about-me-photo {
+  width: 30vh;
+  height: 30vh;
+  box-sizing: border-box;
+  background: var(--s-color);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+  box-shadow: inset 0 0 2vh var(--shadow);
+}
+body .right-section .about-context .about-me .about-me-photo-resume .about-me-photo img {
+  transform: scale(1.5);
   width: 100%;
   height: 100%;
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .right-section .about-context .about-me .about-me-photo-resume .about-me-resume {
+  width: 90%;
+  text-align: center;
+  padding: 1vh;
+  background: var(--p-color);
+  font-size: 2vh;
+  font-family: var(--text);
+  border-radius: 1vh;
+}
+body .right-section .about-context .about-me .about-me-photo-resume .about-me-resume a {
+  color: var(--text-color);
 }
 body .right-section .about-context .about-me .about-me-paragraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 2vh;
   width: 40%;
   text-align: justify;
   color: var(--p-color);
@@ -209,21 +396,6 @@ body .right-section .about-context .about-me .about-me-paragraph .about-me-parag
   margin-bottom: 1vh;
   font-size: 3vh;
   font-weight: bold;
-}
-body .right-section .about-context .about-me .about-me-paragraph .resume {
-  margin: 2vh;
-  align-self: center;
-  padding: 1vh;
-  width: 50%;
-  text-align: center;
-  background: var(--p-color);
-  font-size: 2vh;
-  font-family: var(--text);
-  border-radius: 2vh;
-}
-body .right-section .about-context .about-me .about-me-paragraph .resume a {
-  text-decoration: none;
-  color: var(--s-color);
 }
 body .right-section .projects-context {
   position: absolute;
@@ -238,12 +410,14 @@ body .right-section .projects-context {
   align-items: center;
   justify-content: flex-start;
   overflow-y: auto;
+  padding: 5vh 0;
 }
 body .right-section .projects-context .project-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 10vh;
   padding: 1vh;
 }
 body .right-section .projects-context .project-container .project {
@@ -255,7 +429,6 @@ body .right-section .projects-context .project-container .project {
   gap: 2vh;
   padding: 2vh;
   background: var(--p-color);
-  margin-top: 10vh;
   border-radius: 2vh;
   box-shadow: 0 0 1vh var(--shadow);
 }
