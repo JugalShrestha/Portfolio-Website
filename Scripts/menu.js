@@ -1,28 +1,37 @@
 //const clickMeSign=document.getElementById('menu-opener-click-text-id')
-const hoverMeSign=document.getElementById('menu-opener-hover-text-id')
-const menuOpener= document.getElementById('menu-opener-id');
-const menuList= document.getElementById('menu-list-id')
-const closeMeSign= document.getElementById('menu-opener-close-text-id')
+const main= document.getElementById('main-section-id')
+const menuOpener= document.getElementById('menu-opener-pc-id')
+const menu= document.getElementById('menu-section-id')
+const closeMenu= document.getElementById('menu-closer-pc-id')
 
 //-----Start For opening the menu----------
 //odd=is-open even=is-not-open
-//Inside menu
 //Opened menu
-menuOpener.addEventListener("mouseover",function(){
-    hoverMeSign.style.opacity="0";
-    closeMeSign.style.opacity="100%";
-     menuList.style.opacity="100%";
-     menuList.style.zIndex="1";
-     menuList.style.rotate="0deg";
-     menuList.style.scale="1";
-})
-//Closing menu
 menuOpener.addEventListener("click",function(){
-    hoverMeSign.style.opacity="100%";
-    closeMeSign.style.opacity="0";
-    menuList.style.opacity="0";
-    menuList.style.zIndex="-1";
-    menuList.style.rotate="45deg";
-    menuList.style.scale="0";
+    menuOpener.style.left="15%";
+    menuOpener.style.bottom="10%";
+    menuOpener.style.opacity="20%";
+    menuOpener.style.zIndex="-1";
+    menuOpener.style.transform="traslate(-15%,-10%)";
+
+    menu.style.opacity="100%";
+    menu.style.zIndex="2";
+
+    main.style.left="15%";
+    main.style.bottom="15%";
+})
+//Closed menu
+closeMenu.addEventListener("click",function(){
+    menu.style.opacity="0";
+    menu.style.zIndex="-1";
+
+    main.style.left="0";
+    main.style.bottom="0";
+
+    menuOpener.style.left="50%";
+    menuOpener.style.bottom="1%";
+    menuOpener.style.transform="translateX(-50%)";    
+    menuOpener.style.opacity="100%";
+    menuOpener.style.zIndex="2";
 })
 //--End for starting the menu-----------

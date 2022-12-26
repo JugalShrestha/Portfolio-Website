@@ -23,31 +23,55 @@ const mobileContactsOverlay= document.getElementById('contacts-context-m-id')
 const mobileAboutOverlay= document.getElementById('about-context-m-id')
 
 homeButton.addEventListener("click",function(){
-    aboutOverlay.style.display="none";
-    homeOverlay.style.display="flex";
-    projectsOverlay.style.display="none";
-    contactsOverlay.style.display="none";
+    homeOverlay.style.zIndex="1";
+    homeOverlay.style.opacity="100%";
+
+    aboutOverlay.style.zIndex="-1";
+    projectsOverlay.style.zIndex="-1";
+    contactsOverlay.style.zIndex="-1";
+
+    aboutOverlay.style.opacity="0";
+    projectsOverlay.style.opacity="0";
+    contactsOverlay.style.opacity="0";
 });
 
 aboutButton.addEventListener("click",function(){
-    aboutOverlay.style.display="flex";
-    homeOverlay.style.display="none";
-    projectsOverlay.style.display="none";
-    contactsOverlay.style.display="none";
+    aboutOverlay.style.zIndex="1";
+    aboutOverlay.style.opacity="100%";
+
+    homeOverlay.style.zIndex="-1";
+    projectsOverlay.style.zIndex="-1";
+    contactsOverlay.style.zIndex="-1";
+
+    homeOverlay.style.opacity="0";
+    projectsOverlay.style.opacity="0";
+    contactsOverlay.style.opacity="0";
 });
 
 projectsButton.addEventListener("click",function(){
-    aboutOverlay.style.display="none";
-    homeOverlay.style.display="none";
-    projectsOverlay.style.display="flex";
-    contactsOverlay.style.display="none";
+    projectsOverlay.style.zIndex="1";
+    projectsOverlay.style.opacity="100%";
+
+    aboutOverlay.style.zIndex="-1";
+    homeOverlay.style.zIndex="-1";
+    contactsOverlay.style.zIndex="-1";
+
+    aboutOverlay.style.opacity="0";
+    homeOverlay.style.opacity="0";
+    contactsOverlay.style.opacity="0";
 });
 
 contactsButton.addEventListener("click",function(){
-    aboutOverlay.style.display="none";
-    homeOverlay.style.display="none";
-    projectsOverlay.style.display="none";
-    contactsOverlay.style.display="flex";
+    contactsOverlay.style.zIndex="1";
+    contactsOverlay.style.opacity="100%";
+
+    aboutOverlay.style.zIndex="-1";
+    projectsOverlay.style.zIndex="-1";
+    homeOverlay.style.zIndex="-1";
+
+    aboutOverlay.style.opacity="0";
+    projectsOverlay.style.opacity="0";
+    homeOverlay.style.opacity="0";
 });
 
 //For Mobile Menu

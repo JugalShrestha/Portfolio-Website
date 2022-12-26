@@ -7,3 +7,9 @@
     -LMS
     -FMS
     -RPS game
+
+-Another Plan
+-Making New Menu System.
+-Will take left and bottom 20%;
+    -Bottom will contain links
+    -left will contain a thumbnail
