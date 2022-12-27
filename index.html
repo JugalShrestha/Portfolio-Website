@@ -157,13 +157,30 @@
 
         <!--Start of Projects Menu-->
         <div class="projects-context" id="projects-context-id">
+            <!--Holds every project-->
+             <!--Start of Next button -->
+             <div id="projects-next-btn-id" class="projects-next-btn">
+                ▷
+            </div>
+            <!--End of Next button -->
+            <!--Start of prev button -->
+            <div id="projects-prev-btn-id" class="projects-prev-btn">
+                ◁
+            </div>
+            <!--End of prev button -->
+            <!--Start of Page no Display-->
+            <div class="projects-number-display" id="projects-number-display-id">
+                1
+            </div>
+            <!--End of Page no DIsplay-->
             <div class="project-container">
-                <div class="project">
+                <!--Project 1-->
+                <div id="project-id" class="project">
                     <div class="project-header">
                         Library Management System
                     </div>
                     <div class="project-photo">
-                        <video id="project-video-id" class="project-video" muted autoplay loop>
+                        <video id="project-video-id" class="project-video" muted controls>
                             <source src="videos/LMS-VIDEO.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -179,7 +196,8 @@
                         <a target="_blank" href="https://github.com/JugalBaucha/LIBRARY_MANAGEMENT_SYSTEM" class="view-code">Code Link!</a>
                     </div>
                 </div>
-                <div class="project">
+                <!--Project 2-->
+                <div id="project-id" class="project">
                     <div class="project-header">
                         Finance Tracking App
                     </div>
@@ -197,7 +215,8 @@
                         <a target="_blank" href="https://github.com/JugalShrestha/Finance-app-tracker" class="view-code">Code Link!</a>
                     </div>
                 </div>
-                <div class="project">
+                <!--Project 3-->
+                <div id="project-id" class="project">
                     <div class="project-header">
                         Scissor-Paper-Rock
                     </div>
@@ -215,7 +234,8 @@
                         <a target="_blank" href="https://github.com/JugalShrestha/Finance-app-tracker" class="view-code">Code Link!</a>
                     </div>
                 </div>
-                <div class="project">
+                <!--Project 4-->
+                <div id="project-id" class="project">
                     <div class="project-header">
                         Password Manager
                     </div>
@@ -455,6 +475,7 @@
     <script src="Scripts/device-width.js"></script>
     <script src="Scripts/page-shuffle.js"></script>
     <script src="Scripts/menu.js"></script>
+    <script src="Scripts/projects-section.js"></script>
     <script>
         const video= document.getElementById('project-video-id');
         video.playbackRate="2";

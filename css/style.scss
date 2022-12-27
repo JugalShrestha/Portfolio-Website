@@ -56,7 +56,6 @@ body::-webkit-scrollbar{
         opacity: 0;
     }
 }
-
 @keyframes fade-out {
     0%{
         opacity: 100%;
@@ -88,9 +87,9 @@ body{
     .menu-opener-pc{
         transition: .2s linear;
         position: fixed;
-        bottom: 1%;
+        bottom: 2%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%,-2%);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -105,6 +104,7 @@ body{
         font-family: var(--text);
         text-transform: uppercase;
         cursor: pointer;
+        transform-style: preserve-3d;
         z-index: 2;
         box-shadow: 0 0 1vh var(--shadow);
         &:hover{
@@ -418,34 +418,44 @@ body{
             width: 100%;
             height: 100%;
             box-shadow: inset 0 0 30vh var(--shadow);
-            // background-image: linear-gradient(90deg, transparent 0%, transparent 10%, #EA858A 10%, #EA858A calc(10% + 3px), transparent calc(10% + 3px), transparent 100%), linear-gradient(180deg, white 10%, transparent 10%), repeating-linear-gradient(180deg, #91C1E1 0px, #91C1E1 2px, transparent 2px, transparent 38px), linear-gradient(white,white);
-            background: var(--s-color);
+            background-image: repeating-linear-gradient(0deg, rgb(153,197,206) 0vh, rgb(153,197,206) .1vh, transparent .5vh, transparent 5vh), 
+            repeating-linear-gradient(0deg, rgb(153,197,206) 0vh, rgb(153,197,206) .1vh, transparent .5vh, transparent 10vh),
+             repeating-linear-gradient(90deg, rgb(153,197,206) 0vh, rgb(153,197,206) .1vh, transparent .1vh, transparent 5vh),
+             repeating-linear-gradient(90deg, rgb(153,197,206) 0vh, rgb(153,197,206) .1vh, transparent .5vh, transparent 10vh), 
+             linear-gradient(var(--s-color), var(--s-color));
             display: flex;
             flex-direction: column;
             padding: 1vh;
-            align-items: left;
-            justify-content: left;
-            overflow-x: scroll;
+            align-items: center;
+            justify-content: center;
+            overflow:hidden;
             padding: 10vh 0;
             .project-container{
                 display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                align-items: left;
-                justify-content: left;
-                gap: 10vh;
-                padding: 10vh;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                padding: 1vh;
+                width: 50vh;
+                height: 70vh;
+                overflow: visible;
+                perspective: 100vh;
+                perspective-origin:50%;
+                    
                 .project{
+                    transform-style: preserve-3d;
+                    position: absolute;
                     display: flex;
                     flex-direction: column;
                     align-items: left;
                     justify-content: center;
-                    min-width: 50vh;
+                    width: 100%;
+                    height: 100%;
                     gap: 2vh;
                     padding: 4vh 2vh 4vh 7vh;
-                    background-image: linear-gradient(90deg, transparent 0%, transparent 10%, #EA858A 10%, #EA858A calc(10% + 1vh), transparent calc(10% + 1vh), transparent 100%), linear-gradient(180deg, white 10%, transparent 10%), repeating-linear-gradient(180deg, #91C1E1 0vh, #91C1E1 .5vh, transparent .5vh, transparent 5vh), linear-gradient(white,white);
-                    border-radius: 1vh;
+                    border-radius: 1vh 1vh 2vh 1vh/ 5vh 13vh;
                     box-shadow: 0 0 1vh var(--shadow);
+                    background-image: linear-gradient(90deg, transparent 0%, transparent 10%, #EA858A 10%, #EA858A calc(10% + 1vh), transparent calc(10% + 1vh), transparent 100%), linear-gradient(180deg, white 10%, transparent 10%), repeating-linear-gradient(180deg, #91C1E1 0vh, #91C1E1 .5vh, transparent .5vh, transparent 5vh), linear-gradient(white,white);
                     .project-header{
                         font-size: 4vh;
                         font-family: var(--header);
@@ -461,7 +471,6 @@ body{
                         border-radius: 1vh;
                         border: 1vh solid var(--s-color);
                         overflow: hidden;
-                        pointer-events: none;
                         img{
                             width: 100%;
                             height: 100%;
@@ -494,7 +503,85 @@ body{
                             color:var(--text-color);
                         }
                     }
+                    // &:nth-child(1){
+                    //     transform-origin: 100%;
+                    //     transform: translateX(-50vh) rotateY(90deg);
+                    // }
                 }
+            }
+            .projects-next-btn{
+                cursor: pointer;
+                position: absolute;
+                transition: .2s linear;
+                padding: 1vh;
+                right: 27%;
+                top:50%;
+                width: 10vh;
+                height: 10vh;
+                font-size: 4vh;
+                border-radius: 100%;
+                box-shadow: 0 0 1vh var(--shadow);
+                display: flex;
+                z-index: 2;
+                opacity: 100%;
+                align-items: center;
+                justify-content: center;
+                background: var(--p-color);
+                border:1vh double var(--s-color);
+                transform: translate(-27%,-50%);
+                &:hover{
+                    opacity: 80%;
+                    background: var(--s-color);
+                    color:var(--p-color);
+                }
+            }
+            .projects-prev-btn{
+                cursor: pointer;
+                position: absolute;
+                transition: .2s linear;
+                left: 30%;
+                top:50%;
+                padding: 1vh;
+                width: 10vh;
+                height: 10vh;
+                font-size: 4vh;
+                border-radius: 100%;
+                opacity: 100%;
+                box-shadow: 0 0 1vh var(--shadow);
+                display: flex;
+                z-index: 2;
+                align-items: center;
+                justify-content: center;
+                background: var(--p-color);
+                border:1vh double var(--s-color);
+                transform: translate(-30%,-50%);
+                &:hover{
+                    opacity: 80%;
+                    background: var(--s-color);
+                    color:var(--p-color);
+                }
+            }
+            .projects-number-display{
+                position: absolute;
+                top:10%;
+                left:20%;
+                padding: 1vh;
+                opacity: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform-style: preserve-3d;
+                transform: translate(-10%,-10%) rotate(330deg);
+                width: 20vh;
+                height: 20vh;
+                font-size: 10vh;
+                font-family: var(--header);
+                font-weight: bold;
+                color:var(--p-color);
+                border-radius: 100%;
+                border: 1vh double var(--p1-color);
+                background: var(--s-color);
+                box-shadow: 0 0 1vh var(--shadow);
             }
         }
         .contacts-context{

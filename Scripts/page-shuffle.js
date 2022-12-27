@@ -1,3 +1,5 @@
+//Menu
+
 //For Buttons in pc
 const homeButton= document.getElementById('menu-home')
 const aboutButton= document.getElementById('menu-about')
@@ -26,6 +28,18 @@ homeButton.addEventListener("click",function(){
     homeOverlay.style.zIndex="1";
     homeOverlay.style.opacity="100%";
 
+    menu.style.opacity="0";
+    menu.style.zIndex="-1";
+
+    main.style.left="0";
+    main.style.bottom="0";
+
+    menuOpener.style.left="50%";
+    menuOpener.style.bottom="2%";
+    menuOpener.style.transform="translate(-50%,-2%)";    
+    menuOpener.style.opacity="80%";
+    menuOpener.style.zIndex="2";
+
     aboutOverlay.style.zIndex="-1";
     projectsOverlay.style.zIndex="-1";
     contactsOverlay.style.zIndex="-1";
@@ -38,6 +52,18 @@ homeButton.addEventListener("click",function(){
 aboutButton.addEventListener("click",function(){
     aboutOverlay.style.zIndex="1";
     aboutOverlay.style.opacity="100%";
+
+    menu.style.opacity="0";
+    menu.style.zIndex="-1";
+
+    main.style.left="0";
+    main.style.bottom="0";
+
+    menuOpener.style.left="50%";
+    menuOpener.style.bottom="2%";
+    menuOpener.style.transform="translate(-50%,-2%)";    
+    menuOpener.style.opacity="80%";
+    menuOpener.style.zIndex="2";
 
     homeOverlay.style.zIndex="-1";
     projectsOverlay.style.zIndex="-1";
@@ -52,6 +78,18 @@ projectsButton.addEventListener("click",function(){
     projectsOverlay.style.zIndex="1";
     projectsOverlay.style.opacity="100%";
 
+    menu.style.opacity="0";
+    menu.style.zIndex="-1";
+
+    main.style.left="0";
+    main.style.bottom="0";
+
+    menuOpener.style.left="50%";
+    menuOpener.style.bottom="2%";
+    menuOpener.style.transform="translate(-50%,-2%)";    
+    menuOpener.style.opacity="80%";
+    menuOpener.style.zIndex="2";
+
     aboutOverlay.style.zIndex="-1";
     homeOverlay.style.zIndex="-1";
     contactsOverlay.style.zIndex="-1";
@@ -64,6 +102,18 @@ projectsButton.addEventListener("click",function(){
 contactsButton.addEventListener("click",function(){
     contactsOverlay.style.zIndex="1";
     contactsOverlay.style.opacity="100%";
+   
+    menu.style.opacity="0";
+    menu.style.zIndex="-1";
+
+    main.style.left="0";
+    main.style.bottom="0";
+
+    menuOpener.style.left="50%";
+    menuOpener.style.bottom="2%";
+    menuOpener.style.transform="translate(-50%,-2%)";    
+    menuOpener.style.opacity="80%";
+    menuOpener.style.zIndex="2";
 
     aboutOverlay.style.zIndex="-1";
     projectsOverlay.style.zIndex="-1";

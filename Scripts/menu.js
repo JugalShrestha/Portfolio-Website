@@ -29,9 +29,9 @@ closeMenu.addEventListener("click",function(){
     main.style.bottom="0";
 
     menuOpener.style.left="50%";
-    menuOpener.style.bottom="1%";
-    menuOpener.style.transform="translateX(-50%)";    
-    menuOpener.style.opacity="100%";
+    menuOpener.style.bottom="2%";
+    menuOpener.style.transform="translate(-50%,-2%)";    
+    menuOpener.style.opacity="80%";
     menuOpener.style.zIndex="2";
 })
 //--End for starting the menu-----------

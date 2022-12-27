@@ -126,9 +126,9 @@ body {
 body .menu-opener-pc {
   transition: 0.2s linear;
   position: fixed;
-  bottom: 1%;
+  bottom: 2%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -2%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,6 +143,7 @@ body .menu-opener-pc {
   font-family: var(--text);
   text-transform: uppercase;
   cursor: pointer;
+  transform-style: preserve-3d;
   z-index: 2;
   box-shadow: 0 0 1vh var(--shadow);
 }
@@ -457,35 +458,41 @@ body .main-section .projects-context {
   width: 100%;
   height: 100%;
   box-shadow: inset 0 0 30vh var(--shadow);
-  background: var(--s-color);
+  background-image: repeating-linear-gradient(0deg, rgb(153, 197, 206) 0vh, rgb(153, 197, 206) 0.1vh, transparent 0.5vh, transparent 5vh), repeating-linear-gradient(0deg, rgb(153, 197, 206) 0vh, rgb(153, 197, 206) 0.1vh, transparent 0.5vh, transparent 10vh), repeating-linear-gradient(90deg, rgb(153, 197, 206) 0vh, rgb(153, 197, 206) 0.1vh, transparent 0.1vh, transparent 5vh), repeating-linear-gradient(90deg, rgb(153, 197, 206) 0vh, rgb(153, 197, 206) 0.1vh, transparent 0.5vh, transparent 10vh), linear-gradient(var(--s-color), var(--s-color));
   display: flex;
   flex-direction: column;
   padding: 1vh;
-  align-items: left;
-  justify-content: left;
-  overflow-x: scroll;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   padding: 10vh 0;
 }
 body .main-section .projects-context .project-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: left;
-  justify-content: left;
-  gap: 10vh;
-  padding: 10vh;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 1vh;
+  width: 50vh;
+  height: 70vh;
+  overflow: visible;
+  perspective: 100vh;
+  perspective-origin: 50%;
 }
 body .main-section .projects-context .project-container .project {
+  transform-style: preserve-3d;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: center;
-  min-width: 50vh;
+  width: 100%;
+  height: 100%;
   gap: 2vh;
   padding: 4vh 2vh 4vh 7vh;
-  background-image: linear-gradient(90deg, transparent 0%, transparent 10%, #EA858A 10%, #EA858A calc(10% + 1vh), transparent calc(10% + 1vh), transparent 100%), linear-gradient(180deg, white 10%, transparent 10%), repeating-linear-gradient(180deg, #91C1E1 0vh, #91C1E1 0.5vh, transparent 0.5vh, transparent 5vh), linear-gradient(white, white);
-  border-radius: 1vh;
+  border-radius: 1vh 1vh 2vh 1vh/5vh 13vh;
   box-shadow: 0 0 1vh var(--shadow);
+  background-image: linear-gradient(90deg, transparent 0%, transparent 10%, #EA858A 10%, #EA858A calc(10% + 1vh), transparent calc(10% + 1vh), transparent 100%), linear-gradient(180deg, white 10%, transparent 10%), repeating-linear-gradient(180deg, #91C1E1 0vh, #91C1E1 0.5vh, transparent 0.5vh, transparent 5vh), linear-gradient(white, white);
 }
 body .main-section .projects-context .project-container .project .project-header {
   font-size: 4vh;
@@ -504,7 +511,6 @@ body .main-section .projects-context .project-container .project .project-photo 
   border-radius: 1vh;
   border: 1vh solid var(--s-color);
   overflow: hidden;
-  pointer-events: none;
 }
 body .main-section .projects-context .project-container .project .project-photo img {
   width: 100%;
@@ -538,6 +544,80 @@ body .main-section .projects-context .project-container .project .project-code {
 }
 body .main-section .projects-context .project-container .project .project-code a {
   color: var(--text-color);
+}
+body .main-section .projects-context .projects-next-btn {
+  cursor: pointer;
+  position: absolute;
+  transition: 0.2s linear;
+  padding: 1vh;
+  right: 27%;
+  top: 50%;
+  width: 10vh;
+  height: 10vh;
+  font-size: 4vh;
+  border-radius: 100%;
+  box-shadow: 0 0 1vh var(--shadow);
+  display: flex;
+  z-index: 2;
+  opacity: 100%;
+  align-items: center;
+  justify-content: center;
+  background: var(--p-color);
+  border: 1vh double var(--s-color);
+  transform: translate(-27%, -50%);
+}
+body .main-section .projects-context .projects-next-btn:hover {
+  opacity: 80%;
+  background: var(--s-color);
+  color: var(--p-color);
+}
+body .main-section .projects-context .projects-prev-btn {
+  cursor: pointer;
+  position: absolute;
+  transition: 0.2s linear;
+  left: 30%;
+  top: 50%;
+  padding: 1vh;
+  width: 10vh;
+  height: 10vh;
+  font-size: 4vh;
+  border-radius: 100%;
+  opacity: 100%;
+  box-shadow: 0 0 1vh var(--shadow);
+  display: flex;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  background: var(--p-color);
+  border: 1vh double var(--s-color);
+  transform: translate(-30%, -50%);
+}
+body .main-section .projects-context .projects-prev-btn:hover {
+  opacity: 80%;
+  background: var(--s-color);
+  color: var(--p-color);
+}
+body .main-section .projects-context .projects-number-display {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  padding: 1vh;
+  opacity: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transform: translate(-10%, -10%) rotate(330deg);
+  width: 20vh;
+  height: 20vh;
+  font-size: 10vh;
+  font-family: var(--header);
+  font-weight: bold;
+  color: var(--p-color);
+  border-radius: 100%;
+  border: 1vh double var(--p1-color);
+  background: var(--s-color);
+  box-shadow: 0 0 1vh var(--shadow);
 }
 body .main-section .contacts-context {
   transition: 0.2s linear;
