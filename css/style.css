@@ -48,7 +48,30 @@ body::-webkit-scrollbar {
   color: var(--text-color);
 }
 
-@-webkit-keyframes clickMe {
+@-webkit-keyframes rotate-360deg {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes rotate-360deg {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@-webkit-keyframes click-me {
   0% {
     opacity: 0;
   }
@@ -59,8 +82,7 @@ body::-webkit-scrollbar {
     opacity: 0;
   }
 }
-
-@keyframes clickMe {
+@keyframes click-me {
   0% {
     opacity: 0;
   }
@@ -127,8 +149,9 @@ body .menu-opener-pc {
   transition: 0.2s linear;
   position: fixed;
   bottom: 2%;
-  left: 50%;
-  transform: translate(-50%, -2%);
+  left: 2%;
+  opacity: 80%;
+  transform: translate(-2%, -2%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,12 +188,40 @@ body .menu-section .left-menu {
   position: absolute;
   left: 0;
   width: 15%;
-  height: 100%;
+  height: 85%;
   background: var(--shadow);
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 0 4vh var(--shadow);
+}
+body .menu-section .left-menu .left-menu-contacts {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 4vh var(--shadow);
+  overflow: hidden;
+}
+body .menu-section .left-menu .left-menu-contacts .left-menu-contacts-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+}
+body .menu-section .left-menu .left-menu-contacts .left-menu-contacts-list .left-menu-contact a img {
+  border: 0.2vh solid var(--s-color);
+  border-radius: 100%;
+  background: var(--s-color);
+  width: 5vh;
+  height: 5vh;
+  opacity: 80%;
+}
+body .menu-section .left-menu .left-menu-contacts .left-menu-contacts-list .left-menu-contact a img:hover {
+  opacity: 50%;
 }
 body .menu-section .bottom-menu {
   position: absolute;
@@ -180,7 +231,7 @@ body .menu-section .bottom-menu {
   background: var(--shadow);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   box-shadow: 0 0 4vh var(--shadow);
 }
 body .menu-section .bottom-menu .menu-list {
@@ -206,11 +257,11 @@ body .menu-section .bottom-menu .menu-list .menu-options {
   font-weight: bold;
   cursor: pointer;
   padding: 1vh;
-  border-right: 0.2vh solid var(--s-color);
+  border-left: 0.2vh double var(--s-color);
 }
 body .menu-section .bottom-menu .menu-list .menu-options:hover {
-  -webkit-text-decoration: 1vh underline var(--p1-color);
-          text-decoration: 1vh underline var(--p1-color);
+  -webkit-text-decoration: 0.5vh underline var(--p1-color);
+          text-decoration: 0.5vh underline var(--p1-color);
 }
 body .menu-section .menu-overlay {
   position: fixed;
@@ -218,8 +269,11 @@ body .menu-section .menu-overlay {
   bottom: 15%;
   left: 15%;
   right: 0;
-  background: conic-gradient(var(--p1-color), var(--shadow), var(--p1-color));
-  opacity: 90%;
+  background: var(--shadow);
+  opacity: 50%;
+  border: 2vh double var(--s-color);
+  border-top: none;
+  border-right: none;
 }
 body .menu-section .menu-closer-pc {
   transition: 0.2s linear;
@@ -610,7 +664,7 @@ body .main-section .projects-context .projects-number-display {
   transform: translate(-10%, -10%) rotate(330deg);
   width: 20vh;
   height: 20vh;
-  font-size: 10vh;
+  font-size: 7vh;
   font-family: var(--header);
   font-weight: bold;
   color: var(--p-color);

@@ -5,7 +5,7 @@ projects.forEach(function(project,index){
     project.style.zIndex="-"+index+"";
         project.style.transform="translateX("+index*2+"vh)";
 });
-var projectCount=4;
+var projectCount=projects.length;
 const nextBtn= document.getElementById('projects-next-btn-id')
 const prevBtn= document.getElementById('projects-prev-btn-id')
 var check=0;
@@ -14,7 +14,7 @@ nextBtn.addEventListener("click",function(){
     {
         check++;
         projects[check].style.zIndex=""+check+"";
-        projectNo.innerHTML=""+(check+1)+"";
+        projectNo.innerHTML=""+(check+1)+"/"+projectCount;
         for(let i=check-1;i>=0;i--)
         {
             projects[i].style.zIndex=""+i+"";
@@ -26,7 +26,7 @@ prevBtn.addEventListener("click",function(){
     {
         check--;
         projects[check].style.zIndex="1";
-        projectNo.innerHTML=""+(check+1)+"";
+        projectNo.innerHTML=""+(check+1)+"/"+projectCount;
         for(let i=0;i<projectCount;i++)
         {
             if(i==check)

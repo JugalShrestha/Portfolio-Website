@@ -24,7 +24,63 @@ const mobileProjectsOverlay= document.getElementById('projects-context-m-id')
 const mobileContactsOverlay= document.getElementById('contacts-context-m-id')
 const mobileAboutOverlay= document.getElementById('about-context-m-id')
 
+//Start of Hovering//
+homeButton.addEventListener("mouseover",function(){
+    homeOverlay.style.zIndex="1";
+    homeOverlay.style.opacity="100%";
+
+    aboutOverlay.style.zIndex="-1";
+    projectsOverlay.style.zIndex="-1";
+    contactsOverlay.style.zIndex="-1";
+
+    aboutOverlay.style.opacity="0";
+    projectsOverlay.style.opacity="0";
+    contactsOverlay.style.opacity="0";
+})
+aboutButton.addEventListener("mouseover",function(){
+    aboutOverlay.style.zIndex="1";
+    aboutOverlay.style.opacity="100%";
+    
+    homeOverlay.style.zIndex="-1";
+    projectsOverlay.style.zIndex="-1";
+    contactsOverlay.style.zIndex="-1";
+
+    homeOverlay.style.opacity="0";
+    projectsOverlay.style.opacity="0";
+    contactsOverlay.style.opacity="0";
+})
+
+projectsButton.addEventListener("mouseover",function(){
+    projectsOverlay.style.zIndex="1";
+    projectsOverlay.style.opacity="100%";
+
+    aboutOverlay.style.zIndex="-1";
+    homeOverlay.style.zIndex="-1";
+    contactsOverlay.style.zIndex="-1";
+
+    aboutOverlay.style.opacity="0";
+    homeOverlay.style.opacity="0";
+    contactsOverlay.style.opacity="0";
+})
+
+contactsButton.addEventListener("mouseover",function(){
+    contactsOverlay.style.zIndex="1";
+    contactsOverlay.style.opacity="100%";
+
+    aboutOverlay.style.zIndex="-1";
+    homeOverlay.style.zIndex="-1";
+    projectsOverlay.style.zIndex="-1";
+
+    aboutOverlay.style.opacity="0";
+    projectsOverlay.style.opacity="0";
+    homeOverlay.style.opacity="0";
+})
+
+//End of Hovering//
+
+var clickerCheck=0;
 homeButton.addEventListener("click",function(){
+    clickerCheck=1;
     homeOverlay.style.zIndex="1";
     homeOverlay.style.opacity="100%";
 
@@ -34,9 +90,9 @@ homeButton.addEventListener("click",function(){
     main.style.left="0";
     main.style.bottom="0";
 
-    menuOpener.style.left="50%";
+    menuOpener.style.left="2%";
     menuOpener.style.bottom="2%";
-    menuOpener.style.transform="translate(-50%,-2%)";    
+    menuOpener.style.transform="translate(-2%,-2%)";    
     menuOpener.style.opacity="80%";
     menuOpener.style.zIndex="2";
 
@@ -50,6 +106,7 @@ homeButton.addEventListener("click",function(){
 });
 
 aboutButton.addEventListener("click",function(){
+    clickerCheck=2;
     aboutOverlay.style.zIndex="1";
     aboutOverlay.style.opacity="100%";
 
@@ -59,9 +116,9 @@ aboutButton.addEventListener("click",function(){
     main.style.left="0";
     main.style.bottom="0";
 
-    menuOpener.style.left="50%";
+    menuOpener.style.left="2%";
     menuOpener.style.bottom="2%";
-    menuOpener.style.transform="translate(-50%,-2%)";    
+    menuOpener.style.transform="translate(-2%,-2%)";    
     menuOpener.style.opacity="80%";
     menuOpener.style.zIndex="2";
 
@@ -75,6 +132,7 @@ aboutButton.addEventListener("click",function(){
 });
 
 projectsButton.addEventListener("click",function(){
+    clickerCheck=3;
     projectsOverlay.style.zIndex="1";
     projectsOverlay.style.opacity="100%";
 
@@ -84,9 +142,9 @@ projectsButton.addEventListener("click",function(){
     main.style.left="0";
     main.style.bottom="0";
 
-    menuOpener.style.left="50%";
+    menuOpener.style.left="2%";
     menuOpener.style.bottom="2%";
-    menuOpener.style.transform="translate(-50%,-2%)";    
+    menuOpener.style.transform="translate(-2%,-2%)";    
     menuOpener.style.opacity="80%";
     menuOpener.style.zIndex="2";
 
@@ -100,6 +158,7 @@ projectsButton.addEventListener("click",function(){
 });
 
 contactsButton.addEventListener("click",function(){
+    clickerCheck=4;
     contactsOverlay.style.zIndex="1";
     contactsOverlay.style.opacity="100%";
    
@@ -109,9 +168,9 @@ contactsButton.addEventListener("click",function(){
     main.style.left="0";
     main.style.bottom="0";
 
-    menuOpener.style.left="50%";
+    menuOpener.style.left="2%";
     menuOpener.style.bottom="2%";
-    menuOpener.style.transform="translate(-50%,-2%)";    
+    menuOpener.style.transform="translate(-2%,-2%)";    
     menuOpener.style.opacity="80%";
     menuOpener.style.zIndex="2";
 
