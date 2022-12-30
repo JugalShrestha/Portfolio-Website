@@ -49,13 +49,9 @@ body::-webkit-scrollbar{
     0%{
         transform: rotate(0);
     }
-    50%{
+    100%{
         transform: rotate(360deg);
     }
-    100%{
-        transform: rotate(0);
-    }
-    
 }
 @keyframes click-me {
     0%{
@@ -96,6 +92,43 @@ body::-webkit-scrollbar{
 body{
     overflow-y: hidden;
     background: var(--shadow);
+
+    .loading-screen{
+        transition: 2s ease-in-out;
+        position: fixed;
+        top:0;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--p-color);
+        z-index: 3;
+        .loading-animation{
+            transition: 1s ease-in;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 20vh;
+            height: 20vh;
+            background:repeating-linear-gradient(45deg,var(--p1-color)1%,var(--p-color)10%);
+            border-radius: 100%;
+            border: 1vh dashed var(--s-color);
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            .inner-circle{
+                width: 70%;
+                height: 70%;
+                border-radius: 100%;
+                background: var(--p-color);
+                border:1vh dashed var(--s-color);
+                animation: rotate-360deg 2s linear infinite forwards;
+            }
+        }
+    }
+
     .menu-opener-pc{
         transition: .2s linear;
         position: fixed;

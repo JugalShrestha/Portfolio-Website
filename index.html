@@ -46,6 +46,14 @@
 </head>
 
 <body id="body-id">
+    <!--Start of loader-->
+    <div id="loading-screen-id" class="loading-screen">
+        <div class="loading-animation" id="loading-animation-id">
+            <div class="inner-circle">
+            </div>
+        </div>
+    </div>
+    <!--End of loader-->
     <!--Start of Menu Button-->
     <nav class="menu-opener-pc" id="menu-opener-pc-id">
         Menu
@@ -250,17 +258,15 @@
                         Scissor-Paper-Rock
                     </div>
                     <div class="project-photo">
-                        <img src="images/Projects images/FTA-menu.png" alt="FTA">
+                        <img src="images/Projects images/SPR-game.png" alt="SPR-game">
                     </div>
                     <div class="project-bio">
-                        I built a Finance-Tracker in C programming with
-                        a login system, Adding Expenses, Keeping Record 
-                        of the Expense, Searching of the kept records and 
-                        modifying of those records with the addition of 
-                        Displaying total balance in each day of the month.
+                        I built a game using Python language. This is a game 
+                        of Scissor, Paper and Rock with a bot that plays against 
+                        the user.
                     </div>
                     <div class="project-code">
-                        <a target="_blank" href="https://github.com/JugalShrestha/Finance-app-tracker" class="view-code">Code Link!</a>
+                        <a target="_blank" href="https://github.com/JugalShrestha/scissors-paper-rock" class="view-code">Code Link!</a>
                     </div>
                 </div>
                 <!--Project 4-->
@@ -269,17 +275,15 @@
                         Password Manager
                     </div>
                     <div class="project-photo">
-                        <img src="images/Projects images/FTA-menu.png" alt="FTA">
+                        <img src="images/Projects images/PwM.jpg" alt="PwM">
                     </div>
                     <div class="project-bio">
-                        I built a Finance-Tracker in C programming with
-                        a login system, Adding Expenses, Keeping Record 
-                        of the Expense, Searching of the kept records and 
-                        modifying of those records with the addition of 
-                        Displaying total balance in each day of the month.
+                        I built a Password Manager using Python language 
+                        using File I/O. This makes it easier to store and 
+                        access password of different accounts.
                     </div>
                     <div class="project-code">
-                        <a target="_blank" href="https://github.com/JugalShrestha/Finance-app-tracker" class="view-code">Code Link!</a>
+                        <a target="_blank" href="https://github.com/JugalShrestha/password-manager" class="view-code">Code Link!</a>
                     </div>
                 </div>
             </div>
@@ -505,6 +509,7 @@
     <script src="Scripts/page-shuffle.js"></script>
     <script src="Scripts/menu.js"></script>
     <script src="Scripts/projects-section.js"></script>
+    <script src="Scripts/loader.js"></script>
     <script>
         const video= document.getElementById('project-video-id');
         video.playbackRate="2";
