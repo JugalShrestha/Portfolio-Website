@@ -1,8 +1,7 @@
 const loadingScreen= document.getElementById('loading-screen-id')
 const circle= document.getElementById('loading-animation-id')
+const mainSection= document.getElementById('main-section-id')
 
 window.addEventListener("load",function(){
-    loadingScreen.style.background="transparent";
-    loadingScreen.style.zIndex="-1";
-    circle.style.opacity="0";
+    loadingScreen.style.transform="translateX(-500vh)";
 })

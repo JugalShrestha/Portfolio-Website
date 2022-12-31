@@ -282,16 +282,17 @@ body .menu-section .bottom-menu .menu-list .menu-options {
   height: 100%;
   width: 100%;
   transition: 0.2s linear;
-  font-size: 4vh;
-  font-family: var(--header);
+  font-size: 3vh;
+  font-family: var(--text);
+  text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
   padding: 1vh;
   border-left: 0.2vh double var(--s-color);
 }
 body .menu-section .bottom-menu .menu-list .menu-options:hover {
-  -webkit-text-decoration: 0.5vh underline var(--p1-color);
-          text-decoration: 0.5vh underline var(--p1-color);
+  background: var(--s-color);
+  color: var(--p-color);
 }
 body .menu-section .menu-overlay {
   position: fixed;
@@ -348,7 +349,7 @@ body .main-section .home-context {
   transition: 0.2s linear;
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: linear-gradient(112.5deg, rgba(232, 232, 232, 0.03) 0%, rgba(232, 232, 232, 0.03) 2%, rgba(231, 231, 231, 0.03) 2%, rgba(231, 231, 231, 0.03) 4%, rgba(231, 231, 231, 0.03) 4%, rgba(231, 231, 231, 0.03) 11%, rgba(2, 2, 2, 0.03) 11%, rgba(2, 2, 2, 0.03) 67%, rgba(231, 231, 231, 0.03) 67%, rgba(231, 231, 231, 0.03) 90%, rgba(111, 111, 111, 0.03) 90%, rgba(111, 111, 111, 0.03) 100%), linear-gradient(157.5deg, rgba(210, 210, 210, 0.03) 0%, rgba(210, 210, 210, 0.03) 17%, rgba(254, 254, 254, 0.03) 17%, rgba(254, 254, 254, 0.03) 18%, rgba(96, 96, 96, 0.03) 18%, rgba(96, 96, 96, 0.03) 44%, rgba(159, 159, 159, 0.03) 44%, rgba(159, 159, 159, 0.03) 70%, rgba(24, 24, 24, 0.03) 70%, rgba(24, 24, 24, 0.03) 82%, rgba(16, 16, 16, 0.03) 82%, rgba(16, 16, 16, 0.03) 100%), linear-gradient(22.5deg, rgba(47, 47, 47, 0.03) 0%, rgba(47, 47, 47, 0.03) 32%, rgba(124, 124, 124, 0.03) 32%, rgba(124, 124, 124, 0.03) 40%, rgba(200, 200, 200, 0.03) 40%, rgba(200, 200, 200, 0.03) 42%, rgba(16, 16, 16, 0.03) 42%, rgba(16, 16, 16, 0.03) 64%, rgba(243, 243, 243, 0.03) 64%, rgba(243, 243, 243, 0.03) 94%, rgba(93, 93, 93, 0.03) 94%, rgba(93, 93, 93, 0.03) 100%), linear-gradient(90deg, #ffffff, #ffffff);
   box-shadow: inset 0 0 30vh var(--shadow);
   display: flex;
@@ -538,33 +539,33 @@ body .main-section .projects-context {
   transition: 0.2s linear;
   position: fixed;
   z-index: -1;
-  opacity: 0;
+  opacity: 0%;
   width: 100%;
   height: 100%;
   box-shadow: inset 0 0 30vh var(--shadow);
   background-image: repeating-linear-gradient(0deg, rgb(153, 197, 206) 0vh, rgb(153, 197, 206) 0.1vh, transparent 0.5vh, transparent 5vh), repeating-linear-gradient(0deg, rgb(153, 197, 206) 0vh, rgb(153, 197, 206) 0.1vh, transparent 0.5vh, transparent 10vh), repeating-linear-gradient(90deg, rgb(153, 197, 206) 0vh, rgb(153, 197, 206) 0.1vh, transparent 0.1vh, transparent 5vh), repeating-linear-gradient(90deg, rgb(153, 197, 206) 0vh, rgb(153, 197, 206) 0.1vh, transparent 0.5vh, transparent 10vh), linear-gradient(var(--s-color), var(--s-color));
-  display: flex;
-  flex-direction: column;
-  padding: 1vh;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
-  padding: 10vh 0;
 }
 body .main-section .projects-context .project-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
   padding: 1vh;
-  width: 50vh;
-  height: 70vh;
-  overflow: visible;
-  perspective: 100vh;
-  perspective-origin: 50%;
+  width: 40vh;
+  height: 60vh;
+  overflow: hidden;
+  border-radius: 2vh;
+  box-shadow: 0 0 1vh var(--shadow);
+  border: 2vh double var(--p-color);
+  background: var(--s-color);
 }
 body .main-section .projects-context .project-container .project {
-  transform-style: preserve-3d;
+  transition: 0.2s linear;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -573,28 +574,24 @@ body .main-section .projects-context .project-container .project {
   width: 100%;
   height: 100%;
   gap: 2vh;
-  padding: 4vh 2vh 4vh 7vh;
-  border-radius: 1vh 1vh 2vh 1vh/5vh 13vh;
-  box-shadow: 0 0 1vh var(--shadow);
-  background-image: linear-gradient(90deg, transparent 0%, transparent 10%, #EA858A 10%, #EA858A calc(10% + 1vh), transparent calc(10% + 1vh), transparent 100%), linear-gradient(180deg, white 10%, transparent 10%), repeating-linear-gradient(180deg, #91C1E1 0vh, #91C1E1 0.5vh, transparent 0.5vh, transparent 5vh), linear-gradient(white, white);
+  padding: 1vh;
+  background: var(--s-color);
 }
 body .main-section .projects-context .project-container .project .project-header {
-  font-size: 4vh;
+  font-size: 3vh;
   font-family: var(--header);
   padding: 1vh;
-  color: var(--shadow);
+  color: var(--p-color);
   width: 100%;
   text-align: center;
   border-radius: 1vh;
 }
 body .main-section .projects-context .project-container .project .project-photo {
   width: 100%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: 30vh;
   border-radius: 1vh;
-  border: 1vh solid var(--s-color);
   overflow: hidden;
+  border: 1vh double var(--p-color);
 }
 body .main-section .projects-context .project-container .project .project-photo img {
   width: 100%;
@@ -605,103 +602,142 @@ body .main-section .projects-context .project-container .project .project-photo 
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
 }
 body .main-section .projects-context .project-container .project .project-bio {
   font-size: 2vh;
   font-family: var(--text);
   color: var(--p-color);
-  background: var(--s-color);
   text-align: justify;
   padding: 1vh;
   border-radius: 1vh;
 }
 body .main-section .projects-context .project-container .project .project-code {
+  transition: 0.2s linear;
   font-size: 2vh;
   font-family: var(--text);
   padding: 1vh;
   background: var(--p-color);
-  width: 50%;
-  text-align: center;
-  border-radius: 1vh;
-}
-body .main-section .projects-context .project-container .project .project-code a {
-  color: var(--text-color);
-}
-body .main-section .projects-context .projects-next-btn {
-  cursor: pointer;
-  position: absolute;
-  transition: 0.2s linear;
-  padding: 1vh;
-  right: 27%;
-  top: 50%;
-  width: 10vh;
-  height: 10vh;
-  font-size: 4vh;
-  border-radius: 100%;
-  box-shadow: 0 0 1vh var(--shadow);
+  width: 100%;
   display: flex;
-  z-index: 2;
-  opacity: 100%;
   align-items: center;
   justify-content: center;
-  background: var(--p-color);
-  border: 1vh double var(--s-color);
-  transform: translate(-27%, -50%);
+  border-radius: 1vh;
+  font-weight: bold;
 }
-body .main-section .projects-context .projects-next-btn:hover {
-  opacity: 80%;
+body .main-section .projects-context .project-container .project .project-code:hover {
+  background: var(--p1-color);
+}
+body .main-section .projects-context .project-container .project .project-code a {
+  text-align: center;
+  width: 100%;
+  color: var(--s-color);
+}
+body .main-section .projects-context .project-nav {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, 80%);
+  background: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 1vh var(--shadow);
+  width: 10%;
+  border-radius: 10vh;
+  overflow: hidden;
+  outline: 1vh double var(--p-color);
+}
+body .main-section .projects-context .project-nav .projects-next-btn {
+  cursor: pointer;
+  transition: 0.2s linear;
+  padding: 1vh;
+  width: 100%;
+  font-size: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .main-section .projects-context .project-nav .projects-next-btn:hover {
   background: var(--s-color);
   color: var(--p-color);
 }
-body .main-section .projects-context .projects-prev-btn {
+body .main-section .projects-context .project-nav .projects-prev-btn {
   cursor: pointer;
-  position: absolute;
   transition: 0.2s linear;
-  left: 30%;
-  top: 50%;
   padding: 1vh;
-  width: 10vh;
-  height: 10vh;
+  width: 100%;
   font-size: 4vh;
-  border-radius: 100%;
-  opacity: 100%;
-  box-shadow: 0 0 1vh var(--shadow);
   display: flex;
-  z-index: 2;
   align-items: center;
   justify-content: center;
-  background: var(--p-color);
-  border: 1vh double var(--s-color);
-  transform: translate(-30%, -50%);
 }
-body .main-section .projects-context .projects-prev-btn:hover {
-  opacity: 80%;
+body .main-section .projects-context .project-nav .projects-prev-btn:hover {
   background: var(--s-color);
   color: var(--p-color);
 }
 body .main-section .projects-context .projects-number-display {
+  z-index: 2;
   position: absolute;
-  top: 10%;
-  left: 20%;
-  padding: 1vh;
-  opacity: 80%;
+  top: 20%;
+  left: 40%;
+  padding: 2vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform-style: preserve-3d;
-  transform: translate(-10%, -10%) rotate(330deg);
-  width: 20vh;
-  height: 20vh;
-  font-size: 7vh;
+  transform: translate(-40%, -10%);
+  font-size: 3vh;
   font-family: var(--header);
   font-weight: bold;
-  color: var(--p-color);
   border-radius: 100%;
-  border: 1vh double var(--p1-color);
+  border: 1vh double var(--p-color);
   background: var(--s-color);
+  color: var(--p-color);
   box-shadow: 0 0 1vh var(--shadow);
+}
+body .main-section .projects-context .project-list {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translate(-10%, -50%);
+  background: var(--s-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1vh;
+  border: 1vh double var(--p-color);
+  overflow: hidden;
+}
+body .main-section .projects-context .project-list .project-list-header {
+  width: 100%;
+  text-align: center;
+  padding: 2vh;
+  font-size: 3vh;
+  background: var(--p-color);
+  color: var(--text-color);
+  font-family: var(--text);
+  text-transform: uppercase;
+}
+body .main-section .projects-context .project-list .projects-list {
+  gap: 1vh;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .main-section .projects-context .project-list .projects-list .project-name {
+  text-align: center;
+  width: 100%;
+  padding: 2vh;
+  font-size: 3vh;
+  font-family: var(--header);
+  color: var(--p-color);
+  cursor: pointer;
+}
+body .main-section .projects-context .project-list .projects-list .project-name:hover {
+  background: var(--p-color);
+  color: var(--s-color);
 }
 body .main-section .contacts-context {
   transition: 0.2s linear;
@@ -752,13 +788,13 @@ body .mobile-section {
   display: none;
 }
 body .mobile-section .menu-m {
-  border-top: 1vh solid var(--p1-color);
+  border-top: 1vh double var(--s-color);
   width: 100%;
   height: 10%;
   z-index: 2;
   position: fixed;
   bottom: 0;
-  background: var(--shadow);
+  background: var(--p1-color);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -775,8 +811,10 @@ body .mobile-section .menu-m .menu-m-list {
 }
 body .mobile-section .menu-m .menu-m-list .menu-m-options {
   height: 100%;
-  font-size: 3.5vh;
-  font-family: var(--header);
+  font-size: 2vh;
+  font-family: var(--text);
+  text-transform: uppercase;
+  font-weight: bold;
   cursor: pointer;
   padding: 1vh 2vh;
   display: flex;
@@ -971,94 +1009,201 @@ body .mobile-section .about-context-m .about-me .about-me-skills-m .skills-list 
   font-family: var(--text);
 }
 body .mobile-section .projects-context-m {
-  position: fixed;
-  min-width: 100%;
-  height: 90%;
-  background: var(--p-color);
-  box-shadow: inset 0 0 30vh var(--shadow);
-  background-image: linear-gradient(90deg, transparent 0%, transparent 10%, #EA858A 10%, #EA858A calc(10% + 3px), transparent calc(10% + 3px), transparent 100%), linear-gradient(180deg, white 10%, transparent 10%), repeating-linear-gradient(180deg, #91C1E1 0px, #91C1E1 2px, transparent 2px, transparent 38px), linear-gradient(white, white);
-  display: flex;
-  flex-direction: column;
-  padding: 5vh 0;
-  align-items: center;
-  justify-content: flex-start;
-  overflow-y: auto;
-  z-index: -1;
   transition: 0.2s linear;
-  opacity: 0;
-}
-body .mobile-section .projects-context-m .project-container {
+  position: fixed;
+  z-index: -1;
+  opacity: 0%;
+  width: 100%;
+  height: 90%;
+  box-shadow: inset 0 0 30vh var(--shadow);
+  background-image: repeating-linear-gradient(0deg, rgb(153, 197, 206) 0vh, rgb(153, 197, 206) 0.1vh, transparent 0.5vh, transparent 5vh), repeating-linear-gradient(0deg, rgb(153, 197, 206) 0vh, rgb(153, 197, 206) 0.1vh, transparent 0.5vh, transparent 10vh), repeating-linear-gradient(90deg, rgb(153, 197, 206) 0vh, rgb(153, 197, 206) 0.1vh, transparent 0.1vh, transparent 5vh), repeating-linear-gradient(90deg, rgb(153, 197, 206) 0vh, rgb(153, 197, 206) 0.1vh, transparent 0.5vh, transparent 10vh), linear-gradient(var(--s-color), var(--s-color));
+  gap: 2vh;
+  padding: 10vh 1vh;
+  overflow-y: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+body .mobile-section .projects-context-m .project-container-m {
+  display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   padding: 1vh;
-  gap: 10vh;
-}
-body .mobile-section .projects-context-m .project-container .project {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 90%;
-  gap: 2vh;
-  padding: 2vh;
-  background: var(--p-color);
+  height: 60vh;
+  overflow: hidden;
   border-radius: 2vh;
   box-shadow: 0 0 1vh var(--shadow);
+  border: 2vh double var(--p-color);
+  background: var(--s-color);
 }
-body .mobile-section .projects-context-m .project-container .project .project-header {
+body .mobile-section .projects-context-m .project-container-m .project-m {
+  transition: 0.2s linear;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 2vh;
+  padding: 1vh;
+  background: var(--s-color);
+}
+body .mobile-section .projects-context-m .project-container-m .project-m .project-header {
   font-size: 3vh;
   font-family: var(--header);
   padding: 1vh;
-  background: var(--s-color);
-  color: var(--shadow);
+  color: var(--p-color);
   width: 100%;
   text-align: center;
   border-radius: 1vh;
 }
-body .mobile-section .projects-context-m .project-container .project .project-photo {
+body .mobile-section .projects-context-m .project-container-m .project-m .project-photo {
   width: 100%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: 30vh;
   border-radius: 1vh;
   overflow: hidden;
-  box-shadow: 0 0 1vh var(--shadow);
-  pointer-events: none;
+  border: 1vh double var(--p-color);
 }
-body .mobile-section .projects-context-m .project-container .project .project-photo img {
+body .mobile-section .projects-context-m .project-container-m .project-m .project-photo img {
   width: 100%;
   height: 100%;
 }
-body .mobile-section .projects-context-m .project-container .project .project-photo .project-video {
+body .mobile-section .projects-context-m .project-container-m .project-m .project-photo .project-video {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-body .mobile-section .projects-context-m .project-container .project .project-bio {
+body .mobile-section .projects-context-m .project-container-m .project-m .project-bio {
   font-size: 2vh;
   font-family: var(--text);
+  color: var(--p-color);
   text-align: justify;
   padding: 1vh;
-  background: var(--shadow);
   border-radius: 1vh;
 }
-body .mobile-section .projects-context-m .project-container .project .project-code {
+body .mobile-section .projects-context-m .project-container-m .project-m .project-code {
+  transition: 0.2s linear;
   font-size: 2vh;
   font-family: var(--text);
   padding: 1vh;
-  background: var(--s1-color);
+  background: var(--p-color);
   width: 100%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 1vh;
   font-weight: bold;
 }
-body .mobile-section .projects-context-m .project-container .project .project-code a {
+body .mobile-section .projects-context-m .project-container-m .project-m .project-code:hover {
+  background: var(--p1-color);
+}
+body .mobile-section .projects-context-m .project-container-m .project-m .project-code a {
+  text-align: center;
+  width: 100%;
+  color: var(--s-color);
+}
+body .mobile-section .projects-context-m .project-nav-m {
+  background: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 1vh var(--shadow);
+  width: 20vh;
+  border-radius: 10vh;
+  overflow: hidden;
+  outline: 1vh double var(--p-color);
+}
+body .mobile-section .projects-context-m .project-nav-m .projects-next-btn {
+  cursor: pointer;
+  transition: 0.2s linear;
+  padding: 1vh;
+  width: 100%;
+  font-size: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .mobile-section .projects-context-m .project-nav-m .projects-next-btn:hover {
+  background: var(--s-color);
   color: var(--p-color);
+}
+body .mobile-section .projects-context-m .project-nav-m .projects-prev-btn {
+  cursor: pointer;
+  transition: 0.2s linear;
+  padding: 1vh;
+  width: 100%;
+  font-size: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .mobile-section .projects-context-m .project-nav-m .projects-prev-btn:hover {
+  background: var(--s-color);
+  color: var(--p-color);
+}
+body .mobile-section .projects-context-m .projects-number-display {
+  padding: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vh;
+  font-family: var(--header);
+  font-weight: bold;
+  border-radius: 100%;
+  border: 1vh double var(--p-color);
+  background: var(--s-color);
+  color: var(--p-color);
+  box-shadow: 0 0 1vh var(--shadow);
+}
+body .mobile-section .projects-context-m .project-list-m {
+  background: var(--s-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 1vh;
+  border: 1vh double var(--p-color);
+  overflow: hidden;
+  width: 90%;
+  margin: 10vh 0 0 0;
+}
+body .mobile-section .projects-context-m .project-list-m .project-list-header {
+  width: 100%;
+  text-align: center;
+  padding: 2vh;
+  font-size: 3vh;
+  background: var(--p-color);
+  color: var(--text-color);
+  font-family: var(--text);
+  text-transform: uppercase;
+}
+body .mobile-section .projects-context-m .project-list-m .projects-list-m {
+  gap: 1vh;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .mobile-section .projects-context-m .project-list-m .projects-list-m .project-name-m {
+  text-align: center;
+  width: 100%;
+  padding: 2vh;
+  font-size: 3vh;
+  font-family: var(--header);
+  color: var(--p-color);
+  cursor: pointer;
+}
+body .mobile-section .projects-context-m .project-list-m .projects-list-m .project-name-m:hover {
+  background: var(--p-color);
+  color: var(--s-color);
 }
 body .mobile-section .contacts-context-m {
   position: fixed;
