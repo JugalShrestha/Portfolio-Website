@@ -2,7 +2,8 @@ const navBar= document.getElementById('nav-bar-id');
 var width= window.innerWidth;
 if(width<980)
 {
-    navBar.style.top="0%";
+    navBar.style.top="94%";
+    navBar.style.bottom="0%";
     navBar.style.left="0%";
     navBar.style.right="0%";
     navBar.style.padding="2vh";
