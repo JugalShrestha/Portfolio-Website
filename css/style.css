@@ -201,6 +201,7 @@ body .home-context {
   transition: 0.2s linear;
   width: 100%;
   min-height: 100vh;
+  background-attachment: fixed;
   background-image: linear-gradient(112.5deg, rgba(232, 232, 232, 0.03) 0%, rgba(232, 232, 232, 0.03) 2%, rgba(231, 231, 231, 0.03) 2%, rgba(231, 231, 231, 0.03) 4%, rgba(231, 231, 231, 0.03) 4%, rgba(231, 231, 231, 0.03) 11%, rgba(2, 2, 2, 0.03) 11%, rgba(2, 2, 2, 0.03) 67%, rgba(231, 231, 231, 0.03) 67%, rgba(231, 231, 231, 0.03) 90%, rgba(111, 111, 111, 0.03) 90%, rgba(111, 111, 111, 0.03) 100%), linear-gradient(157.5deg, rgba(210, 210, 210, 0.03) 0%, rgba(210, 210, 210, 0.03) 17%, rgba(254, 254, 254, 0.03) 17%, rgba(254, 254, 254, 0.03) 18%, rgba(96, 96, 96, 0.03) 18%, rgba(96, 96, 96, 0.03) 44%, rgba(159, 159, 159, 0.03) 44%, rgba(159, 159, 159, 0.03) 70%, rgba(24, 24, 24, 0.03) 70%, rgba(24, 24, 24, 0.03) 82%, rgba(16, 16, 16, 0.03) 82%, rgba(16, 16, 16, 0.03) 100%), linear-gradient(22.5deg, rgba(47, 47, 47, 0.03) 0%, rgba(47, 47, 47, 0.03) 32%, rgba(124, 124, 124, 0.03) 32%, rgba(124, 124, 124, 0.03) 40%, rgba(200, 200, 200, 0.03) 40%, rgba(200, 200, 200, 0.03) 42%, rgba(16, 16, 16, 0.03) 42%, rgba(16, 16, 16, 0.03) 64%, rgba(243, 243, 243, 0.03) 64%, rgba(243, 243, 243, 0.03) 94%, rgba(93, 93, 93, 0.03) 94%, rgba(93, 93, 93, 0.03) 100%), linear-gradient(90deg, #ffffff, #ffffff);
   display: flex;
   align-items: center;
@@ -277,6 +278,7 @@ body .about-context {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-attachment: fixed;
   background-image: linear-gradient(90deg, transparent 0%, transparent 8%, rgba(90, 90, 90, 0.05) 8%, rgba(90, 90, 90, 0.05) 21%, transparent 21%, transparent 100%), linear-gradient(45deg, transparent 0%, transparent 23%, rgba(90, 90, 90, 0.05) 23%, rgba(90, 90, 90, 0.05) 37%, transparent 37%, transparent 100%), linear-gradient(0deg, transparent 0%, transparent 37%, rgba(90, 90, 90, 0.05) 37%, rgba(90, 90, 90, 0.05) 49%, transparent 49%, transparent 100%), linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
   width: 100%;
   min-height: 100vh;
@@ -392,6 +394,7 @@ body .projects-context {
   align-items: center;
   justify-content: center;
   background-image: repeating-linear-gradient(0deg, rgb(153, 197, 206) 0vh, rgb(153, 197, 206) 0.1vh, transparent 0.5vh, transparent 5vh), repeating-linear-gradient(0deg, rgb(153, 197, 206) 0vh, rgb(153, 197, 206) 0.1vh, transparent 0.5vh, transparent 10vh), repeating-linear-gradient(90deg, rgb(153, 197, 206) 0vh, rgb(153, 197, 206) 0.1vh, transparent 0.1vh, transparent 5vh), repeating-linear-gradient(90deg, rgb(153, 197, 206) 0vh, rgb(153, 197, 206) 0.1vh, transparent 0.5vh, transparent 10vh), linear-gradient(var(--s-color), var(--s-color));
+  background-attachment: fixed;
 }
 body .projects-context .project-overlay {
   position: fixed;
@@ -496,7 +499,7 @@ body .projects-context .project-container .project .project-expanded {
   right: 10%;
   left: 10%;
   bottom: 10%;
-  background: var(--p-color);
+  background-image: linear-gradient(90deg, transparent 0%, transparent 88%, rgba(200, 200, 200, 0.07) 88%, rgba(200, 200, 200, 0.07) 93%, transparent 93%, transparent 100%), linear-gradient(135deg, transparent 0%, transparent 83%, rgba(200, 200, 200, 0.07) 83%, rgba(200, 200, 200, 0.07) 91%, transparent 91%, transparent 100%), linear-gradient(0deg, transparent 0%, transparent 43%, rgba(200, 200, 200, 0.07) 43%, rgba(200, 200, 200, 0.07) 50%, transparent 50%, transparent 100%), linear-gradient(135deg, transparent 0%, transparent 16%, rgba(200, 200, 200, 0.07) 16%, rgba(200, 200, 200, 0.07) 56%, transparent 56%, transparent 100%), linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
   border-radius: 2vh;
   border: 2vh double var(--s-color);
   z-index: -1;
@@ -505,25 +508,49 @@ body .projects-context .project-container .project .project-expanded {
   flex-direction: column;
   gap: 2vh;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+body .projects-context .project-container .project .project-expanded .project-expanded-context {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  align-items: center;
   justify-content: flex-start;
   overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
 }
 body .projects-context .project-container .project .project-expanded .project-close-btn {
   position: absolute;
   top: 1%;
   right: 1%;
-  font-size: 5vh;
+  font-size: 3vh;
+  width: 5vh;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vh;
+  border-radius: 100%;
+  background: var(--s-color);
+  color: var(--p-color);
+  border: 1vh double var(--p-color);
   cursor: pointer;
 }
 body .projects-context .project-container .project .project-expanded .project-header-expanded {
-  font-size: 3vh;
+  text-align: center;
+  font-size: 4vh;
   font-family: var(--text);
+  color: var(--p-color);
+  padding: 1vh;
+  border-radius: 2vh;
+  background: var(--s-color);
+  border: 1vh double var(--p-color);
   text-transform: uppercase;
-  margin: 1vh;
 }
 body .projects-context .project-container .project .project-expanded .project-photo {
-  width: 90%;
-  height: 100%;
+  width: 50%;
   overflow: hidden;
 }
 body .projects-context .project-container .project .project-expanded .project-photo img {
@@ -541,17 +568,17 @@ body .projects-context .project-container .project .project-expanded .project-ph
   border: 1vh double var(--s-color);
 }
 body .projects-context .project-container .project .project-expanded .project-bio-expanded {
-  margin-top: 10vh;
   gap: 2vh;
   width: 50%;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
-  width: 50%;
+  align-content: flex-start;
 }
 body .projects-context .project-container .project .project-expanded .project-bio-expanded .project-paragraph {
   text-align: justify;
-  width: 50%;
+  width: 40%;
   display: flex;
   font-size: 2vh;
   font-family: var(--text);
@@ -579,6 +606,7 @@ body .projects-context .project-container .project .project-expanded .project-co
 body .contacts-context {
   transition: 0.2s linear;
   width: 100%;
+  background-attachment: fixed;
   background-image: repeating-radial-gradient(circle at center center, transparent 0px, transparent 11px, rgba(255, 255, 255, 0.04) 11px, rgba(255, 255, 255, 0.04) 19px, transparent 19px, transparent 29px, rgba(255, 255, 255, 0.04) 29px, rgba(255, 255, 255, 0.04) 33px), repeating-radial-gradient(circle at center center, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 5px, rgb(0, 0, 0) 5px, rgb(0, 0, 0) 17px, rgb(0, 0, 0) 17px, rgb(0, 0, 0) 30px, rgb(0, 0, 0) 30px, rgb(0, 0, 0) 43px, rgb(0, 0, 0) 43px, rgb(0, 0, 0) 45px, rgb(0, 0, 0) 45px, rgb(0, 0, 0) 47px);
   background-size: 53px 53px;
   display: flex;
@@ -626,8 +654,17 @@ body .contacts-context .phone-no {
 }
 
 @media (max-width: 980px) {
-  .projects-context .project-expanded {
-    flex-direction: column;
+  .projects-context .project-expanded .project-header-expanded {
+    width: 90%;
+  }
+  .projects-context .project-expanded .project-expaned-context .project-photo {
+    width: 100%;
+  }
+  .projects-context .project-expanded .project-expaned-context .project-bio-expanded {
+    flex-wrap: wrap;
+  }
+  .projects-context .project-expanded .project-expaned-context .project-bio-expanded .project-paragraph {
+    width: 100%;
   }
   .about-context {
     padding: 10vh 0;
